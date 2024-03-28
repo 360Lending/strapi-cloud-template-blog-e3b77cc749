@@ -512,6 +512,8 @@ export interface PluginContentReleasesRelease extends Schema.CollectionType {
   attributes: {
     name: Attribute.String & Attribute.Required;
     releasedAt: Attribute.DateTime;
+    scheduledAt: Attribute.DateTime;
+    timezone: Attribute.String;
     actions: Attribute.Relation<
       'plugin::content-releases.release',
       'oneToMany',
@@ -797,6 +799,7 @@ export interface ApiAboutAbout extends Schema.SingleType {
     blocks: Attribute.DynamicZone<
       ['shared.media', 'shared.quote', 'shared.rich-text', 'shared.slider']
     >;
+    description: Attribute.Blocks;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     createdBy: Attribute.Relation<
@@ -814,49 +817,32 @@ export interface ApiAboutAbout extends Schema.SingleType {
   };
 }
 
-export interface ApiArticleArticle extends Schema.CollectionType {
-  collectionName: 'articles';
+export interface ApiBlogPostBlogPost extends Schema.CollectionType {
+  collectionName: 'blog_posts';
   info: {
-    singularName: 'article';
-    pluralName: 'articles';
-    displayName: 'Article';
-    description: 'Create your blog content';
+    singularName: 'blog-post';
+    pluralName: 'blog-posts';
+    displayName: 'Blog Post';
   };
   options: {
     draftAndPublish: true;
   };
   attributes: {
     title: Attribute.String;
-    description: Attribute.Text &
-      Attribute.SetMinMaxLength<{
-        maxLength: 80;
-      }>;
-    slug: Attribute.UID<'api::article.article', 'title'>;
-    cover: Attribute.Media;
-    author: Attribute.Relation<
-      'api::article.article',
-      'manyToOne',
-      'api::author.author'
-    >;
-    category: Attribute.Relation<
-      'api::article.article',
-      'manyToOne',
-      'api::category.category'
-    >;
-    blocks: Attribute.DynamicZone<
-      ['shared.media', 'shared.quote', 'shared.rich-text', 'shared.slider']
-    >;
+    author: Attribute.String;
+    body: Attribute.Blocks;
+    blog_post: Attribute.UID;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
     createdBy: Attribute.Relation<
-      'api::article.article',
+      'api::blog-post.blog-post',
       'oneToOne',
       'admin::user'
     > &
       Attribute.Private;
     updatedBy: Attribute.Relation<
-      'api::article.article',
+      'api::blog-post.blog-post',
       'oneToOne',
       'admin::user'
     > &
@@ -864,73 +850,34 @@ export interface ApiArticleArticle extends Schema.CollectionType {
   };
 }
 
-export interface ApiAuthorAuthor extends Schema.CollectionType {
-  collectionName: 'authors';
+export interface ApiCalculatorCalculator extends Schema.CollectionType {
+  collectionName: 'calculators';
   info: {
-    singularName: 'author';
-    pluralName: 'authors';
-    displayName: 'Author';
-    description: 'Create authors for your content';
+    singularName: 'calculator';
+    pluralName: 'calculators';
+    displayName: 'Calculator';
+    description: '';
   };
   options: {
-    draftAndPublish: false;
+    draftAndPublish: true;
   };
   attributes: {
-    name: Attribute.String;
-    avatar: Attribute.Media;
-    email: Attribute.String;
-    articles: Attribute.Relation<
-      'api::author.author',
-      'oneToMany',
-      'api::article.article'
-    >;
+    question_0: Attribute.String;
+    question_1: Attribute.String;
+    helper_text: Attribute.String;
+    note: Attribute.Text;
+    calculator: Attribute.UID;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
     createdBy: Attribute.Relation<
-      'api::author.author',
+      'api::calculator.calculator',
       'oneToOne',
       'admin::user'
     > &
       Attribute.Private;
     updatedBy: Attribute.Relation<
-      'api::author.author',
-      'oneToOne',
-      'admin::user'
-    > &
-      Attribute.Private;
-  };
-}
-
-export interface ApiCategoryCategory extends Schema.CollectionType {
-  collectionName: 'categories';
-  info: {
-    singularName: 'category';
-    pluralName: 'categories';
-    displayName: 'Category';
-    description: 'Organize your content into categories';
-  };
-  options: {
-    draftAndPublish: false;
-  };
-  attributes: {
-    name: Attribute.String;
-    slug: Attribute.UID;
-    articles: Attribute.Relation<
-      'api::category.category',
-      'oneToMany',
-      'api::article.article'
-    >;
-    description: Attribute.Text;
-    createdAt: Attribute.DateTime;
-    updatedAt: Attribute.DateTime;
-    createdBy: Attribute.Relation<
-      'api::category.category',
-      'oneToOne',
-      'admin::user'
-    > &
-      Attribute.Private;
-    updatedBy: Attribute.Relation<
-      'api::category.category',
+      'api::calculator.calculator',
       'oneToOne',
       'admin::user'
     > &
@@ -971,6 +918,111 @@ export interface ApiGlobalGlobal extends Schema.SingleType {
   };
 }
 
+export interface ApiHomePageHomePage extends Schema.CollectionType {
+  collectionName: 'home_pages';
+  info: {
+    singularName: 'home-page';
+    pluralName: 'home-pages';
+    displayName: 'Home Page';
+    description: '';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    title_small: Attribute.String;
+    carousel_large: Attribute.String;
+    carousel_small: Attribute.String;
+    get_started_button: Attribute.String;
+    learn_more_button: Attribute.String;
+    slug: Attribute.UID;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::home-page.home-page',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::home-page.home-page',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
+export interface ApiMqlsPageMqlsPage extends Schema.CollectionType {
+  collectionName: 'mqls_pages';
+  info: {
+    singularName: 'mqls-page';
+    pluralName: 'mqls-pages';
+    displayName: 'MQLS Page';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    title: Attribute.String;
+    description: Attribute.Text;
+    mqls_page: Attribute.UID;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::mqls-page.mqls-page',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::mqls-page.mqls-page',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
+export interface ApiProductProduct extends Schema.CollectionType {
+  collectionName: 'products';
+  info: {
+    singularName: 'product';
+    pluralName: 'products';
+    displayName: 'Product';
+    description: '';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    product: Attribute.UID;
+    title_large: Attribute.String;
+    title_small: Attribute.String;
+    bullet_0: Attribute.String;
+    bullet_1: Attribute.String;
+    bullet_2: Attribute.String;
+    bullet_3: Attribute.String;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::product.product',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::product.product',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
 declare module '@strapi/types' {
   export module Shared {
     export interface ContentTypes {
@@ -990,10 +1042,12 @@ declare module '@strapi/types' {
       'plugin::users-permissions.user': PluginUsersPermissionsUser;
       'plugin::i18n.locale': PluginI18NLocale;
       'api::about.about': ApiAboutAbout;
-      'api::article.article': ApiArticleArticle;
-      'api::author.author': ApiAuthorAuthor;
-      'api::category.category': ApiCategoryCategory;
+      'api::blog-post.blog-post': ApiBlogPostBlogPost;
+      'api::calculator.calculator': ApiCalculatorCalculator;
       'api::global.global': ApiGlobalGlobal;
+      'api::home-page.home-page': ApiHomePageHomePage;
+      'api::mqls-page.mqls-page': ApiMqlsPageMqlsPage;
+      'api::product.product': ApiProductProduct;
     }
   }
 }

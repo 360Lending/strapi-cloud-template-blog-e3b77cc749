@@ -1,0 +1,34 @@
+{
+  "kind": "collectionType",
+  "collectionName": "home_pages",
+  "info": {
+    "singularName": "home-page",
+    "pluralName": "home-pages",
+    "displayName": "Home Page",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title_small": {
+      "type": "string"
+    },
+    "carousel_large": {
+      "type": "string"
+    },
+    "carousel_small": {
+      "type": "string"
+    },
+    "get_started_button": {
+      "type": "string"
+    },
+    "learn_more_button": {
+      "type": "string"
+    },
+    "slug": {
+      "type": "uid"
+    }
+  }
+}

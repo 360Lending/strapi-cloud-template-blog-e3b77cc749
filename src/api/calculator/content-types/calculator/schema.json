@@ -1,0 +1,31 @@
+{
+  "kind": "collectionType",
+  "collectionName": "calculators",
+  "info": {
+    "singularName": "calculator",
+    "pluralName": "calculators",
+    "displayName": "Calculator",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "question_0": {
+      "type": "string"
+    },
+    "question_1": {
+      "type": "string"
+    },
+    "helper_text": {
+      "type": "string"
+    },
+    "note": {
+      "type": "text"
+    },
+    "calculator": {
+      "type": "uid"
+    }
+  }
+}
