@@ -823,6 +823,7 @@ export interface ApiBlogPostBlogPost extends Schema.CollectionType {
     singularName: 'blog-post';
     pluralName: 'blog-posts';
     displayName: 'Blog Post';
+    description: '';
   };
   options: {
     draftAndPublish: true;
@@ -832,6 +833,7 @@ export interface ApiBlogPostBlogPost extends Schema.CollectionType {
     author: Attribute.String;
     body: Attribute.Blocks;
     blog_post: Attribute.UID;
+    test_blog: Attribute.RichText;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
