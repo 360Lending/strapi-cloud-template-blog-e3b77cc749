@@ -43,6 +43,11 @@
       "components": [
         "shared.product-question"
       ]
+    },
+    "product_next_steps": {
+      "type": "component",
+      "repeatable": true,
+      "component": "shared.product-next-step"
     }
   }
 }
