@@ -43,17 +43,16 @@
       "type": "uid",
       "required": true
     },
-    "product_content": {
-      "type": "dynamiczone",
-      "components": [
-        "shared.product-question"
-      ],
-      "required": true
-    },
     "product_next_steps": {
       "type": "component",
       "repeatable": false,
       "component": "shared.product-next-step",
+      "required": true
+    },
+    "product_content": {
+      "type": "component",
+      "repeatable": false,
+      "component": "shared.product-question",
       "required": true
     }
   }
