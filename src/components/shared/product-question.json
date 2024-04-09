@@ -1,0 +1,40 @@
+{
+  "collectionName": "components_shared_product_questions",
+  "info": {
+    "displayName": "Product Question",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "header": {
+      "type": "string"
+    },
+    "header2": {
+      "type": "string"
+    },
+    "description": {
+      "type": "text"
+    },
+    "header_benefits": {
+      "type": "string"
+    },
+    "benefits": {
+      "type": "component",
+      "repeatable": true,
+      "component": "shared.product-benefits"
+    },
+    "redirect_url": {
+      "type": "string"
+    },
+    "image": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": false
+    }
+  }
+}
