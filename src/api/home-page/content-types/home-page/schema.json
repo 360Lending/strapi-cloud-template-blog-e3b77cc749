@@ -15,7 +15,7 @@
     "title_small": {
       "type": "string"
     },
-    "carousel_large": {
+    "carousel_large_line1": {
       "type": "string"
     },
     "carousel_small": {
@@ -29,6 +29,9 @@
     },
     "slug": {
       "type": "uid"
+    },
+    "carousel_large_line2": {
+      "type": "string"
     }
   }
 }
