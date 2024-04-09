@@ -1,0 +1,35 @@
+{
+  "collectionName": "components_shared_product_next_steps",
+  "info": {
+    "displayName": "Product Next Step",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "header": {
+      "type": "string"
+    },
+    "description": {
+      "type": "string"
+    },
+    "image": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "steps": {
+      "type": "component",
+      "repeatable": true,
+      "component": "shared.text"
+    },
+    "redirect_url": {
+      "type": "string"
+    }
+  }
+}

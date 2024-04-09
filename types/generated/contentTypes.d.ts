@@ -1042,6 +1042,7 @@ export interface ApiProductPageProductPage extends Schema.CollectionType {
     product_background_image: Attribute.Media;
     product: Attribute.UID;
     product_content: Attribute.DynamicZone<['shared.product-question']>;
+    product_next_steps: Attribute.Component<'shared.product-next-step', true>;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;

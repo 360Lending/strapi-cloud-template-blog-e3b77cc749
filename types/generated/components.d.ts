@@ -22,6 +22,21 @@ export interface SharedProductBenefits extends Schema.Component {
   };
 }
 
+export interface SharedProductNextStep extends Schema.Component {
+  collectionName: 'components_shared_product_next_steps';
+  info: {
+    displayName: 'Product Next Step';
+    description: '';
+  };
+  attributes: {
+    header: Attribute.String;
+    description: Attribute.String;
+    image: Attribute.Media;
+    steps: Attribute.Component<'shared.text', true>;
+    redirect_url: Attribute.String;
+  };
+}
+
 export interface SharedProductQuestion extends Schema.Component {
   collectionName: 'components_shared_product_questions';
   info: {
@@ -90,16 +105,29 @@ export interface SharedSlider extends Schema.Component {
   };
 }
 
+export interface SharedText extends Schema.Component {
+  collectionName: 'components_shared_texts';
+  info: {
+    displayName: 'Text';
+    description: '';
+  };
+  attributes: {
+    description: Attribute.String;
+  };
+}
+
 declare module '@strapi/types' {
   export module Shared {
     export interface Components {
       'shared.media': SharedMedia;
       'shared.product-benefits': SharedProductBenefits;
+      'shared.product-next-step': SharedProductNextStep;
       'shared.product-question': SharedProductQuestion;
       'shared.quote': SharedQuote;
       'shared.rich-text': SharedRichText;
       'shared.seo': SharedSeo;
       'shared.slider': SharedSlider;
+      'shared.text': SharedText;
     }
   }
 }
