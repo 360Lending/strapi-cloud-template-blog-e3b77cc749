@@ -932,11 +932,8 @@ export interface ApiHomePageHomePage extends Schema.CollectionType {
     draftAndPublish: true;
   };
   attributes: {
-    title_small: Attribute.String;
     carousel_header_line1: Attribute.String;
     carousel_subheader: Attribute.String;
-    get_started_button: Attribute.String;
-    learn_more_button: Attribute.String;
     slug: Attribute.UID;
     carousel_header_line2: Attribute.String;
     createdAt: Attribute.DateTime;

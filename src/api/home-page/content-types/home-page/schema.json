@@ -12,19 +12,10 @@
   },
   "pluginOptions": {},
   "attributes": {
-    "title_small": {
-      "type": "string"
-    },
     "carousel_header_line1": {
       "type": "string"
     },
     "carousel_subheader": {
-      "type": "string"
-    },
-    "get_started_button": {
-      "type": "string"
-    },
-    "learn_more_button": {
       "type": "string"
     },
     "slug": {
