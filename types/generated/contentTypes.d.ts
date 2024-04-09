@@ -1041,9 +1041,9 @@ export interface ApiProductPageProductPage extends Schema.CollectionType {
     redirect_url: Attribute.String & Attribute.Required;
     product_background_image: Attribute.Media;
     product: Attribute.UID & Attribute.Required;
-    product_content: Attribute.DynamicZone<['shared.product-question']> &
-      Attribute.Required;
     product_next_steps: Attribute.Component<'shared.product-next-step'> &
+      Attribute.Required;
+    product_content: Attribute.Component<'shared.product-question'> &
       Attribute.Required;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
