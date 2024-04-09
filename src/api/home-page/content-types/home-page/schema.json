@@ -15,10 +15,10 @@
     "title_small": {
       "type": "string"
     },
-    "carousel_large": {
+    "carousel_header_line1": {
       "type": "string"
     },
-    "carousel_small": {
+    "carousel_subheader": {
       "type": "string"
     },
     "get_started_button": {
@@ -29,6 +29,9 @@
     },
     "slug": {
       "type": "uid"
+    },
+    "carousel_header_line2": {
+      "type": "string"
     }
   }
 }
