@@ -13,16 +13,20 @@
   "pluginOptions": {},
   "attributes": {
     "header1": {
-      "type": "string"
+      "type": "string",
+      "required": true
     },
     "header2": {
-      "type": "string"
+      "type": "string",
+      "required": true
     },
     "description": {
-      "type": "text"
+      "type": "text",
+      "required": true
     },
     "redirect_url": {
-      "type": "string"
+      "type": "string",
+      "required": true
     },
     "product_background_image": {
       "type": "media",
@@ -36,18 +40,21 @@
       ]
     },
     "product": {
-      "type": "uid"
+      "type": "uid",
+      "required": true
     },
     "product_content": {
       "type": "dynamiczone",
       "components": [
         "shared.product-question"
-      ]
+      ],
+      "required": true
     },
     "product_next_steps": {
       "type": "component",
-      "repeatable": true,
-      "component": "shared.product-next-step"
+      "repeatable": false,
+      "component": "shared.product-next-step",
+      "required": true
     }
   }
 }

@@ -1035,14 +1035,16 @@ export interface ApiProductPageProductPage extends Schema.CollectionType {
     draftAndPublish: true;
   };
   attributes: {
-    header1: Attribute.String;
-    header2: Attribute.String;
-    description: Attribute.Text;
-    redirect_url: Attribute.String;
+    header1: Attribute.String & Attribute.Required;
+    header2: Attribute.String & Attribute.Required;
+    description: Attribute.Text & Attribute.Required;
+    redirect_url: Attribute.String & Attribute.Required;
     product_background_image: Attribute.Media;
-    product: Attribute.UID;
-    product_content: Attribute.DynamicZone<['shared.product-question']>;
-    product_next_steps: Attribute.Component<'shared.product-next-step', true>;
+    product: Attribute.UID & Attribute.Required;
+    product_content: Attribute.DynamicZone<['shared.product-question']> &
+      Attribute.Required;
+    product_next_steps: Attribute.Component<'shared.product-next-step'> &
+      Attribute.Required;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
