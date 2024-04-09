@@ -11,6 +11,34 @@ export interface SharedMedia extends Schema.Component {
   };
 }
 
+export interface SharedProductBenefits extends Schema.Component {
+  collectionName: 'components_shared_product_benefits';
+  info: {
+    displayName: 'Product Benefits';
+  };
+  attributes: {
+    header: Attribute.String;
+    description: Attribute.Text;
+  };
+}
+
+export interface SharedProductQuestion extends Schema.Component {
+  collectionName: 'components_shared_product_questions';
+  info: {
+    displayName: 'Product Question';
+    description: '';
+  };
+  attributes: {
+    header: Attribute.String;
+    header2: Attribute.String;
+    description: Attribute.Text;
+    header_benefits: Attribute.String;
+    benefits: Attribute.Component<'shared.product-benefits', true>;
+    redirect_url: Attribute.String;
+    image: Attribute.Media;
+  };
+}
+
 export interface SharedQuote extends Schema.Component {
   collectionName: 'components_shared_quotes';
   info: {
@@ -66,6 +94,8 @@ declare module '@strapi/types' {
   export module Shared {
     export interface Components {
       'shared.media': SharedMedia;
+      'shared.product-benefits': SharedProductBenefits;
+      'shared.product-question': SharedProductQuestion;
       'shared.quote': SharedQuote;
       'shared.rich-text': SharedRichText;
       'shared.seo': SharedSeo;
