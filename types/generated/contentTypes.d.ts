@@ -932,7 +932,7 @@ export interface ApiHomePageHomePage extends Schema.CollectionType {
     draftAndPublish: true;
   };
   attributes: {
-    slug: Attribute.UID;
+    slug: Attribute.UID & Attribute.Required;
     above_carousel_header: Attribute.String & Attribute.Required;
     carousel: Attribute.Component<'home.product-description', true> &
       Attribute.Required;
