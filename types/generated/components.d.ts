@@ -112,7 +112,9 @@ export interface SharedText extends Schema.Component {
     description: '';
   };
   attributes: {
-    description: Attribute.String;
+    carousel_header_line1: Attribute.String;
+    carousel_header_line2: Attribute.String;
+    carousel_subheader: Attribute.String;
   };
 }
 
