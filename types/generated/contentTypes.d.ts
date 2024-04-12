@@ -936,6 +936,7 @@ export interface ApiHomePageHomePage extends Schema.CollectionType {
     carousel_subheader: Attribute.String;
     slug: Attribute.UID;
     carousel_header_line2: Attribute.String;
+    above_carousel_header: Attribute.String;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;

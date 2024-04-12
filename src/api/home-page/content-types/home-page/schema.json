@@ -23,6 +23,9 @@
     },
     "carousel_header_line2": {
       "type": "string"
+    },
+    "above_carousel_header": {
+      "type": "string"
     }
   }
 }
