@@ -933,8 +933,9 @@ export interface ApiHomePageHomePage extends Schema.CollectionType {
   };
   attributes: {
     slug: Attribute.UID;
-    carousel: Attribute.Component<'shared.text', true>;
-    above_carousel_header: Attribute.String;
+    above_carousel_header: Attribute.String & Attribute.Required;
+    carousel: Attribute.Component<'home.product-description', true> &
+      Attribute.Required;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;

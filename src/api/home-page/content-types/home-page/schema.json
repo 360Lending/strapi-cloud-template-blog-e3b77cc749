@@ -15,13 +15,15 @@
     "slug": {
       "type": "uid"
     },
+    "above_carousel_header": {
+      "type": "string",
+      "required": true
+    },
     "carousel": {
       "type": "component",
       "repeatable": true,
-      "component": "shared.text"
-    },
-    "above_carousel_header": {
-      "type": "string"
+      "component": "home.product-description",
+      "required": true
     }
   }
 }
