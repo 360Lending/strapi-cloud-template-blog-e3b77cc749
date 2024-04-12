@@ -1,0 +1,22 @@
+{
+  "collectionName": "components_products_product_descriptions",
+  "info": {
+    "displayName": "Home Page Carousel",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "carousel_header_line1": {
+      "type": "string",
+      "required": true
+    },
+    "carousel_header_line2": {
+      "type": "string",
+      "required": true
+    },
+    "carousel_subheader": {
+      "type": "string",
+      "required": true
+    }
+  }
+}
