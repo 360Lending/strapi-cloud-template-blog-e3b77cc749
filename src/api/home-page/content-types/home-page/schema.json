@@ -12,17 +12,13 @@
   },
   "pluginOptions": {},
   "attributes": {
-    "carousel_header_line1": {
-      "type": "string"
-    },
-    "carousel_subheader": {
-      "type": "string"
-    },
     "slug": {
       "type": "uid"
     },
-    "carousel_header_line2": {
-      "type": "string"
+    "carousel": {
+      "type": "component",
+      "repeatable": true,
+      "component": "shared.text"
     },
     "above_carousel_header": {
       "type": "string"
