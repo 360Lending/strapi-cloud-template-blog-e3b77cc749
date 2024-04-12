@@ -1,5 +1,15 @@
 import type { Schema, Attribute } from '@strapi/strapi';
 
+export interface ProductsProductDescription extends Schema.Component {
+  collectionName: 'components_products_product_descriptions';
+  info: {
+    displayName: 'Product Description';
+  };
+  attributes: {
+    description: Attribute.String;
+  };
+}
+
 export interface SharedMedia extends Schema.Component {
   collectionName: 'components_shared_media';
   info: {
@@ -108,19 +118,18 @@ export interface SharedSlider extends Schema.Component {
 export interface SharedText extends Schema.Component {
   collectionName: 'components_shared_texts';
   info: {
-    displayName: 'Text';
+    displayName: 'Carousel';
     description: '';
   };
   attributes: {
-    carousel_header_line1: Attribute.String;
-    carousel_header_line2: Attribute.String;
-    carousel_subheader: Attribute.String;
+    description: Attribute.String;
   };
 }
 
 declare module '@strapi/types' {
   export module Shared {
     export interface Components {
+      'products.product-description': ProductsProductDescription;
       'shared.media': SharedMedia;
       'shared.product-benefits': SharedProductBenefits;
       'shared.product-next-step': SharedProductNextStep;
