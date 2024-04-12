@@ -1,8 +1,7 @@
 {
-  "collectionName": "components_shared_texts",
+  "collectionName": "components_products_product_descriptions",
   "info": {
-    "displayName": "Carousel",
-    "description": ""
+    "displayName": "Product Description"
   },
   "options": {},
   "attributes": {
