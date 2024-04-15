@@ -1,0 +1,15 @@
+{
+  "collectionName": "components_product_product_service_contents",
+  "info": {
+    "displayName": "Product Service Content"
+  },
+  "options": {},
+  "attributes": {
+    "product_service_item": {
+      "displayName": "Product Service Item",
+      "type": "component",
+      "repeatable": true,
+      "component": "product.product-service-item"
+    }
+  }
+}

@@ -1,0 +1,31 @@
+{
+  "collectionName": "components_product_product_service_items",
+  "info": {
+    "displayName": "Product Service Item"
+  },
+  "options": {},
+  "attributes": {
+    "prefix": {
+      "type": "string"
+    },
+    "header": {
+      "type": "string"
+    },
+    "description": {
+      "type": "text"
+    },
+    "image": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": false
+    },
+    "redirect_url": {
+      "type": "string"
+    }
+  }
+}
