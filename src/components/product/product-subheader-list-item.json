@@ -1,0 +1,15 @@
+{
+  "collectionName": "components_product_product_subheader_list_items",
+  "info": {
+    "displayName": "Product Subheader List Item"
+  },
+  "options": {},
+  "attributes": {
+    "header": {
+      "type": "string"
+    },
+    "redirect_url": {
+      "type": "string"
+    }
+  }
+}

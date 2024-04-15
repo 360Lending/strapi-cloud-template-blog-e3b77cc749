@@ -1043,8 +1043,9 @@ export interface ApiProductPageProductPage extends Schema.CollectionType {
     product: Attribute.UID & Attribute.Required;
     product_next_steps: Attribute.Component<'shared.product-next-step'> &
       Attribute.Required;
-    product_content: Attribute.Component<'shared.product-question'> &
-      Attribute.Required;
+    product_content: Attribute.Component<'shared.product-question'>;
+    product_subheader_content: Attribute.Component<'product.product-subheader-content'>;
+    product_service_content: Attribute.Component<'product.product-service-content'>;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;

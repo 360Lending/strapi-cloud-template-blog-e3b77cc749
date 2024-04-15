@@ -13,6 +13,60 @@ export interface HomeProductDescription extends Schema.Component {
   };
 }
 
+export interface ProductProductServiceContent extends Schema.Component {
+  collectionName: 'components_product_product_service_contents';
+  info: {
+    displayName: 'Product Service Content';
+  };
+  attributes: {
+    product_service_item: Attribute.Component<
+      'product.product-service-item',
+      true
+    >;
+  };
+}
+
+export interface ProductProductServiceItem extends Schema.Component {
+  collectionName: 'components_product_product_service_items';
+  info: {
+    displayName: 'Product Service Item';
+  };
+  attributes: {
+    prefix: Attribute.String;
+    header: Attribute.String;
+    description: Attribute.Text;
+    image: Attribute.Media;
+    redirect_url: Attribute.String;
+  };
+}
+
+export interface ProductProductSubheaderContent extends Schema.Component {
+  collectionName: 'components_product_product_subheader_contents';
+  info: {
+    displayName: 'Product Subheader Content';
+  };
+  attributes: {
+    subheader: Attribute.String;
+    list_prefix: Attribute.String;
+    list_items: Attribute.Component<
+      'product.product-subheader-list-item',
+      true
+    >;
+    image: Attribute.Media;
+  };
+}
+
+export interface ProductProductSubheaderListItem extends Schema.Component {
+  collectionName: 'components_product_product_subheader_list_items';
+  info: {
+    displayName: 'Product Subheader List Item';
+  };
+  attributes: {
+    header: Attribute.String;
+    redirect_url: Attribute.String;
+  };
+}
+
 export interface SharedMedia extends Schema.Component {
   collectionName: 'components_shared_media';
   info: {
@@ -133,6 +187,10 @@ declare module '@strapi/types' {
   export module Shared {
     export interface Components {
       'home.product-description': HomeProductDescription;
+      'product.product-service-content': ProductProductServiceContent;
+      'product.product-service-item': ProductProductServiceItem;
+      'product.product-subheader-content': ProductProductSubheaderContent;
+      'product.product-subheader-list-item': ProductProductSubheaderListItem;
       'shared.media': SharedMedia;
       'shared.product-benefits': SharedProductBenefits;
       'shared.product-next-step': SharedProductNextStep;
