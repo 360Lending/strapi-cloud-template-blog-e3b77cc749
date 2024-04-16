@@ -1064,6 +1064,41 @@ export interface ApiProductPageProductPage extends Schema.CollectionType {
   };
 }
 
+export interface ApiReviewReview extends Schema.CollectionType {
+  collectionName: 'reviews';
+  info: {
+    singularName: 'review';
+    pluralName: 'reviews';
+    displayName: 'Review';
+    description: '';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    header: Attribute.String;
+    description: Attribute.String;
+    badges: Attribute.Media;
+    review_id: Attribute.UID;
+    iframe: Attribute.Component<'review.iframe'>;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::review.review',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::review.review',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
 declare module '@strapi/types' {
   export module Shared {
     export interface ContentTypes {
@@ -1090,6 +1125,7 @@ declare module '@strapi/types' {
       'api::mqls-page.mqls-page': ApiMqlsPageMqlsPage;
       'api::product.product': ApiProductProduct;
       'api::product-page.product-page': ApiProductPageProductPage;
+      'api::review.review': ApiReviewReview;
     }
   }
 }

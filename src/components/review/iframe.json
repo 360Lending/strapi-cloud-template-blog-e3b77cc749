@@ -1,0 +1,15 @@
+{
+  "collectionName": "components_review_iframes",
+  "info": {
+    "displayName": "Iframe"
+  },
+  "options": {},
+  "attributes": {
+    "src": {
+      "type": "string"
+    },
+    "title": {
+      "type": "string"
+    }
+  }
+}
