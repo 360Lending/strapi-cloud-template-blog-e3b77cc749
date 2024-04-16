@@ -800,7 +800,6 @@ export interface ApiAboutAbout extends Schema.SingleType {
       ['shared.media', 'shared.quote', 'shared.rich-text', 'shared.slider']
     >;
     description: Attribute.Blocks;
-    review_id: Attribute.UID;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     createdBy: Attribute.Relation<
@@ -1081,6 +1080,7 @@ export interface ApiReviewReview extends Schema.CollectionType {
     description: Attribute.String;
     badges: Attribute.Media;
     review_id: Attribute.UID;
+    iframe: Attribute.Component<'review.iframe'>;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
