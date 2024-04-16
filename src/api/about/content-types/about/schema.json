@@ -26,6 +26,9 @@
     },
     "description": {
       "type": "blocks"
+    },
+    "review_id": {
+      "type": "uid"
     }
   }
 }
