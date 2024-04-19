@@ -5,6 +5,12 @@
   },
   "options": {},
   "attributes": {
+    "summary_list_items": {
+      "type": "component",
+      "displayName": "Product Calculator Summary List Items",
+      "repeatable": true,
+      "component": "product.product-calculator-summary-list-item"
+    },
     "header": {
       "type": "string"
     },
@@ -19,7 +25,7 @@
     },
     "subheader_2_list_items": {
       "type": "component",
-      "displayName": "Product Subheader 2 List Items",
+      "displayName": "Product Calculator Subheader 2 List Items",
       "repeatable": true,
       "component": "product.product-calculator-subheader-2-list-item"
     },
@@ -28,6 +34,16 @@
     },
     "subheader_3_description": {
       "type": "text"
+    },
+    "image": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": false
     }
   }   
 }

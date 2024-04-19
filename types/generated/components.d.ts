@@ -19,6 +19,10 @@ export interface ProductProductCalculatorContent extends Schema.Component {
     displayName: 'Product Calculator Content';
   };
   attributes: {
+    summary_list_items: Attribute.Component<
+      'product.product-calculator-summary-list-item',
+      true
+    >;
     header: Attribute.String;
     description: Attribute.String;
     subheader_1: Attribute.String;
@@ -29,6 +33,7 @@ export interface ProductProductCalculatorContent extends Schema.Component {
     >;
     subheader_3: Attribute.String;
     subheader_3_description: Attribute.Text;
+    image: Attribute.Media;
   };
 }
 
@@ -36,11 +41,25 @@ export interface ProductProductCalculatorSubheader2ListItem
   extends Schema.Component {
   collectionName: 'components_product_product_calculator_subheader_2_list_items';
   info: {
-    displayName: 'Product Subheader 2 List Items';
+    displayName: 'Product Calculator Subheader 2 List Items';
   };
   attributes: {
     item: Attribute.String;
-    description: Attribute.Text;
+    sentence_segment_1: Attribute.String;
+    sentence_segment_2: Attribute.String;
+    sentence_segment_3: Attribute.String;
+  };
+}
+
+export interface ProductProductCalculatorSummaryListItem
+  extends Schema.Component {
+  collectionName: 'components_product_product_calculator_summary_list_items';
+  info: {
+    displayName: 'Product Calculator Summary List Items';
+  };
+  attributes: {
+    sentence_segment_1: Attribute.String;
+    sentence_segment_2: Attribute.String;
   };
 }
 
@@ -231,6 +250,7 @@ declare module '@strapi/types' {
       'home.product-description': HomeProductDescription;
       'product.product-calculator-content': ProductProductCalculatorContent;
       'product.product-calculator-subheader-2-list-item': ProductProductCalculatorSubheader2ListItem;
+      'product.product-calculator-summary-list-item': ProductProductCalculatorSummaryListItem;
       'product.product-service-content': ProductProductServiceContent;
       'product.product-service-item': ProductProductServiceItem;
       'product.product-subheader-content': ProductProductSubheaderContent;
