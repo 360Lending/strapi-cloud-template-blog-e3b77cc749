@@ -13,6 +13,37 @@ export interface HomeProductDescription extends Schema.Component {
   };
 }
 
+export interface ProductProductCalculatorContent extends Schema.Component {
+  collectionName: 'components_product_product_calculator_content';
+  info: {
+    displayName: 'Product Calculator Content';
+  };
+  attributes: {
+    header: Attribute.String;
+    description: Attribute.String;
+    subheader_1: Attribute.String;
+    subheader_2: Attribute.String;
+    subheader_2_list_items: Attribute.Component<
+      'product.product-calculator-subheader-2-list-item',
+      true
+    >;
+    subheader_3: Attribute.String;
+    subheader_3_description: Attribute.Text;
+  };
+}
+
+export interface ProductProductCalculatorSubheader2ListItem
+  extends Schema.Component {
+  collectionName: 'components_product_product_calculator_subheader_2_list_items';
+  info: {
+    displayName: 'Product Subheader 2 List Items';
+  };
+  attributes: {
+    item: Attribute.String;
+    description: Attribute.Text;
+  };
+}
+
 export interface ProductProductServiceContent extends Schema.Component {
   collectionName: 'components_product_product_service_contents';
   info: {
@@ -198,6 +229,8 @@ declare module '@strapi/types' {
   export module Shared {
     export interface Components {
       'home.product-description': HomeProductDescription;
+      'product.product-calculator-content': ProductProductCalculatorContent;
+      'product.product-calculator-subheader-2-list-item': ProductProductCalculatorSubheader2ListItem;
       'product.product-service-content': ProductProductServiceContent;
       'product.product-service-item': ProductProductServiceItem;
       'product.product-subheader-content': ProductProductSubheaderContent;
