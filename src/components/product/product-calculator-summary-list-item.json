@@ -1,0 +1,15 @@
+{
+  "collectionName": "components_product_product_calculator_summary_list_items",
+  "info": {
+    "displayName": "Product Calculator Summary List Items"
+  },
+  "options": {},
+  "attributes": {
+    "sentence_segment_1": {
+      "type": "string"
+    },
+    "sentence_segment_2": {
+      "type": "string"
+    }
+  }
+}
