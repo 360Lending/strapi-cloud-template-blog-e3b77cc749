@@ -12,17 +12,20 @@
   },
   "pluginOptions": {},
   "attributes": {
-    "question_0": {
+    "instruction": {
       "type": "string"
     },
-    "question_1": {
-      "type": "string"
+    "text_fields": {
+      "displayName": "Calculator Text Fields",
+      "type": "component",
+      "repeatable": true,
+      "component": "calculator.calculator-text-field"
     },
-    "helper_text": {
-      "type": "string"
-    },
-    "note": {
-      "type": "text"
+    "total_labels": {
+      "displayName": "Calculator Total Labels",
+      "type": "component",
+      "repeatable": true,
+      "component": "calculator.calculator-total-label"
     },
     "calculator": {
       "type": "uid"

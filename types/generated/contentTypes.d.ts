@@ -864,10 +864,12 @@ export interface ApiCalculatorCalculator extends Schema.CollectionType {
     draftAndPublish: true;
   };
   attributes: {
-    question_0: Attribute.String;
-    question_1: Attribute.String;
-    helper_text: Attribute.String;
-    note: Attribute.Text;
+    instruction: Attribute.String;
+    text_fields: Attribute.Component<'calculator.calculator-text-field', true>;
+    total_labels: Attribute.Component<
+      'calculator.calculator-total-label',
+      true
+    >;
     calculator: Attribute.UID;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;

@@ -1,0 +1,18 @@
+{
+  "collectionName": "components_calculator_calculator_text_field",
+  "info": {
+    "displayName": "Calculator Text Field"
+  },
+  "options": {},
+  "attributes": {
+    "label": {
+      "type": "string"
+    },
+    "more_information": {
+      "type": "text"
+    },
+    "operator": {
+      "type": "string"
+    }
+  }
+}

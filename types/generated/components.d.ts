@@ -1,5 +1,29 @@
 import type { Schema, Attribute } from '@strapi/strapi';
 
+export interface CalculatorCalculatorTextField extends Schema.Component {
+  collectionName: 'components_calculator_calculator_text_field';
+  info: {
+    displayName: 'Calculator Text Field';
+  };
+  attributes: {
+    label: Attribute.String;
+    more_information: Attribute.Text;
+    operator: Attribute.String;
+  };
+}
+
+export interface CalculatorCalculatorTotalLabel extends Schema.Component {
+  collectionName: 'components_calculator_calculator_total_label';
+  info: {
+    displayName: 'Calculator Total Label';
+  };
+  attributes: {
+    label: Attribute.String;
+    more_information: Attribute.Text;
+    operator: Attribute.String;
+  };
+}
+
 export interface HomeProductDescription extends Schema.Component {
   collectionName: 'components_products_product_descriptions';
   info: {
@@ -247,6 +271,8 @@ export interface SharedText extends Schema.Component {
 declare module '@strapi/types' {
   export module Shared {
     export interface Components {
+      'calculator.calculator-text-field': CalculatorCalculatorTextField;
+      'calculator.calculator-total-label': CalculatorCalculatorTotalLabel;
       'home.product-description': HomeProductDescription;
       'product.product-calculator-content': ProductProductCalculatorContent;
       'product.product-calculator-subheader-2-list-item': ProductProductCalculatorSubheader2ListItem;

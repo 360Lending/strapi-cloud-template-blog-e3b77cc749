@@ -1,0 +1,18 @@
+{
+  "collectionName": "components_calculator_calculator_total_label",
+  "info": {
+    "displayName": "Calculator Total Label"
+  },
+  "options": {},
+  "attributes": {
+    "label": {
+      "type": "string"
+    },
+    "more_information": {
+      "type": "text"
+    },
+    "operator": {
+      "type": "string"
+    }
+  }
+}
