@@ -1046,6 +1046,8 @@ export interface ApiProductPageProductPage extends Schema.CollectionType {
     product_content: Attribute.Component<'shared.product-question'>;
     product_subheader_content: Attribute.Component<'product.product-subheader-content'>;
     product_service_content: Attribute.Component<'product.product-service-content'>;
+    product_calculator_content: Attribute.Component<'product.product-calculator-content'> &
+      Attribute.Required;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;

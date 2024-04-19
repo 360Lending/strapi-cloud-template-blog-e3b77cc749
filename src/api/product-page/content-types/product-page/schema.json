@@ -66,6 +66,12 @@
       "type": "component",
       "repeatable": false,
       "component": "product.product-service-content"
+    },
+    "product_calculator_content": {
+      "displayName": "Product Calculator Content",
+      "type": "component",
+      "repeatable": false,
+      "component": "product.product-calculator-content"
     }
   }
 }

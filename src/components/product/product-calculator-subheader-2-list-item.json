@@ -1,0 +1,15 @@
+{
+  "collectionName": "components_product_product_calculator_subheader_2_list_items",
+  "info": {
+    "displayName": "Product Subheader 2 List Items"
+  },
+  "options": {},
+  "attributes": {
+    "item": {
+      "type": "string"
+    },
+    "description": {
+      "type": "text"
+    }
+  }
+}
