@@ -13,19 +13,34 @@
   "pluginOptions": {},
   "attributes": {
     "title": {
-      "type": "string"
+      "type": "string",
+      "required": true
     },
     "author": {
-      "type": "string"
+      "type": "string",
+      "required": true
     },
     "body": {
-      "type": "blocks"
+      "type": "blocks",
+      "required": true
     },
-    "blog_post": {
-      "type": "uid"
+    "slug": {
+      "type": "uid",
+      "required": true,
+      "targetField": "title"
     },
-    "test_blog": {
-      "type": "richtext"
+    "hero_image": {
+      "type": "media",
+      "multiple": false,
+      "required": true,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "tags": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::tag.tag"
     }
   }
 }
