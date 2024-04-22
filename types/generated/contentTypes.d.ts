@@ -870,6 +870,7 @@ export interface ApiCalculatorCalculator extends Schema.CollectionType {
       'calculator.calculator-total-label',
       true
     >;
+    variables: Attribute.Component<'calculator.calculator-variables', true>;
     calculator: Attribute.UID;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;

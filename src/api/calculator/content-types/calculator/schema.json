@@ -27,6 +27,12 @@
       "repeatable": true,
       "component": "calculator.calculator-total-label"
     },
+    "variables": {
+      "displayName": "Calculator Variables",
+      "type": "component",
+      "repeatable": true,
+      "component": "calculator.calculator-variables"
+    },
     "calculator": {
       "type": "uid"
     }
