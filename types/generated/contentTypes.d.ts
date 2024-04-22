@@ -829,11 +829,17 @@ export interface ApiBlogPostBlogPost extends Schema.CollectionType {
     draftAndPublish: true;
   };
   attributes: {
-    title: Attribute.String;
-    author: Attribute.String;
-    body: Attribute.Blocks;
-    blog_post: Attribute.UID;
-    test_blog: Attribute.RichText;
+    title: Attribute.String & Attribute.Required;
+    author: Attribute.String & Attribute.Required;
+    body: Attribute.Blocks & Attribute.Required;
+    slug: Attribute.UID<'api::blog-post.blog-post', 'title'> &
+      Attribute.Required;
+    hero_image: Attribute.Media & Attribute.Required;
+    tags: Attribute.Relation<
+      'api::blog-post.blog-post',
+      'oneToMany',
+      'api::tag.tag'
+    >;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
@@ -1103,6 +1109,29 @@ export interface ApiReviewReview extends Schema.CollectionType {
   };
 }
 
+export interface ApiTagTag extends Schema.CollectionType {
+  collectionName: 'tags';
+  info: {
+    singularName: 'tag';
+    pluralName: 'tags';
+    displayName: 'Tag';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    name: Attribute.String & Attribute.Required & Attribute.Unique;
+    type: Attribute.Enumeration<['blog_posts']> & Attribute.Required;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<'api::tag.tag', 'oneToOne', 'admin::user'> &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<'api::tag.tag', 'oneToOne', 'admin::user'> &
+      Attribute.Private;
+  };
+}
+
 declare module '@strapi/types' {
   export module Shared {
     export interface ContentTypes {
@@ -1130,6 +1159,7 @@ declare module '@strapi/types' {
       'api::product.product': ApiProductProduct;
       'api::product-page.product-page': ApiProductPageProductPage;
       'api::review.review': ApiReviewReview;
+      'api::tag.tag': ApiTagTag;
     }
   }
 }
