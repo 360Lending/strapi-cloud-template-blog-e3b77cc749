@@ -24,6 +24,17 @@ export interface CalculatorCalculatorTotalLabel extends Schema.Component {
   };
 }
 
+export interface CalculatorCalculatorVariables extends Schema.Component {
+  collectionName: 'components_calculator_calculator_variables';
+  info: {
+    displayName: 'Calculator variables';
+  };
+  attributes: {
+    name: Attribute.String;
+    value: Attribute.String;
+  };
+}
+
 export interface HomeProductDescription extends Schema.Component {
   collectionName: 'components_products_product_descriptions';
   info: {
@@ -273,6 +284,7 @@ declare module '@strapi/types' {
     export interface Components {
       'calculator.calculator-text-field': CalculatorCalculatorTextField;
       'calculator.calculator-total-label': CalculatorCalculatorTotalLabel;
+      'calculator.calculator-variables': CalculatorCalculatorVariables;
       'home.product-description': HomeProductDescription;
       'product.product-calculator-content': ProductProductCalculatorContent;
       'product.product-calculator-subheader-2-list-item': ProductProductCalculatorSubheader2ListItem;
