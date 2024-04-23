@@ -15,7 +15,7 @@
       "type": "string"
     },
     "description": {
-      "type": "string"
+      "type": "richtext"
     },
     "subheader_1": {
       "type": "string"
