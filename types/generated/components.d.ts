@@ -30,7 +30,7 @@ export interface CalculatorCalculatorVariables extends Schema.Component {
     displayName: 'Calculator variables';
   };
   attributes: {
-    name: Attribute.String;
+    name: Attribute.UID;
     value: Attribute.String;
   };
 }
@@ -59,7 +59,7 @@ export interface ProductProductCalculatorContent extends Schema.Component {
       true
     >;
     header: Attribute.String;
-    description: Attribute.String;
+    description: Attribute.RichText;
     subheader_1: Attribute.String;
     subheader_2: Attribute.String;
     subheader_2_list_items: Attribute.Component<
