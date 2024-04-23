@@ -41,6 +41,10 @@
       "type": "relation",
       "relation": "oneToMany",
       "target": "api::tag.tag"
+    },
+    "isFeatureArticle": {
+      "type": "boolean",
+      "default": false
     }
   }
 }

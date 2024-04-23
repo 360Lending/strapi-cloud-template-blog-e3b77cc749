@@ -840,6 +840,7 @@ export interface ApiBlogPostBlogPost extends Schema.CollectionType {
       'oneToMany',
       'api::tag.tag'
     >;
+    isFeatureArticle: Attribute.Boolean & Attribute.DefaultTo<false>;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
