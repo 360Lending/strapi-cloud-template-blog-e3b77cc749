@@ -52,6 +52,7 @@ export interface ProductProductCalculatorContent extends Schema.Component {
   collectionName: 'components_product_product_calculator_content';
   info: {
     displayName: 'Product Calculator Content';
+    description: '';
   };
   attributes: {
     summary_list_items: Attribute.Component<
