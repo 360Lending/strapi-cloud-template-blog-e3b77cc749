@@ -1,7 +1,8 @@
 {
   "collectionName": "components_product_product_calculator_content",
   "info": {
-    "displayName": "Product Calculator Content"
+    "displayName": "Product Calculator Content",
+    "description": ""
   },
   "options": {},
   "attributes": {
