@@ -1,0 +1,12 @@
+{
+  "collectionName": "components_calculator_selections",
+  "info": {
+    "displayName": "selections"
+  },
+  "options": {},
+  "attributes": {
+    "selection": {
+      "type": "string"
+    }
+  }
+}
