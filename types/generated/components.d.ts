@@ -48,6 +48,30 @@ export interface HomeProductDescription extends Schema.Component {
   };
 }
 
+export interface ProductProductCalculatorContent extends Schema.Component {
+  collectionName: 'components_product_product_calculator_contents';
+  info: {
+    displayName: 'product_calculator_content';
+  };
+  attributes: {
+    summary_list_items: Attribute.Component<
+      'product.product-calculator-summary-list-item',
+      true
+    >;
+    header: Attribute.String;
+    subheader_1: Attribute.String;
+    subheader_2: Attribute.String;
+    subheader_2_list_items: Attribute.Component<
+      'product.product-calculator-subheader-2-list-item',
+      true
+    >;
+    subheader_3: Attribute.String;
+    subheader_3_description: Attribute.Text;
+    image: Attribute.Media;
+    description: Attribute.Blocks;
+  };
+}
+
 export interface ProductProductCalculatorSubheader2ListItem
   extends Schema.Component {
   collectionName: 'components_product_product_calculator_subheader_2_list_items';
@@ -262,6 +286,7 @@ declare module '@strapi/types' {
       'calculator.calculator-total-label': CalculatorCalculatorTotalLabel;
       'calculator.calculator-variables': CalculatorCalculatorVariables;
       'home.product-description': HomeProductDescription;
+      'product.product-calculator-content': ProductProductCalculatorContent;
       'product.product-calculator-subheader-2-list-item': ProductProductCalculatorSubheader2ListItem;
       'product.product-calculator-summary-list-item': ProductProductCalculatorSummaryListItem;
       'product.product-service-content': ProductProductServiceContent;
