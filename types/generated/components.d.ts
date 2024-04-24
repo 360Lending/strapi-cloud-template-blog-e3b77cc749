@@ -40,11 +40,12 @@ export interface CalculatorSelectionFields extends Schema.Component {
   collectionName: 'components_calculator_selection_fields';
   info: {
     displayName: 'selection_fields';
+    description: '';
   };
   attributes: {
     label: Attribute.String;
     more_information: Attribute.Text;
-    selections: Attribute.Component<'calculator.selections', true>;
+    selections: Attribute.Text;
   };
 }
 
