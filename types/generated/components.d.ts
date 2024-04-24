@@ -4,11 +4,13 @@ export interface CalculatorCalculatorTextField extends Schema.Component {
   collectionName: 'components_calculator_calculator_text_field';
   info: {
     displayName: 'Calculator Text Field';
+    description: '';
   };
   attributes: {
     label: Attribute.String;
     more_information: Attribute.Text;
     operator: Attribute.String;
+    initial_state: Attribute.String;
   };
 }
 
@@ -46,6 +48,7 @@ export interface CalculatorSelectionFields extends Schema.Component {
     label: Attribute.String;
     more_information: Attribute.Text;
     selections: Attribute.Text;
+    initial_state: Attribute.String;
   };
 }
 
