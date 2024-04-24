@@ -1,0 +1,47 @@
+{
+  "collectionName": "components_product_product_calculator_contents",
+  "info": {
+    "displayName": "product_calculator_content"
+  },
+  "options": {},
+  "attributes": {
+    "summary_list_items": {
+      "type": "component",
+      "repeatable": true,
+      "component": "product.product-calculator-summary-list-item"
+    },
+    "header": {
+      "type": "string"
+    },
+    "subheader_1": {
+      "type": "string"
+    },
+    "subheader_2": {
+      "type": "string"
+    },
+    "subheader_2_list_items": {
+      "type": "component",
+      "repeatable": true,
+      "component": "product.product-calculator-subheader-2-list-item"
+    },
+    "subheader_3": {
+      "type": "string"
+    },
+    "subheader_3_description": {
+      "type": "text"
+    },
+    "image": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": false
+    },
+    "description": {
+      "type": "blocks"
+    }
+  }
+}
