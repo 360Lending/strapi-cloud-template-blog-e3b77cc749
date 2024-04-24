@@ -1,14 +1,15 @@
 {
   "collectionName": "components_calculator_calculator_variables",
   "info": {
-    "displayName": "Calculator variables"
+    "displayName": "Calculator variables",
+    "description": ""
   },
   "options": {},
   "attributes": {
-    "name": {
-      "type": "uid"
-    },
     "value": {
+      "type": "string"
+    },
+    "name": {
       "type": "string"
     }
   }

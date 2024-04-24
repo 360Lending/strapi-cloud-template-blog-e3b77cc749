@@ -35,6 +35,12 @@
     },
     "calculator": {
       "type": "uid"
+    },
+    "selection_fields": {
+      "displayName": "selection_fields",
+      "type": "component",
+      "repeatable": true,
+      "component": "calculator.selection-fields"
     }
   }
 }

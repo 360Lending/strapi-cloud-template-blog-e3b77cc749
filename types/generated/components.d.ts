@@ -28,10 +28,33 @@ export interface CalculatorCalculatorVariables extends Schema.Component {
   collectionName: 'components_calculator_calculator_variables';
   info: {
     displayName: 'Calculator variables';
+    description: '';
   };
   attributes: {
-    name: Attribute.UID;
     value: Attribute.String;
+    name: Attribute.String;
+  };
+}
+
+export interface CalculatorSelectionFields extends Schema.Component {
+  collectionName: 'components_calculator_selection_fields';
+  info: {
+    displayName: 'selection_fields';
+  };
+  attributes: {
+    label: Attribute.String;
+    more_information: Attribute.Text;
+    selections: Attribute.Component<'calculator.selections', true>;
+  };
+}
+
+export interface CalculatorSelections extends Schema.Component {
+  collectionName: 'components_calculator_selections';
+  info: {
+    displayName: 'selections';
+  };
+  attributes: {
+    selection: Attribute.String;
   };
 }
 
@@ -285,6 +308,8 @@ declare module '@strapi/types' {
       'calculator.calculator-text-field': CalculatorCalculatorTextField;
       'calculator.calculator-total-label': CalculatorCalculatorTotalLabel;
       'calculator.calculator-variables': CalculatorCalculatorVariables;
+      'calculator.selection-fields': CalculatorSelectionFields;
+      'calculator.selections': CalculatorSelections;
       'home.product-description': HomeProductDescription;
       'product.product-calculator-content': ProductProductCalculatorContent;
       'product.product-calculator-subheader-2-list-item': ProductProductCalculatorSubheader2ListItem;

@@ -1,0 +1,21 @@
+{
+  "collectionName": "components_calculator_selection_fields",
+  "info": {
+    "displayName": "selection_fields"
+  },
+  "options": {},
+  "attributes": {
+    "label": {
+      "type": "string"
+    },
+    "more_information": {
+      "type": "text"
+    },
+    "selections": {
+      "displayName": "selections",
+      "type": "component",
+      "repeatable": true,
+      "component": "calculator.selections"
+    }
+  }
+}
