@@ -10,7 +10,6 @@ export interface CalculatorCalculatorTextField extends Schema.Component {
     label: Attribute.String;
     more_information: Attribute.Text;
     operator: Attribute.String;
-    initial_state: Attribute.String;
   };
 }
 
@@ -48,7 +47,6 @@ export interface CalculatorSelectionFields extends Schema.Component {
     label: Attribute.String;
     more_information: Attribute.Text;
     selections: Attribute.Text;
-    initial_state: Attribute.String;
   };
 }
 
@@ -75,10 +73,22 @@ export interface HomeProductDescription extends Schema.Component {
   };
 }
 
+export interface ProductInitialStates extends Schema.Component {
+  collectionName: 'components_product_initial_states';
+  info: {
+    displayName: 'initial_states';
+  };
+  attributes: {
+    name: Attribute.String;
+    value: Attribute.String;
+  };
+}
+
 export interface ProductProductCalculatorContent extends Schema.Component {
   collectionName: 'components_product_product_calculator_contents';
   info: {
     displayName: 'product_calculator_content';
+    description: '';
   };
   attributes: {
     summary_list_items: Attribute.Component<
@@ -96,6 +106,7 @@ export interface ProductProductCalculatorContent extends Schema.Component {
     subheader_3_description: Attribute.Text;
     image: Attribute.Media;
     description: Attribute.Blocks;
+    initial_states: Attribute.Component<'product.initial-states', true>;
   };
 }
 
@@ -315,6 +326,7 @@ declare module '@strapi/types' {
       'calculator.selection-fields': CalculatorSelectionFields;
       'calculator.selections': CalculatorSelections;
       'home.product-description': HomeProductDescription;
+      'product.initial-states': ProductInitialStates;
       'product.product-calculator-content': ProductProductCalculatorContent;
       'product.product-calculator-subheader-2-list-item': ProductProductCalculatorSubheader2ListItem;
       'product.product-calculator-summary-list-item': ProductProductCalculatorSummaryListItem;

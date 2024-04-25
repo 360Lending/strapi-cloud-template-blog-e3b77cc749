@@ -14,9 +14,6 @@
     },
     "selections": {
       "type": "text"
-    },
-    "initial_state": {
-      "type": "string"
     }
   }
 }
