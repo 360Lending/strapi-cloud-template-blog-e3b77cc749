@@ -1,0 +1,15 @@
+{
+  "collectionName": "components_product_initial_states",
+  "info": {
+    "displayName": "initial_states"
+  },
+  "options": {},
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "value": {
+      "type": "string"
+    }
+  }
+}
