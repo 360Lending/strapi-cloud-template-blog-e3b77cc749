@@ -45,6 +45,9 @@
     "isFeatureArticle": {
       "type": "boolean",
       "default": false
+    },
+    "description": {
+      "type": "text"
     }
   }
 }

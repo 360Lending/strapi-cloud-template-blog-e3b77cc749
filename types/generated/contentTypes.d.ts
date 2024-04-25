@@ -841,6 +841,7 @@ export interface ApiBlogPostBlogPost extends Schema.CollectionType {
       'api::tag.tag'
     >;
     isFeatureArticle: Attribute.Boolean & Attribute.DefaultTo<false>;
+    description: Attribute.Text;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
