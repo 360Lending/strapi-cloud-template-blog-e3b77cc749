@@ -190,6 +190,17 @@ export interface ProductProductSubheaderListItem extends Schema.Component {
   };
 }
 
+export interface RatesMortgageOptionListItems extends Schema.Component {
+  collectionName: 'components_rates_mortgage_option_list_items';
+  info: {
+    displayName: 'mortgage_option_list_items';
+  };
+  attributes: {
+    item: Attribute.String;
+    description: Attribute.Text;
+  };
+}
+
 export interface RatesRates extends Schema.Component {
   collectionName: 'components_rates_rates';
   info: {
@@ -355,6 +366,7 @@ declare module '@strapi/types' {
       'product.product-service-item': ProductProductServiceItem;
       'product.product-subheader-content': ProductProductSubheaderContent;
       'product.product-subheader-list-item': ProductProductSubheaderListItem;
+      'rates.mortgage-option-list-items': RatesMortgageOptionListItems;
       'rates.rates': RatesRates;
       'review.iframe': ReviewIframe;
       'shared.media': SharedMedia;

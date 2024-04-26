@@ -1082,6 +1082,7 @@ export interface ApiRatesPageRatesPage extends Schema.CollectionType {
     singularName: 'rates-page';
     pluralName: 'rates-pages';
     displayName: 'Rates Page';
+    description: '';
   };
   options: {
     draftAndPublish: true;
@@ -1092,6 +1093,10 @@ export interface ApiRatesPageRatesPage extends Schema.CollectionType {
     rates: Attribute.Component<'rates.rates', true>;
     subheader_1: Attribute.String;
     subheader_1_description: Attribute.Text;
+    mortgage_option_list_items: Attribute.Component<
+      'rates.mortgage-option-list-items',
+      true
+    >;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
