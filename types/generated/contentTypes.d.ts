@@ -1076,6 +1076,40 @@ export interface ApiProductPageProductPage extends Schema.CollectionType {
   };
 }
 
+export interface ApiRatesPageRatesPage extends Schema.CollectionType {
+  collectionName: 'rates_pages';
+  info: {
+    singularName: 'rates-page';
+    pluralName: 'rates-pages';
+    displayName: 'Rates Page';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    header: Attribute.String;
+    description: Attribute.Text;
+    rates: Attribute.Component<'rates.rates', true>;
+    subheader_1: Attribute.String;
+    subheader_1_description: Attribute.Text;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::rates-page.rates-page',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::rates-page.rates-page',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
 export interface ApiReviewReview extends Schema.CollectionType {
   collectionName: 'reviews';
   info: {
@@ -1160,6 +1194,7 @@ declare module '@strapi/types' {
       'api::mqls-page.mqls-page': ApiMqlsPageMqlsPage;
       'api::product.product': ApiProductProduct;
       'api::product-page.product-page': ApiProductPageProductPage;
+      'api::rates-page.rates-page': ApiRatesPageRatesPage;
       'api::review.review': ApiReviewReview;
       'api::tag.tag': ApiTagTag;
     }
