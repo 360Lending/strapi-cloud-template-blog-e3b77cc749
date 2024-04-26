@@ -194,10 +194,19 @@ export interface RatesMortgageOptionListItems extends Schema.Component {
   collectionName: 'components_rates_mortgage_option_list_items';
   info: {
     displayName: 'mortgage_option_list_items';
+    description: '';
   };
   attributes: {
     item: Attribute.String;
     description: Attribute.Text;
+    type: Attribute.Enumeration<
+      [
+        'Refinance (Prime)',
+        'Refinance (Subprime)',
+        'Purchase (Insured)',
+        'Purchase (Uninsured)'
+      ]
+    >;
   };
 }
 

@@ -1,7 +1,8 @@
 {
   "collectionName": "components_rates_mortgage_option_list_items",
   "info": {
-    "displayName": "mortgage_option_list_items"
+    "displayName": "mortgage_option_list_items",
+    "description": ""
   },
   "options": {},
   "attributes": {
@@ -10,6 +11,15 @@
     },
     "description": {
       "type": "text"
+    },
+    "type": {
+      "type": "enumeration",
+      "enum": [
+        "Refinance (Prime)",
+        "Refinance (Subprime)",
+        "Purchase (Insured)",
+        "Purchase (Uninsured)"
+      ]
     }
   }
 }
