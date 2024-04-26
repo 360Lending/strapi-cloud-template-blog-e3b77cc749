@@ -4,7 +4,8 @@
   "info": {
     "singularName": "rates-page",
     "pluralName": "rates-pages",
-    "displayName": "Rates Page"
+    "displayName": "Rates Page",
+    "description": ""
   },
   "options": {
     "draftAndPublish": true
@@ -28,6 +29,12 @@
     },
     "subheader_1_description": {
       "type": "text"
+    },
+    "mortgage_option_list_items": {
+      "displayName": "mortgage_option_list_items",
+      "type": "component",
+      "repeatable": true,
+      "component": "rates.mortgage-option-list-items"
     }
   }
 }
