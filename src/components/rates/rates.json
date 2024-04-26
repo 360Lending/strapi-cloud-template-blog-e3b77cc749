@@ -1,0 +1,37 @@
+{
+  "collectionName": "components_rates_rates",
+  "info": {
+    "displayName": "rates"
+  },
+  "options": {},
+  "attributes": {
+    "type": {
+      "type": "enumeration",
+      "enum": [
+        "Refinance (Prime)",
+        "Refinance (Subprime)",
+        "Purchase (Insured)",
+        "Purchase (Uninsured)"
+      ]
+    },
+    "rate": {
+      "type": "decimal"
+    },
+    "bank_logo": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": false
+    },
+    "bank_name": {
+      "type": "string"
+    },
+    "term": {
+      "type": "integer"
+    }
+  }
+}

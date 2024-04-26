@@ -190,6 +190,27 @@ export interface ProductProductSubheaderListItem extends Schema.Component {
   };
 }
 
+export interface RatesRates extends Schema.Component {
+  collectionName: 'components_rates_rates';
+  info: {
+    displayName: 'rates';
+  };
+  attributes: {
+    type: Attribute.Enumeration<
+      [
+        'Refinance (Prime)',
+        'Refinance (Subprime)',
+        'Purchase (Insured)',
+        'Purchase (Uninsured)'
+      ]
+    >;
+    rate: Attribute.Decimal;
+    bank_logo: Attribute.Media;
+    bank_name: Attribute.String;
+    term: Attribute.Integer;
+  };
+}
+
 export interface ReviewIframe extends Schema.Component {
   collectionName: 'components_review_iframes';
   info: {
@@ -334,6 +355,7 @@ declare module '@strapi/types' {
       'product.product-service-item': ProductProductServiceItem;
       'product.product-subheader-content': ProductProductSubheaderContent;
       'product.product-subheader-list-item': ProductProductSubheaderListItem;
+      'rates.rates': RatesRates;
       'review.iframe': ReviewIframe;
       'shared.media': SharedMedia;
       'shared.product-benefits': SharedProductBenefits;
