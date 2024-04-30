@@ -1174,6 +1174,50 @@ export interface ApiTagTag extends Schema.CollectionType {
   };
 }
 
+export interface ApiWhyUsPageWhyUsPage extends Schema.CollectionType {
+  collectionName: 'why_us_pages';
+  info: {
+    singularName: 'why-us-page';
+    pluralName: 'why-us-pages';
+    displayName: 'Why Us Page';
+    description: '';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    header_segment_1: Attribute.String;
+    header_segment_2: Attribute.String;
+    description: Attribute.Blocks;
+    reason_list_items: Attribute.Component<'why-us.reason-list-items', true>;
+    media_section_header: Attribute.String;
+    media_section_description: Attribute.Text;
+    media_press_list_items: Attribute.Component<
+      'why-us.media-press-list-items',
+      true
+    >;
+    footer_header: Attribute.String;
+    footer_header_description: Attribute.String;
+    footer_image: Attribute.Media;
+    footer_map: Attribute.Media;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::why-us-page.why-us-page',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::why-us-page.why-us-page',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
 declare module '@strapi/types' {
   export module Shared {
     export interface ContentTypes {
@@ -1203,6 +1247,7 @@ declare module '@strapi/types' {
       'api::rates-page.rates-page': ApiRatesPageRatesPage;
       'api::review.review': ApiReviewReview;
       'api::tag.tag': ApiTagTag;
+      'api::why-us-page.why-us-page': ApiWhyUsPageWhyUsPage;
     }
   }
 }

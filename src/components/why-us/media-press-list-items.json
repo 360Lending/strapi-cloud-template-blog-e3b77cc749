@@ -1,0 +1,28 @@
+{
+  "collectionName": "components_why_us_media_press_list_items",
+  "info": {
+    "displayName": "media_press_list_items"
+  },
+  "options": {},
+  "attributes": {
+    "header": {
+      "type": "string"
+    },
+    "Date": {
+      "type": "date"
+    },
+    "press_logo": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": false
+    },
+    "redirect_url": {
+      "type": "string"
+    }
+  }
+}
