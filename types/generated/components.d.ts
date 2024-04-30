@@ -357,6 +357,31 @@ export interface SharedText extends Schema.Component {
   };
 }
 
+export interface WhyUsMediaPressListItems extends Schema.Component {
+  collectionName: 'components_why_us_media_press_list_items';
+  info: {
+    displayName: 'media_press_list_items';
+  };
+  attributes: {
+    header: Attribute.String;
+    Date: Attribute.Date;
+    press_logo: Attribute.Media;
+    redirect_url: Attribute.String;
+  };
+}
+
+export interface WhyUsReasonListItems extends Schema.Component {
+  collectionName: 'components_why_us_reason_list_items';
+  info: {
+    displayName: 'reason_list_items';
+  };
+  attributes: {
+    item: Attribute.String;
+    value: Attribute.String;
+    image: Attribute.Media;
+  };
+}
+
 declare module '@strapi/types' {
   export module Shared {
     export interface Components {
@@ -386,6 +411,8 @@ declare module '@strapi/types' {
       'shared.seo': SharedSeo;
       'shared.slider': SharedSlider;
       'shared.text': SharedText;
+      'why-us.media-press-list-items': WhyUsMediaPressListItems;
+      'why-us.reason-list-items': WhyUsReasonListItems;
     }
   }
 }

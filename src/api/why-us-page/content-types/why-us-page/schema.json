@@ -1,0 +1,68 @@
+{
+  "kind": "collectionType",
+  "collectionName": "why_us_pages",
+  "info": {
+    "singularName": "why-us-page",
+    "pluralName": "why-us-pages",
+    "displayName": "Why Us Page",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "header_segment_1": {
+      "type": "string"
+    },
+    "header_segment_2": {
+      "type": "string"
+    },
+    "description": {
+      "type": "blocks"
+    },
+    "reason_list_items": {
+      "type": "component",
+      "repeatable": true,
+      "component": "why-us.reason-list-items"
+    },
+    "media_section_header": {
+      "type": "string"
+    },
+    "media_section_description": {
+      "type": "text"
+    },
+    "media_press_list_items": {
+      "displayName": "media_press_list_items",
+      "type": "component",
+      "repeatable": true,
+      "component": "why-us.media-press-list-items"
+    },
+    "footer_header": {
+      "type": "string"
+    },
+    "footer_header_description": {
+      "type": "string"
+    },
+    "footer_image": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": false
+    },
+    "footer_map": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": false
+    }
+  }
+}
