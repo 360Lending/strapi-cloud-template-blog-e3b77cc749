@@ -1,0 +1,19 @@
+{
+  "collectionName": "components_calculator_selection_fields",
+  "info": {
+    "displayName": "selection_fields",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "label": {
+      "type": "string"
+    },
+    "more_information": {
+      "type": "text"
+    },
+    "selections": {
+      "type": "text"
+    }
+  }
+}

@@ -1,5 +1,65 @@
 import type { Schema, Attribute } from '@strapi/strapi';
 
+export interface CalculatorCalculatorTextField extends Schema.Component {
+  collectionName: 'components_calculator_calculator_text_field';
+  info: {
+    displayName: 'Calculator Text Field';
+    description: '';
+  };
+  attributes: {
+    label: Attribute.String;
+    more_information: Attribute.Text;
+    operator: Attribute.String;
+  };
+}
+
+export interface CalculatorCalculatorTotalLabel extends Schema.Component {
+  collectionName: 'components_calculator_calculator_total_label';
+  info: {
+    displayName: 'Calculator Total Label';
+  };
+  attributes: {
+    label: Attribute.String;
+    more_information: Attribute.Text;
+    operator: Attribute.String;
+  };
+}
+
+export interface CalculatorCalculatorVariables extends Schema.Component {
+  collectionName: 'components_calculator_calculator_variables';
+  info: {
+    displayName: 'Calculator variables';
+    description: '';
+  };
+  attributes: {
+    value: Attribute.String;
+    name: Attribute.String;
+  };
+}
+
+export interface CalculatorSelectionFields extends Schema.Component {
+  collectionName: 'components_calculator_selection_fields';
+  info: {
+    displayName: 'selection_fields';
+    description: '';
+  };
+  attributes: {
+    label: Attribute.String;
+    more_information: Attribute.Text;
+    selections: Attribute.Text;
+  };
+}
+
+export interface CalculatorSelections extends Schema.Component {
+  collectionName: 'components_calculator_selections';
+  info: {
+    displayName: 'selections';
+  };
+  attributes: {
+    selection: Attribute.String;
+  };
+}
+
 export interface HomeProductDescription extends Schema.Component {
   collectionName: 'components_products_product_descriptions';
   info: {
@@ -13,14 +73,29 @@ export interface HomeProductDescription extends Schema.Component {
   };
 }
 
-export interface ProductProductCalculatorContent extends Schema.Component {
-  collectionName: 'components_product_product_calculator_content';
+export interface ProductInitialStates extends Schema.Component {
+  collectionName: 'components_product_initial_states';
   info: {
-    displayName: 'Product Calculator Content';
+    displayName: 'initial_states';
   };
   attributes: {
+    name: Attribute.String;
+    value: Attribute.String;
+  };
+}
+
+export interface ProductProductCalculatorContent extends Schema.Component {
+  collectionName: 'components_product_product_calculator_contents';
+  info: {
+    displayName: 'product_calculator_content';
+    description: '';
+  };
+  attributes: {
+    summary_list_items: Attribute.Component<
+      'product.product-calculator-summary-list-item',
+      true
+    >;
     header: Attribute.String;
-    description: Attribute.String;
     subheader_1: Attribute.String;
     subheader_2: Attribute.String;
     subheader_2_list_items: Attribute.Component<
@@ -29,6 +104,9 @@ export interface ProductProductCalculatorContent extends Schema.Component {
     >;
     subheader_3: Attribute.String;
     subheader_3_description: Attribute.Text;
+    image: Attribute.Media;
+    description: Attribute.Blocks;
+    initial_states: Attribute.Component<'product.initial-states', true>;
   };
 }
 
@@ -36,11 +114,24 @@ export interface ProductProductCalculatorSubheader2ListItem
   extends Schema.Component {
   collectionName: 'components_product_product_calculator_subheader_2_list_items';
   info: {
-    displayName: 'Product Subheader 2 List Items';
+    displayName: 'Product Calculator Subheader 2 List Items';
+    description: '';
   };
   attributes: {
     item: Attribute.String;
-    description: Attribute.Text;
+    value: Attribute.Text;
+  };
+}
+
+export interface ProductProductCalculatorSummaryListItem
+  extends Schema.Component {
+  collectionName: 'components_product_product_calculator_summary_list_items';
+  info: {
+    displayName: 'Product Calculator Summary List Items';
+  };
+  attributes: {
+    sentence_segment_1: Attribute.String;
+    sentence_segment_2: Attribute.String;
   };
 }
 
@@ -95,6 +186,47 @@ export interface ProductProductSubheaderListItem extends Schema.Component {
   attributes: {
     header: Attribute.String;
     redirect_url: Attribute.String;
+  };
+}
+
+export interface RatesMortgageOptionListItems extends Schema.Component {
+  collectionName: 'components_rates_mortgage_option_list_items';
+  info: {
+    displayName: 'mortgage_option_list_items';
+    description: '';
+  };
+  attributes: {
+    item: Attribute.String;
+    description: Attribute.Text;
+    type: Attribute.Enumeration<
+      [
+        'Refinance (Prime)',
+        'Refinance (Subprime)',
+        'Purchase (Insured)',
+        'Purchase (Uninsured)'
+      ]
+    >;
+  };
+}
+
+export interface RatesRates extends Schema.Component {
+  collectionName: 'components_rates_rates';
+  info: {
+    displayName: 'rates';
+  };
+  attributes: {
+    type: Attribute.Enumeration<
+      [
+        'Refinance (Prime)',
+        'Refinance (Subprime)',
+        'Purchase (Insured)',
+        'Purchase (Uninsured)'
+      ]
+    >;
+    rate: Attribute.Decimal;
+    bank_logo: Attribute.Media;
+    bank_name: Attribute.String;
+    term: Attribute.Integer;
   };
 }
 
@@ -228,13 +360,22 @@ export interface SharedText extends Schema.Component {
 declare module '@strapi/types' {
   export module Shared {
     export interface Components {
+      'calculator.calculator-text-field': CalculatorCalculatorTextField;
+      'calculator.calculator-total-label': CalculatorCalculatorTotalLabel;
+      'calculator.calculator-variables': CalculatorCalculatorVariables;
+      'calculator.selection-fields': CalculatorSelectionFields;
+      'calculator.selections': CalculatorSelections;
       'home.product-description': HomeProductDescription;
+      'product.initial-states': ProductInitialStates;
       'product.product-calculator-content': ProductProductCalculatorContent;
       'product.product-calculator-subheader-2-list-item': ProductProductCalculatorSubheader2ListItem;
+      'product.product-calculator-summary-list-item': ProductProductCalculatorSummaryListItem;
       'product.product-service-content': ProductProductServiceContent;
       'product.product-service-item': ProductProductServiceItem;
       'product.product-subheader-content': ProductProductSubheaderContent;
       'product.product-subheader-list-item': ProductProductSubheaderListItem;
+      'rates.mortgage-option-list-items': RatesMortgageOptionListItems;
+      'rates.rates': RatesRates;
       'review.iframe': ReviewIframe;
       'shared.media': SharedMedia;
       'shared.product-benefits': SharedProductBenefits;

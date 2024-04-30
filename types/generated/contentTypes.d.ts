@@ -829,11 +829,18 @@ export interface ApiBlogPostBlogPost extends Schema.CollectionType {
     draftAndPublish: true;
   };
   attributes: {
-    title: Attribute.String;
-    author: Attribute.String;
-    body: Attribute.Blocks;
-    blog_post: Attribute.UID;
-    test_blog: Attribute.RichText;
+    title: Attribute.String & Attribute.Required;
+    author: Attribute.String & Attribute.Required;
+    body: Attribute.Blocks & Attribute.Required;
+    slug: Attribute.UID<'api::blog-post.blog-post', 'title'> &
+      Attribute.Required;
+    hero_image: Attribute.Media & Attribute.Required;
+    tags: Attribute.Relation<
+      'api::blog-post.blog-post',
+      'oneToMany',
+      'api::tag.tag'
+    >;
+    isFeatureArticle: Attribute.Boolean & Attribute.DefaultTo<false>;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
@@ -864,11 +871,15 @@ export interface ApiCalculatorCalculator extends Schema.CollectionType {
     draftAndPublish: true;
   };
   attributes: {
-    question_0: Attribute.String;
-    question_1: Attribute.String;
-    helper_text: Attribute.String;
-    note: Attribute.Text;
+    instruction: Attribute.String;
+    text_fields: Attribute.Component<'calculator.calculator-text-field', true>;
+    total_labels: Attribute.Component<
+      'calculator.calculator-total-label',
+      true
+    >;
+    variables: Attribute.Component<'calculator.calculator-variables', true>;
     calculator: Attribute.UID;
+    selection_fields: Attribute.Component<'calculator.selection-fields', true>;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
@@ -1065,6 +1076,45 @@ export interface ApiProductPageProductPage extends Schema.CollectionType {
   };
 }
 
+export interface ApiRatesPageRatesPage extends Schema.CollectionType {
+  collectionName: 'rates_pages';
+  info: {
+    singularName: 'rates-page';
+    pluralName: 'rates-pages';
+    displayName: 'Rates Page';
+    description: '';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    header: Attribute.String;
+    description: Attribute.Text;
+    rates: Attribute.Component<'rates.rates', true>;
+    subheader_1: Attribute.String;
+    subheader_1_description: Attribute.Text;
+    mortgage_option_list_items: Attribute.Component<
+      'rates.mortgage-option-list-items',
+      true
+    >;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::rates-page.rates-page',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::rates-page.rates-page',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
 export interface ApiReviewReview extends Schema.CollectionType {
   collectionName: 'reviews';
   info: {
@@ -1100,6 +1150,29 @@ export interface ApiReviewReview extends Schema.CollectionType {
   };
 }
 
+export interface ApiTagTag extends Schema.CollectionType {
+  collectionName: 'tags';
+  info: {
+    singularName: 'tag';
+    pluralName: 'tags';
+    displayName: 'Tag';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    name: Attribute.String & Attribute.Required & Attribute.Unique;
+    type: Attribute.Enumeration<['blog_posts']> & Attribute.Required;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<'api::tag.tag', 'oneToOne', 'admin::user'> &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<'api::tag.tag', 'oneToOne', 'admin::user'> &
+      Attribute.Private;
+  };
+}
+
 declare module '@strapi/types' {
   export module Shared {
     export interface ContentTypes {
@@ -1126,7 +1199,9 @@ declare module '@strapi/types' {
       'api::mqls-page.mqls-page': ApiMqlsPageMqlsPage;
       'api::product.product': ApiProductProduct;
       'api::product-page.product-page': ApiProductPageProductPage;
+      'api::rates-page.rates-page': ApiRatesPageRatesPage;
       'api::review.review': ApiReviewReview;
+      'api::tag.tag': ApiTagTag;
     }
   }
 }

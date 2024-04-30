@@ -12,20 +12,35 @@
   },
   "pluginOptions": {},
   "attributes": {
-    "question_0": {
+    "instruction": {
       "type": "string"
     },
-    "question_1": {
-      "type": "string"
+    "text_fields": {
+      "displayName": "Calculator Text Fields",
+      "type": "component",
+      "repeatable": true,
+      "component": "calculator.calculator-text-field"
     },
-    "helper_text": {
-      "type": "string"
+    "total_labels": {
+      "displayName": "Calculator Total Labels",
+      "type": "component",
+      "repeatable": true,
+      "component": "calculator.calculator-total-label"
     },
-    "note": {
-      "type": "text"
+    "variables": {
+      "displayName": "Calculator Variables",
+      "type": "component",
+      "repeatable": true,
+      "component": "calculator.calculator-variables"
     },
     "calculator": {
       "type": "uid"
+    },
+    "selection_fields": {
+      "displayName": "selection_fields",
+      "type": "component",
+      "repeatable": true,
+      "component": "calculator.selection-fields"
     }
   }
 }

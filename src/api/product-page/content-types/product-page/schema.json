@@ -68,7 +68,7 @@
       "component": "product.product-service-content"
     },
     "product_calculator_content": {
-      "displayName": "Product Calculator Content",
+      "displayName": "product_calculator_content",
       "type": "component",
       "repeatable": false,
       "component": "product.product-calculator-content"
