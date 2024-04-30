@@ -115,12 +115,11 @@ export interface ProductProductCalculatorSubheader2ListItem
   collectionName: 'components_product_product_calculator_subheader_2_list_items';
   info: {
     displayName: 'Product Calculator Subheader 2 List Items';
+    description: '';
   };
   attributes: {
     item: Attribute.String;
-    sentence_segment_1: Attribute.String;
-    sentence_segment_2: Attribute.String;
-    sentence_segment_3: Attribute.String;
+    value: Attribute.Text;
   };
 }
 

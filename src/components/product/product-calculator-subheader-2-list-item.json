@@ -1,21 +1,16 @@
 {
   "collectionName": "components_product_product_calculator_subheader_2_list_items",
   "info": {
-    "displayName": "Product Calculator Subheader 2 List Items"
+    "displayName": "Product Calculator Subheader 2 List Items",
+    "description": ""
   },
   "options": {},
   "attributes": {
     "item": {
       "type": "string"
     },
-    "sentence_segment_1": {
-      "type": "string"
-    },
-    "sentence_segment_2": {
-      "type": "string"
-    },
-    "sentence_segment_3": {
-      "type": "string"
+    "value": {
+      "type": "text"
     }
   }
 }
