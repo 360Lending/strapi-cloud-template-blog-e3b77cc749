@@ -1,17 +1,20 @@
 {
-  "collectionName": "components_why_us_media_press_list_items",
+  "collectionName": "components_why_us_media_section_list_items",
   "info": {
-    "displayName": "media_press_list_items"
+    "displayName": "media_section_list_items"
   },
   "options": {},
   "attributes": {
     "header": {
       "type": "string"
     },
-    "Date": {
+    "redirect_url": {
+      "type": "string"
+    },
+    "date": {
       "type": "date"
     },
-    "press_logo": {
+    "logo": {
       "allowedTypes": [
         "images",
         "files",
@@ -20,9 +23,6 @@
       ],
       "type": "media",
       "multiple": false
-    },
-    "redirect_url": {
-      "type": "string"
     }
   }
 }
