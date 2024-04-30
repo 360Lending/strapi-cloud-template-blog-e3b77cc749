@@ -357,16 +357,16 @@ export interface SharedText extends Schema.Component {
   };
 }
 
-export interface WhyUsMediaPressListItems extends Schema.Component {
-  collectionName: 'components_why_us_media_press_list_items';
+export interface WhyUsMediaSectionListItems extends Schema.Component {
+  collectionName: 'components_why_us_media_section_list_items';
   info: {
-    displayName: 'media_press_list_items';
+    displayName: 'media_section_list_items';
   };
   attributes: {
     header: Attribute.String;
-    Date: Attribute.Date;
-    press_logo: Attribute.Media;
     redirect_url: Attribute.String;
+    date: Attribute.Date;
+    logo: Attribute.Media;
   };
 }
 
@@ -411,7 +411,7 @@ declare module '@strapi/types' {
       'shared.seo': SharedSeo;
       'shared.slider': SharedSlider;
       'shared.text': SharedText;
-      'why-us.media-press-list-items': WhyUsMediaPressListItems;
+      'why-us.media-section-list-items': WhyUsMediaSectionListItems;
       'why-us.reason-list-items': WhyUsReasonListItems;
     }
   }

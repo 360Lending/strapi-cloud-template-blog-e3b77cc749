@@ -32,16 +32,7 @@
     "media_section_description": {
       "type": "text"
     },
-    "media_press_list_items": {
-      "displayName": "media_press_list_items",
-      "type": "component",
-      "repeatable": true,
-      "component": "why-us.media-press-list-items"
-    },
     "footer_header": {
-      "type": "string"
-    },
-    "footer_header_description": {
       "type": "string"
     },
     "footer_image": {
@@ -68,6 +59,15 @@
     },
     "hero_redirect_url": {
       "type": "string"
+    },
+    "footer_description": {
+      "type": "string"
+    },
+    "media_section_list_items": {
+      "displayName": "media_section_list_items",
+      "type": "component",
+      "repeatable": true,
+      "component": "why-us.media-section-list-items"
     }
   }
 }

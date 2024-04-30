@@ -1191,15 +1191,15 @@ export interface ApiWhyUsPageWhyUsPage extends Schema.CollectionType {
     reason_list_items: Attribute.Component<'why-us.reason-list-items', true>;
     media_section_header: Attribute.String;
     media_section_description: Attribute.Text;
-    media_press_list_items: Attribute.Component<
-      'why-us.media-press-list-items',
-      true
-    >;
     footer_header: Attribute.String;
-    footer_header_description: Attribute.String;
     footer_image: Attribute.Media;
     footer_map: Attribute.Media;
     hero_redirect_url: Attribute.String;
+    footer_description: Attribute.String;
+    media_section_list_items: Attribute.Component<
+      'why-us.media-section-list-items',
+      true
+    >;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
