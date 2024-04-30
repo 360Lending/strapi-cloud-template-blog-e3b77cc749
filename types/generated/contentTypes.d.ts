@@ -1199,6 +1199,7 @@ export interface ApiWhyUsPageWhyUsPage extends Schema.CollectionType {
     footer_header_description: Attribute.String;
     footer_image: Attribute.Media;
     footer_map: Attribute.Media;
+    hero_redirect_url: Attribute.String;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
