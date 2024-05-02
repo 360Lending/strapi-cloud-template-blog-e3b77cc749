@@ -1131,7 +1131,6 @@ export interface ApiReviewReview extends Schema.CollectionType {
     description: Attribute.String;
     badges: Attribute.Media;
     review_id: Attribute.UID;
-    iframe: Attribute.Component<'review.iframe'>;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
@@ -1150,13 +1149,12 @@ export interface ApiReviewReview extends Schema.CollectionType {
   };
 }
 
-export interface ApiSupportSupport extends Schema.CollectionType {
-  collectionName: 'supports';
+export interface ApiSupportPageSupportPage extends Schema.CollectionType {
+  collectionName: 'support_pages';
   info: {
-    singularName: 'support';
-    pluralName: 'supports';
+    singularName: 'support-page';
+    pluralName: 'support-pages';
     displayName: 'Support Page';
-    description: '';
   };
   options: {
     draftAndPublish: true;
@@ -1169,13 +1167,13 @@ export interface ApiSupportSupport extends Schema.CollectionType {
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
     createdBy: Attribute.Relation<
-      'api::support.support',
+      'api::support-page.support-page',
       'oneToOne',
       'admin::user'
     > &
       Attribute.Private;
     updatedBy: Attribute.Relation<
-      'api::support.support',
+      'api::support-page.support-page',
       'oneToOne',
       'admin::user'
     > &
@@ -1279,7 +1277,7 @@ declare module '@strapi/types' {
       'api::product-page.product-page': ApiProductPageProductPage;
       'api::rates-page.rates-page': ApiRatesPageRatesPage;
       'api::review.review': ApiReviewReview;
-      'api::support.support': ApiSupportSupport;
+      'api::support-page.support-page': ApiSupportPageSupportPage;
       'api::tag.tag': ApiTagTag;
       'api::why-us-page.why-us-page': ApiWhyUsPageWhyUsPage;
     }
