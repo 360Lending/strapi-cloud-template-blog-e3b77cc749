@@ -230,17 +230,6 @@ export interface RatesRates extends Schema.Component {
   };
 }
 
-export interface ReviewIframe extends Schema.Component {
-  collectionName: 'components_review_iframes';
-  info: {
-    displayName: 'Iframe';
-  };
-  attributes: {
-    src: Attribute.String;
-    title: Attribute.String;
-  };
-}
-
 export interface SharedMedia extends Schema.Component {
   collectionName: 'components_shared_media';
   info: {
@@ -412,7 +401,6 @@ declare module '@strapi/types' {
       'product.product-subheader-list-item': ProductProductSubheaderListItem;
       'rates.mortgage-option-list-items': RatesMortgageOptionListItems;
       'rates.rates': RatesRates;
-      'review.iframe': ReviewIframe;
       'shared.media': SharedMedia;
       'shared.product-benefits': SharedProductBenefits;
       'shared.product-next-step': SharedProductNextStep;

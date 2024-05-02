@@ -1,11 +1,10 @@
 {
   "kind": "collectionType",
-  "collectionName": "supports",
+  "collectionName": "support_pages",
   "info": {
-    "singularName": "support",
-    "pluralName": "supports",
-    "displayName": "Support Page",
-    "description": ""
+    "singularName": "support-page",
+    "pluralName": "support-pages",
+    "displayName": "Support Page"
   },
   "options": {
     "draftAndPublish": true
@@ -19,7 +18,6 @@
       "type": "text"
     },
     "FAQ_list_items": {
-      "displayName": "FAQ_list_items",
       "type": "component",
       "repeatable": true,
       "component": "support.faq-list-items"

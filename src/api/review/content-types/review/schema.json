@@ -31,12 +31,6 @@
     },
     "review_id": {
       "type": "uid"
-    },
-    "iframe": {
-      "displayName": "Iframe",
-      "type": "component",
-      "repeatable": false,
-      "component": "review.iframe"
     }
   }
 }
