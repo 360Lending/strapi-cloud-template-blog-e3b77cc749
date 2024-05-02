@@ -1151,6 +1151,39 @@ export interface ApiReviewReview extends Schema.CollectionType {
   };
 }
 
+export interface ApiSupportSupport extends Schema.CollectionType {
+  collectionName: 'supports';
+  info: {
+    singularName: 'support';
+    pluralName: 'supports';
+    displayName: 'Support Page';
+    description: '';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    FAQ_header: Attribute.String;
+    FAQ_description: Attribute.Text;
+    FAQ_list_items: Attribute.Component<'support.faq-list-items', true>;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::support.support',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::support.support',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
 export interface ApiTagTag extends Schema.CollectionType {
   collectionName: 'tags';
   info: {
@@ -1247,6 +1280,7 @@ declare module '@strapi/types' {
       'api::product-page.product-page': ApiProductPageProductPage;
       'api::rates-page.rates-page': ApiRatesPageRatesPage;
       'api::review.review': ApiReviewReview;
+      'api::support.support': ApiSupportSupport;
       'api::tag.tag': ApiTagTag;
       'api::why-us-page.why-us-page': ApiWhyUsPageWhyUsPage;
     }

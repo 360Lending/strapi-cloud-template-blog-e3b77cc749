@@ -357,6 +357,17 @@ export interface SharedText extends Schema.Component {
   };
 }
 
+export interface SupportFaqListItems extends Schema.Component {
+  collectionName: 'components_support_faq_list_items';
+  info: {
+    displayName: 'FAQ_list_items';
+  };
+  attributes: {
+    question: Attribute.Text;
+    answer: Attribute.Text;
+  };
+}
+
 export interface WhyUsMediaSectionListItems extends Schema.Component {
   collectionName: 'components_why_us_media_section_list_items';
   info: {
@@ -411,6 +422,7 @@ declare module '@strapi/types' {
       'shared.seo': SharedSeo;
       'shared.slider': SharedSlider;
       'shared.text': SharedText;
+      'support.faq-list-items': SupportFaqListItems;
       'why-us.media-section-list-items': WhyUsMediaSectionListItems;
       'why-us.reason-list-items': WhyUsReasonListItems;
     }
