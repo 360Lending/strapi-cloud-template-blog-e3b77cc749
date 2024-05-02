@@ -1,0 +1,15 @@
+{
+  "collectionName": "components_support_faq_list_items",
+  "info": {
+    "displayName": "FAQ_list_items"
+  },
+  "options": {},
+  "attributes": {
+    "question": {
+      "type": "text"
+    },
+    "answer": {
+      "type": "text"
+    }
+  }
+}
