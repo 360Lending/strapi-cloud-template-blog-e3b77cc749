@@ -1,0 +1,15 @@
+{
+  "collectionName": "components_credit_summary_credit_score_helpers",
+  "info": {
+    "displayName": "Credit Score Helper"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "description": {
+      "type": "blocks"
+    }
+  }
+}

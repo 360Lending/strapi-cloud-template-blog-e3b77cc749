@@ -1,0 +1,22 @@
+{
+  "collectionName": "components_credit_summary_order_appraisal_items",
+  "info": {
+    "displayName": "Order Appraisal Item"
+  },
+  "options": {},
+  "attributes": {
+    "image": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": false
+    },
+    "item_body": {
+      "type": "blocks"
+    }
+  }
+}

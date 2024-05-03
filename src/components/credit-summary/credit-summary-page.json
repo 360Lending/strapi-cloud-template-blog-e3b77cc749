@@ -1,0 +1,19 @@
+{
+  "collectionName": "components_credit_summary_credit_summary_pages",
+  "info": {
+    "displayName": "Credit Summary Page",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "description": {
+      "type": "string"
+    },
+    "liability_table_header": {
+      "type": "string"
+    }
+  }
+}
