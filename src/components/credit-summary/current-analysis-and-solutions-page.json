@@ -1,7 +1,8 @@
 {
   "collectionName": "components_credit_summary_current_analysis_and_solutions_pages",
   "info": {
-    "displayName": "Current Analysis & Solutions Page"
+    "displayName": "Current Analysis & Solutions Page",
+    "description": ""
   },
   "options": {},
   "attributes": {
@@ -11,7 +12,7 @@
     "description": {
       "type": "string"
     },
-    "gds_tds_ratios_title": {
+    "gds_tds_ratio_title": {
       "type": "string"
     },
     "gds_tds_ratio_description": {
