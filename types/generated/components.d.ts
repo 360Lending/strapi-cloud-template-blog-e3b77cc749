@@ -89,11 +89,12 @@ export interface CreditSummaryCurrentAnalysisAndSolutionsPage
   collectionName: 'components_credit_summary_current_analysis_and_solutions_pages';
   info: {
     displayName: 'Current Analysis & Solutions Page';
+    description: '';
   };
   attributes: {
     title: Attribute.String;
     description: Attribute.String;
-    gds_tds_ratios_title: Attribute.String;
+    gds_tds_ratio_title: Attribute.String;
     gds_tds_ratio_description: Attribute.Text;
     help_section_title: Attribute.String;
     help_section_description: Attribute.Text;
