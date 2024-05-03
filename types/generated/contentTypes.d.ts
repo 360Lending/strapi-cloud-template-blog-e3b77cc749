@@ -899,6 +899,43 @@ export interface ApiCalculatorCalculator extends Schema.CollectionType {
   };
 }
 
+export interface ApiCreditSummaryCreditSummary extends Schema.CollectionType {
+  collectionName: 'credit_summaries';
+  info: {
+    singularName: 'credit-summary';
+    pluralName: 'credit-summaries';
+    displayName: 'Credit Summary';
+    description: '';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    greeting: Attribute.String;
+    welcome_text: Attribute.String;
+    credit_score_helper: Attribute.Component<'credit-summary.credit-score-helper'>;
+    credit_summary_page: Attribute.Component<'credit-summary.credit-summary-page'>;
+    current_analysis_solutions: Attribute.Component<'credit-summary.current-analysis-and-solutions-page'>;
+    order_appraisal: Attribute.Component<'credit-summary.order-appraisal'>;
+    slug: Attribute.UID;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::credit-summary.credit-summary',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::credit-summary.credit-summary',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
 export interface ApiGlobalGlobal extends Schema.SingleType {
   collectionName: 'globals';
   info: {
@@ -1273,6 +1310,7 @@ declare module '@strapi/types' {
       'api::about.about': ApiAboutAbout;
       'api::blog-post.blog-post': ApiBlogPostBlogPost;
       'api::calculator.calculator': ApiCalculatorCalculator;
+      'api::credit-summary.credit-summary': ApiCreditSummaryCreditSummary;
       'api::global.global': ApiGlobalGlobal;
       'api::home-page.home-page': ApiHomePageHomePage;
       'api::mqls-page.mqls-page': ApiMqlsPageMqlsPage;

@@ -1,0 +1,21 @@
+{
+  "collectionName": "components_credit_summary_order_appraisals",
+  "info": {
+    "displayName": "Order Appraisal"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "description": {
+      "type": "text"
+    },
+    "order_appraisal_sub_item": {
+      "displayName": "Order Appraisal Item",
+      "type": "component",
+      "repeatable": false,
+      "component": "credit-summary.order-appraisal-item"
+    }
+  }
+}

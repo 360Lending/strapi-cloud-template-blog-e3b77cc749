@@ -1,0 +1,49 @@
+{
+  "kind": "collectionType",
+  "collectionName": "credit_summaries",
+  "info": {
+    "singularName": "credit-summary",
+    "pluralName": "credit-summaries",
+    "displayName": "Credit Summary",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "greeting": {
+      "type": "string"
+    },
+    "welcome_text": {
+      "type": "string"
+    },
+    "credit_score_helper": {
+      "displayName": "Credit Score Helper",
+      "type": "component",
+      "repeatable": false,
+      "component": "credit-summary.credit-score-helper"
+    },
+    "credit_summary_page": {
+      "displayName": "Credit Summary Page",
+      "type": "component",
+      "repeatable": false,
+      "component": "credit-summary.credit-summary-page"
+    },
+    "current_analysis_solutions": {
+      "displayName": "Current Analysis & Solutions Page",
+      "type": "component",
+      "repeatable": false,
+      "component": "credit-summary.current-analysis-and-solutions-page"
+    },
+    "order_appraisal": {
+      "displayName": "Order Appraisal",
+      "type": "component",
+      "repeatable": false,
+      "component": "credit-summary.order-appraisal"
+    },
+    "slug": {
+      "type": "uid"
+    }
+  }
+}

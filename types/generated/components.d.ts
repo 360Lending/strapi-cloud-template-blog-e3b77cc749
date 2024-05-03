@@ -60,6 +60,70 @@ export interface CalculatorSelections extends Schema.Component {
   };
 }
 
+export interface CreditSummaryCreditScoreHelper extends Schema.Component {
+  collectionName: 'components_credit_summary_credit_score_helpers';
+  info: {
+    displayName: 'Credit Score Helper';
+  };
+  attributes: {
+    title: Attribute.String;
+    description: Attribute.Blocks;
+  };
+}
+
+export interface CreditSummaryCreditSummaryPage extends Schema.Component {
+  collectionName: 'components_credit_summary_credit_summary_pages';
+  info: {
+    displayName: 'Credit Summary Page';
+    description: '';
+  };
+  attributes: {
+    title: Attribute.String;
+    description: Attribute.String;
+    liability_table_header: Attribute.String;
+  };
+}
+
+export interface CreditSummaryCurrentAnalysisAndSolutionsPage
+  extends Schema.Component {
+  collectionName: 'components_credit_summary_current_analysis_and_solutions_pages';
+  info: {
+    displayName: 'Current Analysis & Solutions Page';
+  };
+  attributes: {
+    title: Attribute.String;
+    description: Attribute.String;
+    gds_tds_ratios_title: Attribute.String;
+    gds_tds_ratio_description: Attribute.Text;
+    help_section_title: Attribute.String;
+    help_section_description: Attribute.Text;
+    credit_repair_plan_title: Attribute.String;
+  };
+}
+
+export interface CreditSummaryOrderAppraisalItem extends Schema.Component {
+  collectionName: 'components_credit_summary_order_appraisal_items';
+  info: {
+    displayName: 'Order Appraisal Item';
+  };
+  attributes: {
+    image: Attribute.Media;
+    item_body: Attribute.Blocks;
+  };
+}
+
+export interface CreditSummaryOrderAppraisal extends Schema.Component {
+  collectionName: 'components_credit_summary_order_appraisals';
+  info: {
+    displayName: 'Order Appraisal';
+  };
+  attributes: {
+    title: Attribute.String;
+    description: Attribute.Text;
+    order_appraisal_sub_item: Attribute.Component<'credit-summary.order-appraisal-item'>;
+  };
+}
+
 export interface HomeProductDescription extends Schema.Component {
   collectionName: 'components_products_product_descriptions';
   info: {
@@ -390,6 +454,11 @@ declare module '@strapi/types' {
       'calculator.calculator-variables': CalculatorCalculatorVariables;
       'calculator.selection-fields': CalculatorSelectionFields;
       'calculator.selections': CalculatorSelections;
+      'credit-summary.credit-score-helper': CreditSummaryCreditScoreHelper;
+      'credit-summary.credit-summary-page': CreditSummaryCreditSummaryPage;
+      'credit-summary.current-analysis-and-solutions-page': CreditSummaryCurrentAnalysisAndSolutionsPage;
+      'credit-summary.order-appraisal-item': CreditSummaryOrderAppraisalItem;
+      'credit-summary.order-appraisal': CreditSummaryOrderAppraisal;
       'home.product-description': HomeProductDescription;
       'product.initial-states': ProductInitialStates;
       'product.product-calculator-content': ProductProductCalculatorContent;

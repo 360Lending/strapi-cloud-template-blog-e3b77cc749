@@ -1,0 +1,30 @@
+{
+  "collectionName": "components_credit_summary_current_analysis_and_solutions_pages",
+  "info": {
+    "displayName": "Current Analysis & Solutions Page"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "description": {
+      "type": "string"
+    },
+    "gds_tds_ratios_title": {
+      "type": "string"
+    },
+    "gds_tds_ratio_description": {
+      "type": "text"
+    },
+    "help_section_title": {
+      "type": "string"
+    },
+    "help_section_description": {
+      "type": "text"
+    },
+    "credit_repair_plan_title": {
+      "type": "string"
+    }
+  }
+}
