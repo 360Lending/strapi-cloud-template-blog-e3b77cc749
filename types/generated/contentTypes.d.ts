@@ -1197,6 +1197,7 @@ export interface ApiTagTag extends Schema.CollectionType {
     name: Attribute.String & Attribute.Required & Attribute.Unique;
     type: Attribute.Enumeration<['blog_posts']> & Attribute.Required;
     description: Attribute.Text;
+    isFeatured: Attribute.Boolean & Attribute.DefaultTo<false>;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
