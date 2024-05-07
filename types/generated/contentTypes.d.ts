@@ -1187,6 +1187,39 @@ export interface ApiReviewReview extends Schema.CollectionType {
   };
 }
 
+export interface ApiSearchComponentSearchComponent
+  extends Schema.CollectionType {
+  collectionName: 'search_components';
+  info: {
+    singularName: 'search-component';
+    pluralName: 'search-components';
+    displayName: 'Search Component';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    header: Attribute.String;
+    description: Attribute.Text;
+    search_placeholder: Attribute.Text;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::search-component.search-component',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::search-component.search-component',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
 export interface ApiSupportPageSupportPage extends Schema.CollectionType {
   collectionName: 'support_pages';
   info: {
@@ -1319,6 +1352,7 @@ declare module '@strapi/types' {
       'api::product-page.product-page': ApiProductPageProductPage;
       'api::rates-page.rates-page': ApiRatesPageRatesPage;
       'api::review.review': ApiReviewReview;
+      'api::search-component.search-component': ApiSearchComponentSearchComponent;
       'api::support-page.support-page': ApiSupportPageSupportPage;
       'api::tag.tag': ApiTagTag;
       'api::why-us-page.why-us-page': ApiWhyUsPageWhyUsPage;
