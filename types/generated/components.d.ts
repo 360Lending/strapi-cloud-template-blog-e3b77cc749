@@ -152,6 +152,7 @@ export interface HomeProductsSectionListItems extends Schema.Component {
     story_list_items: Attribute.Component<'home.story-list-items', true>;
     story_image: Attribute.Media;
     story_description: Attribute.Text;
+    name: Attribute.String;
   };
 }
 
