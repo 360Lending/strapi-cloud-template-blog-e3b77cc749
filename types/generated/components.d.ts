@@ -138,6 +138,33 @@ export interface HomeProductDescription extends Schema.Component {
   };
 }
 
+export interface HomeProductsSectionListItems extends Schema.Component {
+  collectionName: 'components_home_products_section_list_items';
+  info: {
+    displayName: 'products_section_list_items';
+    description: '';
+  };
+  attributes: {
+    header: Attribute.String;
+    description: Attribute.Text;
+    redirect_url: Attribute.String;
+    story_header: Attribute.String;
+    story_list_items: Attribute.Component<'home.story-list-items', true>;
+    story_image: Attribute.Media;
+    story_description: Attribute.Text;
+  };
+}
+
+export interface HomeStoryListItems extends Schema.Component {
+  collectionName: 'components_home_story_list_items';
+  info: {
+    displayName: 'story_list_items';
+  };
+  attributes: {
+    item: Attribute.Text;
+  };
+}
+
 export interface ProductInitialStates extends Schema.Component {
   collectionName: 'components_product_initial_states';
   info: {
@@ -461,6 +488,8 @@ declare module '@strapi/types' {
       'credit-summary.order-appraisal-item': CreditSummaryOrderAppraisalItem;
       'credit-summary.order-appraisal': CreditSummaryOrderAppraisal;
       'home.product-description': HomeProductDescription;
+      'home.products-section-list-items': HomeProductsSectionListItems;
+      'home.story-list-items': HomeStoryListItems;
       'product.initial-states': ProductInitialStates;
       'product.product-calculator-content': ProductProductCalculatorContent;
       'product.product-calculator-subheader-2-list-item': ProductProductCalculatorSubheader2ListItem;

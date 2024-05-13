@@ -1,0 +1,12 @@
+{
+  "collectionName": "components_home_story_list_items",
+  "info": {
+    "displayName": "story_list_items"
+  },
+  "options": {},
+  "attributes": {
+    "item": {
+      "type": "text"
+    }
+  }
+}
