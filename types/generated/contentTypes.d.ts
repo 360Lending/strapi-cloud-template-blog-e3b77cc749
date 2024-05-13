@@ -985,9 +985,9 @@ export interface ApiHomePageHomePage extends Schema.CollectionType {
     above_carousel_header: Attribute.String & Attribute.Required;
     carousel: Attribute.Component<'home.product-description', true> &
       Attribute.Required;
-    products_section_header: Attribute.String;
-    products_section_description: Attribute.Text;
-    products_section_list_items: Attribute.Component<
+    products_services_section_header: Attribute.String;
+    products_services_section_description: Attribute.Text;
+    products_services_section_list_items: Attribute.Component<
       'home.products-section-list-items',
       true
     >;

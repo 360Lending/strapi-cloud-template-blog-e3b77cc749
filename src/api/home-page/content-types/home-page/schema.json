@@ -26,13 +26,13 @@
       "component": "home.product-description",
       "required": true
     },
-    "products_section_header": {
+    "products_services_section_header": {
       "type": "string"
     },
-    "products_section_description": {
+    "products_services_section_description": {
       "type": "text"
     },
-    "products_section_list_items": {
+    "products_services_section_list_items": {
       "displayName": "products_section_list_items",
       "type": "component",
       "repeatable": true,

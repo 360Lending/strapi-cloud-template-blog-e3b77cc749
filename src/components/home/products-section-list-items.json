@@ -37,6 +37,9 @@
     },
     "story_description": {
       "type": "text"
+    },
+    "name": {
+      "type": "string"
     }
   }
 }
