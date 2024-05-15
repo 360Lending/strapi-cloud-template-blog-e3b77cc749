@@ -31,6 +31,18 @@
     },
     "review_id": {
       "type": "uid"
+    },
+    "reason_list_items": {
+      "displayName": "reason_list_items",
+      "type": "component",
+      "repeatable": true,
+      "component": "review.reason-list-items"
+    },
+    "redirect_description": {
+      "type": "string"
+    },
+    "redirect_url": {
+      "type": "string"
     }
   }
 }
