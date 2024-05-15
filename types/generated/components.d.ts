@@ -327,11 +327,12 @@ export interface ReviewReasonListItems extends Schema.Component {
   collectionName: 'components_review_reason_list_items';
   info: {
     displayName: 'reason_list_items';
+    description: '';
   };
   attributes: {
     reason: Attribute.String;
-    description: Attribute.Text;
     icon: Attribute.Media;
+    description: Attribute.Blocks;
   };
 }
 
