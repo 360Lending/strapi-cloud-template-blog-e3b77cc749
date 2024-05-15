@@ -1,0 +1,25 @@
+{
+  "collectionName": "components_review_reason_list_items",
+  "info": {
+    "displayName": "reason_list_items"
+  },
+  "options": {},
+  "attributes": {
+    "reason": {
+      "type": "string"
+    },
+    "description": {
+      "type": "text"
+    },
+    "icon": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": false
+    }
+  }
+}

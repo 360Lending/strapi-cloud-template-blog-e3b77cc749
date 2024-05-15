@@ -1175,6 +1175,9 @@ export interface ApiReviewReview extends Schema.CollectionType {
     description: Attribute.String;
     badges: Attribute.Media;
     review_id: Attribute.UID;
+    reason_list_items: Attribute.Component<'review.reason-list-items', true>;
+    redirect_description: Attribute.String;
+    redirect_url: Attribute.String;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;

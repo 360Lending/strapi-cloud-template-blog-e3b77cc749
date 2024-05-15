@@ -323,6 +323,18 @@ export interface RatesRates extends Schema.Component {
   };
 }
 
+export interface ReviewReasonListItems extends Schema.Component {
+  collectionName: 'components_review_reason_list_items';
+  info: {
+    displayName: 'reason_list_items';
+  };
+  attributes: {
+    reason: Attribute.String;
+    description: Attribute.Text;
+    icon: Attribute.Media;
+  };
+}
+
 export interface SharedMedia extends Schema.Component {
   collectionName: 'components_shared_media';
   info: {
@@ -501,6 +513,7 @@ declare module '@strapi/types' {
       'product.product-subheader-list-item': ProductProductSubheaderListItem;
       'rates.mortgage-option-list-items': RatesMortgageOptionListItems;
       'rates.rates': RatesRates;
+      'review.reason-list-items': ReviewReasonListItems;
       'shared.media': SharedMedia;
       'shared.product-benefits': SharedProductBenefits;
       'shared.product-next-step': SharedProductNextStep;
