@@ -1,8 +1,7 @@
 {
   "collectionName": "components_review_reason_list_items",
   "info": {
-    "displayName": "reason_list_items",
-    "description": ""
+    "displayName": "reason_list_items"
   },
   "options": {},
   "attributes": {
@@ -10,15 +9,14 @@
       "type": "string"
     },
     "icon": {
-      "type": "media",
-      "multiple": false,
-      "required": false,
       "allowedTypes": [
         "images",
         "files",
         "videos",
         "audios"
-      ]
+      ],
+      "type": "media",
+      "multiple": false
     },
     "description": {
       "type": "blocks"
