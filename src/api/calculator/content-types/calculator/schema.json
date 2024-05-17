@@ -41,6 +41,20 @@
       "type": "component",
       "repeatable": true,
       "component": "calculator.selection-fields"
+    },
+    "headers": {
+      "displayName": "headers",
+      "type": "component",
+      "repeatable": true,
+      "component": "calculator.headers"
+    },
+    "notes": {
+      "type": "component",
+      "repeatable": true,
+      "component": "calculator.notes"
+    },
+    "redirect_url": {
+      "type": "string"
     }
   }
 }

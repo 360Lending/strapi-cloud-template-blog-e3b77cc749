@@ -881,6 +881,9 @@ export interface ApiCalculatorCalculator extends Schema.CollectionType {
     variables: Attribute.Component<'calculator.calculator-variables', true>;
     calculator: Attribute.UID;
     selection_fields: Attribute.Component<'calculator.selection-fields', true>;
+    headers: Attribute.Component<'calculator.headers', true>;
+    notes: Attribute.Component<'calculator.notes', true>;
+    redirect_url: Attribute.String;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;

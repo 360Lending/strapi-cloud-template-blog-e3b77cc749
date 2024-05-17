@@ -37,6 +37,26 @@ export interface CalculatorCalculatorVariables extends Schema.Component {
   };
 }
 
+export interface CalculatorHeaders extends Schema.Component {
+  collectionName: 'components_calculator_headers';
+  info: {
+    displayName: 'headers';
+  };
+  attributes: {
+    header: Attribute.String;
+  };
+}
+
+export interface CalculatorNotes extends Schema.Component {
+  collectionName: 'components_calculator_notes';
+  info: {
+    displayName: 'notes';
+  };
+  attributes: {
+    note: Attribute.String;
+  };
+}
+
 export interface CalculatorSelectionFields extends Schema.Component {
   collectionName: 'components_calculator_selection_fields';
   info: {
@@ -493,6 +513,8 @@ declare module '@strapi/types' {
       'calculator.calculator-text-field': CalculatorCalculatorTextField;
       'calculator.calculator-total-label': CalculatorCalculatorTotalLabel;
       'calculator.calculator-variables': CalculatorCalculatorVariables;
+      'calculator.headers': CalculatorHeaders;
+      'calculator.notes': CalculatorNotes;
       'calculator.selection-fields': CalculatorSelectionFields;
       'calculator.selections': CalculatorSelections;
       'credit-summary.credit-score-helper': CreditSummaryCreditScoreHelper;

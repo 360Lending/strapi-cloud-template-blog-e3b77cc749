@@ -1,0 +1,12 @@
+{
+  "collectionName": "components_calculator_headers",
+  "info": {
+    "displayName": "headers"
+  },
+  "options": {},
+  "attributes": {
+    "header": {
+      "type": "string"
+    }
+  }
+}
