@@ -1,0 +1,12 @@
+{
+  "collectionName": "components_calculator_notes",
+  "info": {
+    "displayName": "notes"
+  },
+  "options": {},
+  "attributes": {
+    "note": {
+      "type": "string"
+    }
+  }
+}
