@@ -4,7 +4,8 @@
   "info": {
     "singularName": "mqls-page",
     "pluralName": "mqls-pages",
-    "displayName": "MQLS Page"
+    "displayName": "MQLS Page",
+    "description": ""
   },
   "options": {
     "draftAndPublish": true
@@ -19,6 +20,11 @@
     },
     "mqls_page": {
       "type": "uid"
+    },
+    "education_content": {
+      "type": "component",
+      "repeatable": false,
+      "component": "mqls.education"
     }
   }
 }

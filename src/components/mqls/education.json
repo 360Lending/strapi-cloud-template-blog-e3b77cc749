@@ -1,0 +1,29 @@
+{
+  "collectionName": "components_mqls_educations",
+  "info": {
+    "displayName": "Educational Content",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "header": {
+      "type": "string",
+      "required": true
+    },
+    "description": {
+      "type": "string"
+    },
+    "learn_more_link": {
+      "type": "string"
+    },
+    "shape_type": {
+      "type": "enumeration",
+      "enum": [
+        "What",
+        "Why",
+        "How"
+      ],
+      "required": true
+    }
+  }
+}

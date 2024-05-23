@@ -1018,6 +1018,7 @@ export interface ApiMqlsPageMqlsPage extends Schema.CollectionType {
     singularName: 'mqls-page';
     pluralName: 'mqls-pages';
     displayName: 'MQLS Page';
+    description: '';
   };
   options: {
     draftAndPublish: true;
@@ -1026,6 +1027,7 @@ export interface ApiMqlsPageMqlsPage extends Schema.CollectionType {
     title: Attribute.String;
     description: Attribute.Text;
     mqls_page: Attribute.UID;
+    education_content: Attribute.Component<'mqls.education'>;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
