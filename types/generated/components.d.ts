@@ -186,6 +186,21 @@ export interface HomeStoryListItems extends Schema.Component {
   };
 }
 
+export interface MqlsEducation extends Schema.Component {
+  collectionName: 'components_mqls_educations';
+  info: {
+    displayName: 'Educational Content';
+    description: '';
+  };
+  attributes: {
+    header: Attribute.String & Attribute.Required;
+    description: Attribute.String;
+    learn_more_link: Attribute.String;
+    shape_type: Attribute.Enumeration<['What', 'Why', 'How']> &
+      Attribute.Required;
+  };
+}
+
 export interface ProductInitialStates extends Schema.Component {
   collectionName: 'components_product_initial_states';
   info: {
@@ -525,6 +540,7 @@ declare module '@strapi/types' {
       'home.product-description': HomeProductDescription;
       'home.products-section-list-items': HomeProductsSectionListItems;
       'home.story-list-items': HomeStoryListItems;
+      'mqls.education': MqlsEducation;
       'product.initial-states': ProductInitialStates;
       'product.product-calculator-content': ProductProductCalculatorContent;
       'product.product-calculator-subheader-2-list-item': ProductProductCalculatorSubheader2ListItem;
