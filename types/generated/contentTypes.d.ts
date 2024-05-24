@@ -884,6 +884,7 @@ export interface ApiCalculatorCalculator extends Schema.CollectionType {
     headers: Attribute.Component<'calculator.headers', true>;
     notes: Attribute.Component<'calculator.notes', true>;
     redirect_url: Attribute.String;
+    error_messages: Attribute.Component<'calculator.error-messages', true>;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;

@@ -37,6 +37,16 @@ export interface CalculatorCalculatorVariables extends Schema.Component {
   };
 }
 
+export interface CalculatorErrorMessages extends Schema.Component {
+  collectionName: 'components_calculator_error_messages';
+  info: {
+    displayName: 'error_messages';
+  };
+  attributes: {
+    message: Attribute.String;
+  };
+}
+
 export interface CalculatorHeaders extends Schema.Component {
   collectionName: 'components_calculator_headers';
   info: {
@@ -528,6 +538,7 @@ declare module '@strapi/types' {
       'calculator.calculator-text-field': CalculatorCalculatorTextField;
       'calculator.calculator-total-label': CalculatorCalculatorTotalLabel;
       'calculator.calculator-variables': CalculatorCalculatorVariables;
+      'calculator.error-messages': CalculatorErrorMessages;
       'calculator.headers': CalculatorHeaders;
       'calculator.notes': CalculatorNotes;
       'calculator.selection-fields': CalculatorSelectionFields;

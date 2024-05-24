@@ -1,0 +1,12 @@
+{
+  "collectionName": "components_calculator_error_messages",
+  "info": {
+    "displayName": "error_messages"
+  },
+  "options": {},
+  "attributes": {
+    "message": {
+      "type": "string"
+    }
+  }
+}
