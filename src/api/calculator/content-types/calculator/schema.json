@@ -55,6 +55,12 @@
     },
     "redirect_url": {
       "type": "string"
+    },
+    "error_messages": {
+      "displayName": "error_messages",
+      "type": "component",
+      "repeatable": true,
+      "component": "calculator.error-messages"
     }
   }
 }
