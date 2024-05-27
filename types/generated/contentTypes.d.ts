@@ -1147,6 +1147,7 @@ export interface ApiRatesPageRatesPage extends Schema.CollectionType {
       'rates.mortgage-option-list-items',
       true
     >;
+    rate_options: Attribute.Component<'rates.rate-options', true>;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
