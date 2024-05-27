@@ -347,6 +347,22 @@ export interface RatesMortgageOptionListItems extends Schema.Component {
   };
 }
 
+export interface RatesRateOptions extends Schema.Component {
+  collectionName: 'components_rates_rate_options';
+  info: {
+    displayName: 'rate-options';
+    description: '';
+  };
+  attributes: {
+    title: Attribute.String;
+    description: Attribute.Text;
+    type: Attribute.Enumeration<
+      ['Insured', 'Uninsured', 'Prime', 'Subprime', 'Non-Prime']
+    >;
+    icon: Attribute.String;
+  };
+}
+
 export interface RatesRates extends Schema.Component {
   collectionName: 'components_rates_rates';
   info: {
@@ -561,6 +577,7 @@ declare module '@strapi/types' {
       'product.product-subheader-content': ProductProductSubheaderContent;
       'product.product-subheader-list-item': ProductProductSubheaderListItem;
       'rates.mortgage-option-list-items': RatesMortgageOptionListItems;
+      'rates.rate-options': RatesRateOptions;
       'rates.rates': RatesRates;
       'review.reason-list-items': ReviewReasonListItems;
       'shared.media': SharedMedia;

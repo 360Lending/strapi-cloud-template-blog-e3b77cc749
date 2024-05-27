@@ -1,0 +1,29 @@
+{
+  "collectionName": "components_rates_rate_options",
+  "info": {
+    "displayName": "rate-options",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "description": {
+      "type": "text"
+    },
+    "type": {
+      "type": "enumeration",
+      "enum": [
+        "Insured",
+        "Uninsured",
+        "Prime",
+        "Subprime",
+        "Non-Prime"
+      ]
+    },
+    "icon": {
+      "type": "string"
+    }
+  }
+}

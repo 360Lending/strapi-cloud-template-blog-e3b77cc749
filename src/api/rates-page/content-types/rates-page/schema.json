@@ -35,6 +35,12 @@
       "type": "component",
       "repeatable": true,
       "component": "rates.mortgage-option-list-items"
+    },
+    "rate_options": {
+      "displayName": "rate-options",
+      "type": "component",
+      "repeatable": true,
+      "component": "rates.rate-options"
     }
   }
 }
