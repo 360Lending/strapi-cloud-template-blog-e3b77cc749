@@ -10,7 +10,7 @@
       "type": "string"
     },
     "description": {
-      "type": "string"
+      "type": "text"
     },
     "gds_ratio_title": {
       "type": "string"
