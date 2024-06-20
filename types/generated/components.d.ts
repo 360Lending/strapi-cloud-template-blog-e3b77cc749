@@ -123,7 +123,7 @@ export interface CreditSummaryCurrentAnalysisAndSolutionsPage
   };
   attributes: {
     title: Attribute.String;
-    description: Attribute.String;
+    description: Attribute.Text;
     gds_ratio_title: Attribute.String;
     gds_ratio_description: Attribute.Text;
     tds_ratio_title: Attribute.String;
