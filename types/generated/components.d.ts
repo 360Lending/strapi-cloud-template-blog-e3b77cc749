@@ -130,6 +130,8 @@ export interface CreditSummaryCurrentAnalysisAndSolutionsPage
     tds_ratio_description: Attribute.Text;
     payment_estimate_title: Attribute.String;
     payment_estimate_description: Attribute.Text;
+    payment_estimate_interest_rates: Attribute.String;
+    payment_estimate_rates_list: Attribute.String;
   };
 }
 
