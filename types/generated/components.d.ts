@@ -124,11 +124,12 @@ export interface CreditSummaryCurrentAnalysisAndSolutionsPage
   attributes: {
     title: Attribute.String;
     description: Attribute.String;
-    gds_tds_ratio_title: Attribute.String;
-    gds_tds_ratio_description: Attribute.Text;
-    help_section_title: Attribute.String;
-    help_section_description: Attribute.Text;
-    credit_repair_plan_title: Attribute.String;
+    gds_ratio_title: Attribute.String;
+    gds_ratio_description: Attribute.Text;
+    tds_ratio_title: Attribute.String;
+    tds_ratio_description: Attribute.Text;
+    payment_estimate_title: Attribute.String;
+    payment_estimate_description: Attribute.Text;
   };
 }
 
