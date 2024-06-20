@@ -12,20 +12,23 @@
     "description": {
       "type": "string"
     },
-    "gds_tds_ratio_title": {
+    "gds_ratio_title": {
       "type": "string"
     },
-    "gds_tds_ratio_description": {
+    "gds_ratio_description": {
       "type": "text"
     },
-    "help_section_title": {
+    "tds_ratio_title": {
       "type": "string"
     },
-    "help_section_description": {
+    "tds_ratio_description": {
       "type": "text"
     },
-    "credit_repair_plan_title": {
+    "payment_estimate_title": {
       "type": "string"
+    },
+    "payment_estimate_description": {
+      "type": "text"
     }
   }
 }
