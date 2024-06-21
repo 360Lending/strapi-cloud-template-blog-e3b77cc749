@@ -149,11 +149,14 @@ export interface CreditSummaryOrderAppraisal extends Schema.Component {
   collectionName: 'components_credit_summary_order_appraisals';
   info: {
     displayName: 'Order Appraisal';
+    description: '';
   };
   attributes: {
     title: Attribute.String;
     description: Attribute.Text;
     order_appraisal_sub_item: Attribute.Component<'credit-summary.order-appraisal-item'>;
+    equity_analysis_title: Attribute.String;
+    equity_analysis_description: Attribute.Text;
   };
 }
 
