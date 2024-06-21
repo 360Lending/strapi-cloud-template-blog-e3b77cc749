@@ -30,9 +30,6 @@
     "payment_estimate_description": {
       "type": "text"
     },
-    "payment_estimate_interest_rates": {
-      "type": "string"
-    },
     "payment_estimate_rates_list": {
       "type": "string"
     }
