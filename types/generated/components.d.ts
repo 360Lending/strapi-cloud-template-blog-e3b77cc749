@@ -365,6 +365,7 @@ export interface RatesRateOptions extends Schema.Component {
       ['Insured', 'Uninsured', 'Prime', 'Subprime', 'Non-Prime']
     >;
     icon: Attribute.String;
+    rate: Attribute.Decimal;
   };
 }
 
