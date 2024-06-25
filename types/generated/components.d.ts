@@ -360,12 +360,18 @@ export interface RatesRateOptions extends Schema.Component {
   };
   attributes: {
     title: Attribute.String;
-    description: Attribute.Text;
+    description_prime: Attribute.Text;
     type: Attribute.Enumeration<
       ['Insured', 'Uninsured', 'Prime', 'Subprime', 'Non-Prime']
     >;
     icon: Attribute.String;
-    rate: Attribute.Decimal;
+    rate_prime: Attribute.Decimal;
+    rate_nonprime: Attribute.Decimal;
+    rate_insured: Attribute.Decimal;
+    rate_uninsured: Attribute.Decimal;
+    description_nonprime: Attribute.Text;
+    description_insured: Attribute.Text;
+    description_uninsured: Attribute.Text;
   };
 }
 
