@@ -24,6 +24,9 @@
     },
     "icon": {
       "type": "string"
+    },
+    "rate": {
+      "type": "decimal"
     }
   }
 }
