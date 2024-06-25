@@ -9,7 +9,7 @@
     "title": {
       "type": "string"
     },
-    "description": {
+    "description_prime": {
       "type": "text"
     },
     "type": {
@@ -25,8 +25,26 @@
     "icon": {
       "type": "string"
     },
-    "rate": {
+    "rate_prime": {
       "type": "decimal"
+    },
+    "rate_nonprime": {
+      "type": "decimal"
+    },
+    "rate_insured": {
+      "type": "decimal"
+    },
+    "rate_uninsured": {
+      "type": "decimal"
+    },
+    "description_nonprime": {
+      "type": "text"
+    },
+    "description_insured": {
+      "type": "text"
+    },
+    "description_uninsured": {
+      "type": "text"
     }
   }
 }
