@@ -372,6 +372,7 @@ export interface RatesRateOptions extends Schema.Component {
     description_nonprime: Attribute.Text;
     description_insured: Attribute.Text;
     description_uninsured: Attribute.Text;
+    term: Attribute.Integer;
   };
 }
 

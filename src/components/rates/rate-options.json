@@ -45,6 +45,9 @@
     },
     "description_uninsured": {
       "type": "text"
+    },
+    "term": {
+      "type": "integer"
     }
   }
 }
