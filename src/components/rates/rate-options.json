@@ -45,6 +45,18 @@
     },
     "description_uninsured": {
       "type": "text"
+    },
+    "term_prime": {
+      "type": "integer"
+    },
+    "term_nonprime": {
+      "type": "integer"
+    },
+    "term_insured": {
+      "type": "integer"
+    },
+    "term_uninsured": {
+      "type": "integer"
     }
   }
 }
