@@ -271,10 +271,12 @@ export interface ProductProductCalculatorSummaryListItem
   collectionName: 'components_product_product_calculator_summary_list_items';
   info: {
     displayName: 'Product Calculator Summary List Items';
+    description: '';
   };
   attributes: {
     sentence_segment_1: Attribute.String;
     sentence_segment_2: Attribute.String;
+    sentence_segment_3: Attribute.String;
   };
 }
 
