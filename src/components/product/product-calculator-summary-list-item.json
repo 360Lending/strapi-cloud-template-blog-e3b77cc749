@@ -1,7 +1,8 @@
 {
   "collectionName": "components_product_product_calculator_summary_list_items",
   "info": {
-    "displayName": "Product Calculator Summary List Items"
+    "displayName": "Product Calculator Summary List Items",
+    "description": ""
   },
   "options": {},
   "attributes": {
@@ -9,6 +10,9 @@
       "type": "string"
     },
     "sentence_segment_2": {
+      "type": "string"
+    },
+    "sentence_segment_3": {
       "type": "string"
     }
   }
