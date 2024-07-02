@@ -25,6 +25,12 @@
       "type": "component",
       "repeatable": false,
       "component": "mqls.education"
+    },
+    "more_info": {
+      "displayName": "more_info",
+      "type": "component",
+      "repeatable": true,
+      "component": "mqls.more-info"
     }
   }
 }

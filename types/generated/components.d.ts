@@ -216,6 +216,16 @@ export interface MqlsEducation extends Schema.Component {
   };
 }
 
+export interface MqlsMoreInfo extends Schema.Component {
+  collectionName: 'components_mqls_more_infos';
+  info: {
+    displayName: 'more_info';
+  };
+  attributes: {
+    info: Attribute.String;
+  };
+}
+
 export interface ProductInitialStates extends Schema.Component {
   collectionName: 'components_product_initial_states';
   info: {
@@ -586,6 +596,7 @@ declare module '@strapi/types' {
       'home.products-section-list-items': HomeProductsSectionListItems;
       'home.story-list-items': HomeStoryListItems;
       'mqls.education': MqlsEducation;
+      'mqls.more-info': MqlsMoreInfo;
       'product.initial-states': ProductInitialStates;
       'product.product-calculator-content': ProductProductCalculatorContent;
       'product.product-calculator-subheader-2-list-item': ProductProductCalculatorSubheader2ListItem;
