@@ -111,6 +111,8 @@ export interface CreditSummaryCreditSummaryPage extends Schema.Component {
     title: Attribute.String;
     description: Attribute.String;
     liability_table_header: Attribute.String;
+    liability_info: Attribute.String;
+    public_record_info: Attribute.String;
   };
 }
 
