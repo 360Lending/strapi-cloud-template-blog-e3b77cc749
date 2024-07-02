@@ -1029,6 +1029,7 @@ export interface ApiMqlsPageMqlsPage extends Schema.CollectionType {
     description: Attribute.Text;
     mqls_page: Attribute.UID;
     education_content: Attribute.Component<'mqls.education'>;
+    more_info: Attribute.Component<'mqls.more-info', true>;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;

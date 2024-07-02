@@ -1,0 +1,12 @@
+{
+  "collectionName": "components_mqls_more_infos",
+  "info": {
+    "displayName": "more_info"
+  },
+  "options": {},
+  "attributes": {
+    "info": {
+      "type": "string"
+    }
+  }
+}
