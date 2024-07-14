@@ -18,6 +18,9 @@
     "welcome_text": {
       "type": "string"
     },
+    "credit_score_description": {
+      "type": "blocks"
+    },
     "credit_score_helper": {
       "displayName": "Credit Score Helper",
       "type": "component",
