@@ -917,6 +917,7 @@ export interface ApiCreditSummaryCreditSummary extends Schema.CollectionType {
   attributes: {
     greeting: Attribute.String;
     welcome_text: Attribute.String;
+    credit_score_description: Attribute.Blocks;
     credit_score_helper: Attribute.Component<'credit-summary.credit-score-helper'>;
     credit_summary_page: Attribute.Component<'credit-summary.credit-summary-page'>;
     current_analysis_solutions: Attribute.Component<'credit-summary.current-analysis-and-solutions-page'>;
