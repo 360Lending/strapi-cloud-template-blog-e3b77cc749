@@ -1,0 +1,15 @@
+{
+  "collectionName": "components_home_hero_section_buttons",
+  "info": {
+    "displayName": "hero_section_button"
+  },
+  "options": {},
+  "attributes": {
+    "button_name": {
+      "type": "string"
+    },
+    "url": {
+      "type": "string"
+    }
+  }
+}
