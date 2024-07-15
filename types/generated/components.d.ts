@@ -162,6 +162,17 @@ export interface CreditSummaryOrderAppraisal extends Schema.Component {
   };
 }
 
+export interface HomeHeroSectionButton extends Schema.Component {
+  collectionName: 'components_home_hero_section_buttons';
+  info: {
+    displayName: 'hero_section_button';
+  };
+  attributes: {
+    button_name: Attribute.String;
+    url: Attribute.String;
+  };
+}
+
 export interface HomeProductDescription extends Schema.Component {
   collectionName: 'components_products_product_descriptions';
   info: {
@@ -594,6 +605,7 @@ declare module '@strapi/types' {
       'credit-summary.current-analysis-and-solutions-page': CreditSummaryCurrentAnalysisAndSolutionsPage;
       'credit-summary.order-appraisal-item': CreditSummaryOrderAppraisalItem;
       'credit-summary.order-appraisal': CreditSummaryOrderAppraisal;
+      'home.hero-section-button': HomeHeroSectionButton;
       'home.product-description': HomeProductDescription;
       'home.products-section-list-items': HomeProductsSectionListItems;
       'home.story-list-items': HomeStoryListItems;

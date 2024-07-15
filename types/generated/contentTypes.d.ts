@@ -996,6 +996,7 @@ export interface ApiHomePageHomePage extends Schema.CollectionType {
       'home.products-section-list-items',
       true
     >;
+    hero_section_button: Attribute.Component<'home.hero-section-button'>;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
