@@ -923,7 +923,7 @@ export interface ApiCreditSummaryCreditSummary extends Schema.CollectionType {
     current_analysis_solutions: Attribute.Component<'credit-summary.current-analysis-and-solutions-page'>;
     order_appraisal: Attribute.Component<'credit-summary.order-appraisal'>;
     slug: Attribute.UID;
-    credit_score_disclaimer: Attribute.String;
+    credit_score_disclaimer: Attribute.Text;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
