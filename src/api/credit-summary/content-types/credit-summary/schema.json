@@ -47,6 +47,9 @@
     },
     "slug": {
       "type": "uid"
+    },
+    "credit_score_disclaimer": {
+      "type": "string"
     }
   }
 }

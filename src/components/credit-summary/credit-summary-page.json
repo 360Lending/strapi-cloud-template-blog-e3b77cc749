@@ -20,6 +20,9 @@
     },
     "public_record_info": {
       "type": "string"
+    },
+    "disclaimer": {
+      "type": "string"
     }
   }
 }
