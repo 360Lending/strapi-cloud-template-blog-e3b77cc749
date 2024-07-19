@@ -1051,6 +1051,36 @@ export interface ApiMqlsPageMqlsPage extends Schema.CollectionType {
   };
 }
 
+export interface ApiOfferToFinanceOfferToFinance extends Schema.CollectionType {
+  collectionName: 'offer_to_finances';
+  info: {
+    singularName: 'offer-to-finance';
+    pluralName: 'offer-to-finances';
+    displayName: 'Offer to Finance';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    disclaimer: Attribute.Text;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::offer-to-finance.offer-to-finance',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::offer-to-finance.offer-to-finance',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
 export interface ApiProductProduct extends Schema.CollectionType {
   collectionName: 'products';
   info: {
@@ -1368,6 +1398,7 @@ declare module '@strapi/types' {
       'api::global.global': ApiGlobalGlobal;
       'api::home-page.home-page': ApiHomePageHomePage;
       'api::mqls-page.mqls-page': ApiMqlsPageMqlsPage;
+      'api::offer-to-finance.offer-to-finance': ApiOfferToFinanceOfferToFinance;
       'api::product.product': ApiProductProduct;
       'api::product-page.product-page': ApiProductPageProductPage;
       'api::rates-page.rates-page': ApiRatesPageRatesPage;
