@@ -1,0 +1,18 @@
+{
+  "kind": "collectionType",
+  "collectionName": "offer_to_finances",
+  "info": {
+    "singularName": "offer-to-finance",
+    "pluralName": "offer-to-finances",
+    "displayName": "Offer to Finance"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "disclaimer": {
+      "type": "text"
+    }
+  }
+}
