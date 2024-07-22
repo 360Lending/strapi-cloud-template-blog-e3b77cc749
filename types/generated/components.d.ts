@@ -10,6 +10,7 @@ export interface CalculatorCalculatorTextField extends Schema.Component {
     label: Attribute.String;
     more_information: Attribute.Text;
     operator: Attribute.String;
+    home_page_default_value: Attribute.String;
   };
 }
 
