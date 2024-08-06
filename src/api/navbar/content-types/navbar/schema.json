@@ -1,0 +1,22 @@
+{
+  "kind": "collectionType",
+  "collectionName": "navbars",
+  "info": {
+    "singularName": "navbar",
+    "pluralName": "navbars",
+    "displayName": "Navbar",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "navbar_menus": {
+      "displayName": "Navbar Menu",
+      "type": "component",
+      "repeatable": false,
+      "component": "navbar-menu.navbar-menu"
+    }
+  }
+}
