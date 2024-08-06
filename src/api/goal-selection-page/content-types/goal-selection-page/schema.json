@@ -1,0 +1,22 @@
+{
+  "kind": "collectionType",
+  "collectionName": "goal_selection_pages",
+  "info": {
+    "singularName": "goal-selection-page",
+    "pluralName": "goal-selection-pages",
+    "displayName": "Goal Selection Page",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "goals": {
+      "displayName": "goals",
+      "type": "component",
+      "repeatable": true,
+      "component": "goals.goals"
+    }
+  }
+}
