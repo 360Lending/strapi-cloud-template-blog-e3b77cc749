@@ -11,6 +11,21 @@
     },
     "description": {
       "type": "text"
+    },
+    "subheader_1": {
+      "type": "string"
+    },
+    "subheader_2": {
+      "type": "string"
+    },
+    "subheader_3": {
+      "type": "string"
+    },
+    "subheader_4": {
+      "type": "string"
+    },
+    "subheader_5": {
+      "type": "string"
     }
   }
 }
