@@ -975,6 +975,38 @@ export interface ApiGlobalGlobal extends Schema.SingleType {
   };
 }
 
+export interface ApiGoalSelectionPageGoalSelectionPage
+  extends Schema.CollectionType {
+  collectionName: 'goal_selection_pages';
+  info: {
+    singularName: 'goal-selection-page';
+    pluralName: 'goal-selection-pages';
+    displayName: 'Goal Selection Page';
+    description: '';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    goals: Attribute.Component<'goals.goals', true>;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::goal-selection-page.goal-selection-page',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::goal-selection-page.goal-selection-page',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
 export interface ApiHomePageHomePage extends Schema.CollectionType {
   collectionName: 'home_pages';
   info: {
@@ -1396,6 +1428,7 @@ declare module '@strapi/types' {
       'api::calculator.calculator': ApiCalculatorCalculator;
       'api::credit-summary.credit-summary': ApiCreditSummaryCreditSummary;
       'api::global.global': ApiGlobalGlobal;
+      'api::goal-selection-page.goal-selection-page': ApiGoalSelectionPageGoalSelectionPage;
       'api::home-page.home-page': ApiHomePageHomePage;
       'api::mqls-page.mqls-page': ApiMqlsPageMqlsPage;
       'api::offer-to-finance.offer-to-finance': ApiOfferToFinanceOfferToFinance;

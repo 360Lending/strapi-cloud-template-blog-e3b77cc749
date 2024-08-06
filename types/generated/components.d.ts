@@ -164,6 +164,18 @@ export interface CreditSummaryOrderAppraisal extends Schema.Component {
   };
 }
 
+export interface GoalsGoals extends Schema.Component {
+  collectionName: 'components_goals_goals';
+  info: {
+    displayName: 'goals';
+    description: '';
+  };
+  attributes: {
+    goal_name: Attribute.String;
+    goal_description: Attribute.Text;
+  };
+}
+
 export interface HomeHeroSectionButton extends Schema.Component {
   collectionName: 'components_home_hero_section_buttons';
   info: {
@@ -607,6 +619,7 @@ declare module '@strapi/types' {
       'credit-summary.current-analysis-and-solutions-page': CreditSummaryCurrentAnalysisAndSolutionsPage;
       'credit-summary.order-appraisal-item': CreditSummaryOrderAppraisalItem;
       'credit-summary.order-appraisal': CreditSummaryOrderAppraisal;
+      'goals.goals': GoalsGoals;
       'home.hero-section-button': HomeHeroSectionButton;
       'home.product-description': HomeProductDescription;
       'home.products-section-list-items': HomeProductsSectionListItems;
