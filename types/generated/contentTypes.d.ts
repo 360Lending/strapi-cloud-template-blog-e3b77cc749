@@ -1083,6 +1083,37 @@ export interface ApiMqlsPageMqlsPage extends Schema.CollectionType {
   };
 }
 
+export interface ApiNavbarNavbar extends Schema.CollectionType {
+  collectionName: 'navbars';
+  info: {
+    singularName: 'navbar';
+    pluralName: 'navbars';
+    displayName: 'Navbar';
+    description: '';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    navbar_menus: Attribute.Component<'navbar-menu.navbar-menu'>;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::navbar.navbar',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::navbar.navbar',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
 export interface ApiOfferToFinanceOfferToFinance extends Schema.CollectionType {
   collectionName: 'offer_to_finances';
   info: {
@@ -1431,6 +1462,7 @@ declare module '@strapi/types' {
       'api::goal-selection-page.goal-selection-page': ApiGoalSelectionPageGoalSelectionPage;
       'api::home-page.home-page': ApiHomePageHomePage;
       'api::mqls-page.mqls-page': ApiMqlsPageMqlsPage;
+      'api::navbar.navbar': ApiNavbarNavbar;
       'api::offer-to-finance.offer-to-finance': ApiOfferToFinanceOfferToFinance;
       'api::product.product': ApiProductProduct;
       'api::product-page.product-page': ApiProductPageProductPage;

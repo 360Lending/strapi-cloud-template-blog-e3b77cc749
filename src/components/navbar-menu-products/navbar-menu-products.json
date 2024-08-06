@@ -1,0 +1,16 @@
+{
+  "collectionName": "components_navbar_menu_products_navbar_menu_products",
+  "info": {
+    "displayName": "Navbar Menu - Products",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "description": {
+      "type": "text"
+    }
+  }
+}

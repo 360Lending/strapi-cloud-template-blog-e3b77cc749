@@ -1,0 +1,16 @@
+{
+  "collectionName": "components_navbar_menu_navbar_menus",
+  "info": {
+    "displayName": "Navbar Menu",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "navbar_menus_products": {
+      "displayName": "Navbar Menu - Products",
+      "type": "component",
+      "repeatable": true,
+      "component": "navbar-menu-products.navbar-menu-products"
+    }
+  }
+}

@@ -253,6 +253,32 @@ export interface MqlsMoreInfo extends Schema.Component {
   };
 }
 
+export interface NavbarMenuProductsNavbarMenuProducts extends Schema.Component {
+  collectionName: 'components_navbar_menu_products_navbar_menu_products';
+  info: {
+    displayName: 'Navbar Menu - Products';
+    description: '';
+  };
+  attributes: {
+    title: Attribute.String;
+    description: Attribute.Text;
+  };
+}
+
+export interface NavbarMenuNavbarMenu extends Schema.Component {
+  collectionName: 'components_navbar_menu_navbar_menus';
+  info: {
+    displayName: 'Navbar Menu';
+    description: '';
+  };
+  attributes: {
+    navbar_menus_products: Attribute.Component<
+      'navbar-menu-products.navbar-menu-products',
+      true
+    >;
+  };
+}
+
 export interface ProductInitialStates extends Schema.Component {
   collectionName: 'components_product_initial_states';
   info: {
@@ -626,6 +652,8 @@ declare module '@strapi/types' {
       'home.story-list-items': HomeStoryListItems;
       'mqls.education': MqlsEducation;
       'mqls.more-info': MqlsMoreInfo;
+      'navbar-menu-products.navbar-menu-products': NavbarMenuProductsNavbarMenuProducts;
+      'navbar-menu.navbar-menu': NavbarMenuNavbarMenu;
       'product.initial-states': ProductInitialStates;
       'product.product-calculator-content': ProductProductCalculatorContent;
       'product.product-calculator-subheader-2-list-item': ProductProductCalculatorSubheader2ListItem;
