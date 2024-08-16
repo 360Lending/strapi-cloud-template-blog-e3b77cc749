@@ -17,6 +17,9 @@
     },
     "slug": {
       "type": "uid"
+    },
+    "subheader": {
+      "type": "string"
     }
   }
 }
