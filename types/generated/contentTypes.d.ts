@@ -1048,6 +1048,38 @@ export interface ApiHomePageHomePage extends Schema.CollectionType {
   };
 }
 
+export interface ApiLearnPageLearnPage extends Schema.CollectionType {
+  collectionName: 'learn_pages';
+  info: {
+    singularName: 'learn-page';
+    pluralName: 'learn-pages';
+    displayName: 'Learn Page';
+    description: '';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    header: Attribute.String;
+    slug: Attribute.UID;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::learn-page.learn-page',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::learn-page.learn-page',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
 export interface ApiMqlsPageMqlsPage extends Schema.CollectionType {
   collectionName: 'mqls_pages';
   info: {
@@ -1461,6 +1493,7 @@ declare module '@strapi/types' {
       'api::global.global': ApiGlobalGlobal;
       'api::goal-selection-page.goal-selection-page': ApiGoalSelectionPageGoalSelectionPage;
       'api::home-page.home-page': ApiHomePageHomePage;
+      'api::learn-page.learn-page': ApiLearnPageLearnPage;
       'api::mqls-page.mqls-page': ApiMqlsPageMqlsPage;
       'api::navbar.navbar': ApiNavbarNavbar;
       'api::offer-to-finance.offer-to-finance': ApiOfferToFinanceOfferToFinance;
