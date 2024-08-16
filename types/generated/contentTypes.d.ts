@@ -1062,6 +1062,7 @@ export interface ApiLearnPageLearnPage extends Schema.CollectionType {
   attributes: {
     header: Attribute.String;
     slug: Attribute.UID;
+    subheader: Attribute.String;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
