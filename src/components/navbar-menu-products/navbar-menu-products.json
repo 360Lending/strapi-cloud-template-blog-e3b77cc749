@@ -26,6 +26,9 @@
     },
     "subheader_5": {
       "type": "string"
+    },
+    "url": {
+      "type": "string"
     }
   }
 }
