@@ -267,6 +267,7 @@ export interface NavbarMenuProductsNavbarMenuProducts extends Schema.Component {
     subheader_3: Attribute.String;
     subheader_4: Attribute.String;
     subheader_5: Attribute.String;
+    url: Attribute.String;
   };
 }
 
