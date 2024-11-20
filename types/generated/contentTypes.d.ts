@@ -1177,6 +1177,36 @@ export interface ApiOfferToFinanceOfferToFinance extends Schema.CollectionType {
   };
 }
 
+export interface ApiPrivacyPolicyPrivacyPolicy extends Schema.CollectionType {
+  collectionName: 'privacy_policies';
+  info: {
+    singularName: 'privacy-policy';
+    pluralName: 'privacy-policies';
+    displayName: 'Privacy Policy';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    content: Attribute.Blocks;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::privacy-policy.privacy-policy',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::privacy-policy.privacy-policy',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
 export interface ApiProductProduct extends Schema.CollectionType {
   collectionName: 'products';
   info: {
@@ -1498,6 +1528,7 @@ declare module '@strapi/types' {
       'api::mqls-page.mqls-page': ApiMqlsPageMqlsPage;
       'api::navbar.navbar': ApiNavbarNavbar;
       'api::offer-to-finance.offer-to-finance': ApiOfferToFinanceOfferToFinance;
+      'api::privacy-policy.privacy-policy': ApiPrivacyPolicyPrivacyPolicy;
       'api::product.product': ApiProductProduct;
       'api::product-page.product-page': ApiProductPageProductPage;
       'api::rates-page.rates-page': ApiRatesPageRatesPage;
