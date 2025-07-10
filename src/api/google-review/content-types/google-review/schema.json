@@ -1,0 +1,28 @@
+{
+  "kind": "singleType",
+  "collectionName": "google_reviews",
+  "info": {
+    "singularName": "google-review",
+    "pluralName": "google-reviews",
+    "displayName": "Google Review"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "rating": {
+      "required": true,
+      "default": 4.9,
+      "max": 5,
+      "min": 0,
+      "type": "decimal"
+    },
+    "reviewCount": {
+      "type": "integer",
+      "required": true,
+      "default": 812,
+      "min": 0
+    }
+  }
+}
