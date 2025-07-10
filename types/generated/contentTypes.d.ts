@@ -1007,6 +1007,54 @@ export interface ApiGoalSelectionPageGoalSelectionPage
   };
 }
 
+export interface ApiGoogleReviewGoogleReview extends Schema.SingleType {
+  collectionName: 'google_reviews';
+  info: {
+    singularName: 'google-review';
+    pluralName: 'google-reviews';
+    displayName: 'Google Review';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    rating: Attribute.Decimal &
+      Attribute.Required &
+      Attribute.SetMinMax<
+        {
+          min: 0;
+          max: 5;
+        },
+        number
+      > &
+      Attribute.DefaultTo<4.9>;
+    reviewCount: Attribute.Integer &
+      Attribute.Required &
+      Attribute.SetMinMax<
+        {
+          min: 0;
+        },
+        number
+      > &
+      Attribute.DefaultTo<812>;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::google-review.google-review',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::google-review.google-review',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
 export interface ApiHomePageHomePage extends Schema.CollectionType {
   collectionName: 'home_pages';
   info: {
@@ -1523,6 +1571,7 @@ declare module '@strapi/types' {
       'api::credit-summary.credit-summary': ApiCreditSummaryCreditSummary;
       'api::global.global': ApiGlobalGlobal;
       'api::goal-selection-page.goal-selection-page': ApiGoalSelectionPageGoalSelectionPage;
+      'api::google-review.google-review': ApiGoogleReviewGoogleReview;
       'api::home-page.home-page': ApiHomePageHomePage;
       'api::learn-page.learn-page': ApiLearnPageLearnPage;
       'api::mqls-page.mqls-page': ApiMqlsPageMqlsPage;
