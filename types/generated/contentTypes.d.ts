@@ -817,6 +817,40 @@ export interface ApiAboutAbout extends Schema.SingleType {
   };
 }
 
+export interface ApiBlogEngagementBlogEngagement extends Schema.SingleType {
+  collectionName: 'blog_engagements';
+  info: {
+    singularName: 'blog-engagement';
+    pluralName: 'blog-engagements';
+    displayName: 'Blog Engagement';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    header: Attribute.String;
+    body: Attribute.Blocks;
+    button_text: Attribute.String;
+    button_url: Attribute.String;
+    is_active: Attribute.Boolean & Attribute.DefaultTo<true>;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::blog-engagement.blog-engagement',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::blog-engagement.blog-engagement',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
 export interface ApiBlogPostBlogPost extends Schema.CollectionType {
   collectionName: 'blog_posts';
   info: {
@@ -1566,6 +1600,7 @@ declare module '@strapi/types' {
       'plugin::users-permissions.role': PluginUsersPermissionsRole;
       'plugin::users-permissions.user': PluginUsersPermissionsUser;
       'api::about.about': ApiAboutAbout;
+      'api::blog-engagement.blog-engagement': ApiBlogEngagementBlogEngagement;
       'api::blog-post.blog-post': ApiBlogPostBlogPost;
       'api::calculator.calculator': ApiCalculatorCalculator;
       'api::credit-summary.credit-summary': ApiCreditSummaryCreditSummary;
