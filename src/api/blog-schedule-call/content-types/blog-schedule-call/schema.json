@@ -1,0 +1,24 @@
+{
+  "kind": "singleType",
+  "collectionName": "blog_schedule_calls",
+  "info": {
+    "singularName": "blog-schedule-call",
+    "pluralName": "blog-schedule-calls",
+    "displayName": "Blog Schedule Call"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "header": {
+      "type": "string"
+    },
+    "body": {
+      "type": "blocks"
+    },
+    "button_text": {
+      "type": "string"
+    }
+  }
+}

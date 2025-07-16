@@ -894,6 +894,38 @@ export interface ApiBlogPostBlogPost extends Schema.CollectionType {
   };
 }
 
+export interface ApiBlogScheduleCallBlogScheduleCall extends Schema.SingleType {
+  collectionName: 'blog_schedule_calls';
+  info: {
+    singularName: 'blog-schedule-call';
+    pluralName: 'blog-schedule-calls';
+    displayName: 'Blog Schedule Call';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    header: Attribute.String;
+    body: Attribute.Blocks;
+    button_text: Attribute.String;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::blog-schedule-call.blog-schedule-call',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::blog-schedule-call.blog-schedule-call',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
 export interface ApiCalculatorCalculator extends Schema.CollectionType {
   collectionName: 'calculators';
   info: {
@@ -1602,6 +1634,7 @@ declare module '@strapi/types' {
       'api::about.about': ApiAboutAbout;
       'api::blog-engagement.blog-engagement': ApiBlogEngagementBlogEngagement;
       'api::blog-post.blog-post': ApiBlogPostBlogPost;
+      'api::blog-schedule-call.blog-schedule-call': ApiBlogScheduleCallBlogScheduleCall;
       'api::calculator.calculator': ApiCalculatorCalculator;
       'api::credit-summary.credit-summary': ApiCreditSummaryCreditSummary;
       'api::global.global': ApiGlobalGlobal;
