@@ -817,12 +817,13 @@ export interface ApiAboutAbout extends Schema.SingleType {
   };
 }
 
-export interface ApiBlogEngagementBlogEngagement extends Schema.SingleType {
+export interface ApiBlogEngagementBlogEngagement extends Schema.CollectionType {
   collectionName: 'blog_engagements';
   info: {
     singularName: 'blog-engagement';
     pluralName: 'blog-engagements';
     displayName: 'Blog Engagement';
+    description: '';
   };
   options: {
     draftAndPublish: true;
@@ -833,6 +834,7 @@ export interface ApiBlogEngagementBlogEngagement extends Schema.SingleType {
     button_text: Attribute.String;
     button_url: Attribute.String;
     is_active: Attribute.Boolean & Attribute.DefaultTo<true>;
+    slug: Attribute.UID & Attribute.Required;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
