@@ -1010,6 +1010,36 @@ export interface ApiCreditSummaryCreditSummary extends Schema.CollectionType {
   };
 }
 
+export interface ApiGeoLandingGeoLanding extends Schema.SingleType {
+  collectionName: 'geo_landings';
+  info: {
+    singularName: 'geo-landing';
+    pluralName: 'geo-landings';
+    displayName: 'Geo Landing';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    cities: Attribute.Component<'locations.city', true>;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::geo-landing.geo-landing',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::geo-landing.geo-landing',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
 export interface ApiGlobalGlobal extends Schema.SingleType {
   collectionName: 'globals';
   info: {
@@ -1639,6 +1669,7 @@ declare module '@strapi/types' {
       'api::blog-schedule-call.blog-schedule-call': ApiBlogScheduleCallBlogScheduleCall;
       'api::calculator.calculator': ApiCalculatorCalculator;
       'api::credit-summary.credit-summary': ApiCreditSummaryCreditSummary;
+      'api::geo-landing.geo-landing': ApiGeoLandingGeoLanding;
       'api::global.global': ApiGlobalGlobal;
       'api::goal-selection-page.goal-selection-page': ApiGoalSelectionPageGoalSelectionPage;
       'api::google-review.google-review': ApiGoogleReviewGoogleReview;

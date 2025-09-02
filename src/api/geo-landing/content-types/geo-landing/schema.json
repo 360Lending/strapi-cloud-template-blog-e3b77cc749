@@ -1,0 +1,20 @@
+{
+  "kind": "singleType",
+  "collectionName": "geo_landings",
+  "info": {
+    "singularName": "geo-landing",
+    "pluralName": "geo-landings",
+    "displayName": "Geo Landing"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "cities": {
+      "type": "component",
+      "repeatable": true,
+      "component": "locations.city"
+    }
+  }
+}
