@@ -1024,6 +1024,15 @@ export interface ApiGeoLandingGeoLanding extends Schema.SingleType {
   attributes: {
     cities: Attribute.Component<'locations.city', true>;
     locations: Attribute.Component<'locations.location', true>;
+    hero_header: Attribute.String;
+    hero_sub_header: Attribute.String;
+    hero_underlined_text: Attribute.String;
+    hero_bullet_point_1: Attribute.String;
+    hero_bullet_point_2: Attribute.String;
+    hero_bullet_point_3: Attribute.String;
+    hero_button_text: Attribute.String;
+    hero_fine_print: Attribute.String;
+    hero_image_alt: Attribute.String;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
