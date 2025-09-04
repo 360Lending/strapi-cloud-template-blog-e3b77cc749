@@ -238,6 +238,16 @@ export interface LocationsCity extends Schema.Component {
   };
 }
 
+export interface LocationsLocation extends Schema.Component {
+  collectionName: 'components_locations_locations';
+  info: {
+    displayName: 'location';
+  };
+  attributes: {
+    location: Attribute.String;
+  };
+}
+
 export interface MqlsEducation extends Schema.Component {
   collectionName: 'components_mqls_educations';
   info: {
@@ -667,6 +677,7 @@ declare module '@strapi/types' {
       'home.products-section-list-items': HomeProductsSectionListItems;
       'home.story-list-items': HomeStoryListItems;
       'locations.city': LocationsCity;
+      'locations.location': LocationsLocation;
       'mqls.education': MqlsEducation;
       'mqls.more-info': MqlsMoreInfo;
       'navbar-menu-products.navbar-menu-products': NavbarMenuProductsNavbarMenuProducts;

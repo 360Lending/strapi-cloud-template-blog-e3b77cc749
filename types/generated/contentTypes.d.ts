@@ -1016,12 +1016,14 @@ export interface ApiGeoLandingGeoLanding extends Schema.SingleType {
     singularName: 'geo-landing';
     pluralName: 'geo-landings';
     displayName: 'Geo Landing';
+    description: '';
   };
   options: {
     draftAndPublish: true;
   };
   attributes: {
     cities: Attribute.Component<'locations.city', true>;
+    locations: Attribute.Component<'locations.location', true>;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
