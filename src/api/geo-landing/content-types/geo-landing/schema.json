@@ -21,6 +21,33 @@
       "type": "component",
       "repeatable": true,
       "component": "locations.location"
+    },
+    "hero_header": {
+      "type": "string"
+    },
+    "hero_sub_header": {
+      "type": "string"
+    },
+    "hero_underlined_text": {
+      "type": "string"
+    },
+    "hero_bullet_point_1": {
+      "type": "string"
+    },
+    "hero_bullet_point_2": {
+      "type": "string"
+    },
+    "hero_bullet_point_3": {
+      "type": "string"
+    },
+    "hero_button_text": {
+      "type": "string"
+    },
+    "hero_fine_print": {
+      "type": "string"
+    },
+    "hero_image_alt": {
+      "type": "string"
     }
   }
 }
