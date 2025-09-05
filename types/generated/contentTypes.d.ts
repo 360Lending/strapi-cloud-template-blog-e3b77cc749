@@ -1032,6 +1032,18 @@ export interface ApiGeoLandingGeoLanding extends Schema.SingleType {
     hero_button_text: Attribute.String;
     hero_fine_print: Attribute.String;
     hero_image_alt: Attribute.String;
+    why_header: Attribute.String;
+    why_description: Attribute.String;
+    why_bullet_point_1_label: Attribute.String;
+    why_bullet_point_1_text: Attribute.String;
+    why_bullet_point_2_label: Attribute.String;
+    why_bullet_point_2_text: Attribute.String;
+    why_bullet_point_3_label: Attribute.String;
+    why_bullet_point_3_text: Attribute.String;
+    why_bullet_point_4_label: Attribute.String;
+    why_bullet_point_4_text: Attribute.String;
+    why_cta: Attribute.String;
+    why_button_text: Attribute.String;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
