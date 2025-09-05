@@ -43,6 +43,42 @@
     },
     "hero_image_alt": {
       "type": "string"
+    },
+    "why_header": {
+      "type": "string"
+    },
+    "why_description": {
+      "type": "string"
+    },
+    "why_bullet_point_1_label": {
+      "type": "string"
+    },
+    "why_bullet_point_1_text": {
+      "type": "string"
+    },
+    "why_bullet_point_2_label": {
+      "type": "string"
+    },
+    "why_bullet_point_2_text": {
+      "type": "string"
+    },
+    "why_bullet_point_3_label": {
+      "type": "string"
+    },
+    "why_bullet_point_3_text": {
+      "type": "string"
+    },
+    "why_bullet_point_4_label": {
+      "type": "string"
+    },
+    "why_bullet_point_4_text": {
+      "type": "string"
+    },
+    "why_cta": {
+      "type": "string"
+    },
+    "why_button_text": {
+      "type": "string"
     }
   }
 }
