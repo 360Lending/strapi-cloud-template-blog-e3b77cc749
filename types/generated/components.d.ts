@@ -228,16 +228,6 @@ export interface HomeStoryListItems extends Schema.Component {
   };
 }
 
-export interface LocationsCity extends Schema.Component {
-  collectionName: 'components_locations_cities';
-  info: {
-    displayName: 'city';
-  };
-  attributes: {
-    city: Attribute.String;
-  };
-}
-
 export interface LocationsLocation extends Schema.Component {
   collectionName: 'components_locations_locations';
   info: {
@@ -676,7 +666,6 @@ declare module '@strapi/types' {
       'home.product-description': HomeProductDescription;
       'home.products-section-list-items': HomeProductsSectionListItems;
       'home.story-list-items': HomeStoryListItems;
-      'locations.city': LocationsCity;
       'locations.location': LocationsLocation;
       'mqls.education': MqlsEducation;
       'mqls.more-info': MqlsMoreInfo;

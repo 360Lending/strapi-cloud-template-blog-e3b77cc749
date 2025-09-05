@@ -1022,7 +1022,6 @@ export interface ApiGeoLandingGeoLanding extends Schema.SingleType {
     draftAndPublish: true;
   };
   attributes: {
-    cities: Attribute.Component<'locations.city', true>;
     locations: Attribute.Component<'locations.location', true>;
     hero_header: Attribute.String;
     hero_sub_header: Attribute.String;

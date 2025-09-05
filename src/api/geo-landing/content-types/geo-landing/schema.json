@@ -12,11 +12,6 @@
   },
   "pluginOptions": {},
   "attributes": {
-    "cities": {
-      "type": "component",
-      "repeatable": true,
-      "component": "locations.city"
-    },
     "locations": {
       "type": "component",
       "repeatable": true,
