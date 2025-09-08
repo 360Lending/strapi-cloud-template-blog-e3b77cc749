@@ -1044,6 +1044,14 @@ export interface ApiGeoLandingGeoLanding extends Schema.SingleType {
     why_bullet_point_4_text: Attribute.String;
     why_cta: Attribute.String;
     why_button_text: Attribute.String;
+    social_header: Attribute.String;
+    social_description: Attribute.String;
+    social_reason_1_label: Attribute.String;
+    social_reason_1_text: Attribute.String;
+    social_reason_2_label: Attribute.String;
+    social_reason_2_text: Attribute.String;
+    social_reason_3_label: Attribute.String;
+    social_reason_3_text: Attribute.String;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
