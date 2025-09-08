@@ -79,6 +79,30 @@
     },
     "why_button_text": {
       "type": "string"
+    },
+    "social_header": {
+      "type": "string"
+    },
+    "social_description": {
+      "type": "string"
+    },
+    "social_reason_1_label": {
+      "type": "string"
+    },
+    "social_reason_1_text": {
+      "type": "string"
+    },
+    "social_reason_2_label": {
+      "type": "string"
+    },
+    "social_reason_2_text": {
+      "type": "string"
+    },
+    "social_reason_3_label": {
+      "type": "string"
+    },
+    "social_reason_3_text": {
+      "type": "string"
     }
   }
 }
