@@ -103,6 +103,17 @@
     },
     "social_reason_3_text": {
       "type": "string"
+    },
+    "faq_header": {
+      "type": "string"
+    },
+    "faq_sub_header": {
+      "type": "string"
+    },
+    "faq_list_items": {
+      "type": "component",
+      "repeatable": true,
+      "component": "support.faq-list-items"
     }
   }
 }
