@@ -1052,6 +1052,9 @@ export interface ApiGeoLandingGeoLanding extends Schema.SingleType {
     social_reason_2_text: Attribute.String;
     social_reason_3_label: Attribute.String;
     social_reason_3_text: Attribute.String;
+    faq_header: Attribute.String;
+    faq_sub_header: Attribute.String;
+    faq_list_items: Attribute.Component<'support.faq-list-items', true>;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
