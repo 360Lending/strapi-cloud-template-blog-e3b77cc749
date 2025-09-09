@@ -114,6 +114,96 @@
       "type": "component",
       "repeatable": true,
       "component": "support.faq-list-items"
+    },
+    "services_header": {
+      "type": "string"
+    },
+    "services_description": {
+      "type": "string"
+    },
+    "services_card_1_label": {
+      "type": "string"
+    },
+    "services_card_1_text": {
+      "type": "string"
+    },
+    "services_card_1_link": {
+      "type": "string"
+    },
+    "services_card_2_label": {
+      "type": "string"
+    },
+    "services_card_2_text": {
+      "type": "string"
+    },
+    "services_card_2_link": {
+      "type": "string"
+    },
+    "services_card_3_label": {
+      "type": "string"
+    },
+    "services_card_3_text": {
+      "type": "string"
+    },
+    "services_card_3_link": {
+      "type": "string"
+    },
+    "services_card_4_label": {
+      "type": "string"
+    },
+    "services_card_4_text": {
+      "type": "string"
+    },
+    "services_card_4_link": {
+      "type": "string"
+    },
+    "services_card_5_label": {
+      "type": "string"
+    },
+    "services_card_5_text": {
+      "type": "string"
+    },
+    "services_card_5_link": {
+      "type": "string"
+    },
+    "services_card_6_label": {
+      "type": "string"
+    },
+    "services_card_6_text": {
+      "type": "string"
+    },
+    "services_card_6_link": {
+      "type": "string"
+    },
+    "services_card_7_label": {
+      "type": "string"
+    },
+    "services_card_7_text": {
+      "type": "string"
+    },
+    "services_card_7_link": {
+      "type": "string"
+    },
+    "services_card_8_label": {
+      "type": "string"
+    },
+    "services_card_8_text": {
+      "type": "string"
+    },
+    "services_card_8_link": {
+      "type": "string"
+    },
+    "services_card_9_label": {
+      "type": "string"
+    },
+    "services_card_9_text": {
+      "type": "string"
+    },
+    "services_card_9_link": {
+      "type": "string"
+    },
+    "services_button_text": {
+      "type": "string"
     }
   }
 }
