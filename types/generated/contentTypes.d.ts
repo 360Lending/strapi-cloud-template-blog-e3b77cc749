@@ -1085,6 +1085,9 @@ export interface ApiGeoLandingGeoLanding extends Schema.SingleType {
     services_card_9_text: Attribute.String;
     services_card_9_link: Attribute.String;
     services_button_text: Attribute.String;
+    cta_header: Attribute.String;
+    cta_sub_header: Attribute.String;
+    cta_button_text: Attribute.String;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
