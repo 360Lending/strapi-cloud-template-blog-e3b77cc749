@@ -204,6 +204,15 @@
     },
     "services_button_text": {
       "type": "string"
+    },
+    "cta_header": {
+      "type": "string"
+    },
+    "cta_sub_header": {
+      "type": "string"
+    },
+    "cta_button_text": {
+      "type": "string"
     }
   }
 }
