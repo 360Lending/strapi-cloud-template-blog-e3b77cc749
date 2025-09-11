@@ -213,6 +213,33 @@
     },
     "cta_button_text": {
       "type": "string"
+    },
+    "market_header": {
+      "type": "string"
+    },
+    "market_sub_header": {
+      "type": "string"
+    },
+    "market_average_price_title": {
+      "type": "string"
+    },
+    "market_days_on_market_title": {
+      "type": "string"
+    },
+    "market_description_header": {
+      "type": "string"
+    },
+    "market_description_body": {
+      "type": "string"
+    },
+    "market_fine_print_text": {
+      "type": "string"
+    },
+    "market_fine_print_link_text": {
+      "type": "string"
+    },
+    "market_fine_print_link_url": {
+      "type": "string"
     }
   }
 }
