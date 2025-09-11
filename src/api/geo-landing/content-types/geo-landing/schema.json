@@ -240,6 +240,48 @@
     },
     "market_fine_print_link_url": {
       "type": "string"
+    },
+    "rates_header": {
+      "type": "string"
+    },
+    "rates_current_header": {
+      "type": "string"
+    },
+    "rates_current_card_1_label": {
+      "type": "string"
+    },
+    "rates_current_card_1_text": {
+      "type": "string"
+    },
+    "rates_current_card_2_label": {
+      "type": "string"
+    },
+    "rates_current_card_2_text": {
+      "type": "string"
+    },
+    "rates_current_body": {
+      "type": "richtext"
+    },
+    "rates_refinancing_header": {
+      "type": "string"
+    },
+    "rates_refinancing_card_1_label": {
+      "type": "string"
+    },
+    "rates_refinancing_card_1_text": {
+      "type": "string"
+    },
+    "rates_refinancing_card_2_label": {
+      "type": "string"
+    },
+    "rates_refinancing_card_2_text": {
+      "type": "string"
+    },
+    "rates_refinancing_card_1_description": {
+      "type": "richtext"
+    },
+    "rates_refinancing_card_2_description": {
+      "type": "richtext"
     }
   }
 }
