@@ -230,7 +230,7 @@
       "type": "string"
     },
     "market_description_body": {
-      "type": "string"
+      "type": "text"
     },
     "market_fine_print_text": {
       "type": "string"
