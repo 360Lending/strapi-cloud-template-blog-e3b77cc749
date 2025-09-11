@@ -259,9 +259,6 @@
     "rates_current_card_2_text": {
       "type": "string"
     },
-    "rates_current_body": {
-      "type": "richtext"
-    },
     "rates_refinancing_header": {
       "type": "string"
     },
@@ -277,11 +274,14 @@
     "rates_refinancing_card_2_text": {
       "type": "string"
     },
+    "rates_current_body": {
+      "type": "blocks"
+    },
     "rates_refinancing_card_1_description": {
-      "type": "richtext"
+      "type": "blocks"
     },
     "rates_refinancing_card_2_description": {
-      "type": "richtext"
+      "type": "blocks"
     }
   }
 }
