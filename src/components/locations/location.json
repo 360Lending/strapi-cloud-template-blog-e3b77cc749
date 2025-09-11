@@ -1,12 +1,19 @@
 {
   "collectionName": "components_locations_locations",
   "info": {
-    "displayName": "location"
+    "displayName": "location",
+    "description": ""
   },
   "options": {},
   "attributes": {
     "location": {
       "type": "string"
+    },
+    "average_price": {
+      "type": "biginteger"
+    },
+    "days_on_market": {
+      "type": "integer"
     }
   }
 }

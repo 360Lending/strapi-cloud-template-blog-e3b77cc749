@@ -232,9 +232,12 @@ export interface LocationsLocation extends Schema.Component {
   collectionName: 'components_locations_locations';
   info: {
     displayName: 'location';
+    description: '';
   };
   attributes: {
     location: Attribute.String;
+    average_price: Attribute.BigInteger;
+    days_on_market: Attribute.Integer;
   };
 }
 
