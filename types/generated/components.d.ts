@@ -416,6 +416,32 @@ export interface ProductProductSubheaderListItem extends Schema.Component {
   };
 }
 
+export interface RatesV2AdvantageCard extends Schema.Component {
+  collectionName: 'components_rates_v2_advantage_cards';
+  info: {
+    displayName: 'Advantage_card';
+  };
+  attributes: {
+    title: Attribute.String;
+    description: Attribute.Text;
+  };
+}
+
+export interface RatesV2Advantage extends Schema.Component {
+  collectionName: 'components_rates_v2_advantages';
+  info: {
+    displayName: 'Advantage';
+    description: '';
+  };
+  attributes: {
+    header: Attribute.String;
+    subheader: Attribute.Text;
+    cta_text: Attribute.Text;
+    button_text: Attribute.String;
+    advantage_card: Attribute.Component<'rates-v2.advantage-card', true>;
+  };
+}
+
 export interface RatesMortgageOptionListItems extends Schema.Component {
   collectionName: 'components_rates_mortgage_option_list_items';
   info: {
@@ -682,6 +708,8 @@ declare module '@strapi/types' {
       'product.product-service-item': ProductProductServiceItem;
       'product.product-subheader-content': ProductProductSubheaderContent;
       'product.product-subheader-list-item': ProductProductSubheaderListItem;
+      'rates-v2.advantage-card': RatesV2AdvantageCard;
+      'rates-v2.advantage': RatesV2Advantage;
       'rates.mortgage-option-list-items': RatesMortgageOptionListItems;
       'rates.rate-options': RatesRateOptions;
       'rates.rates': RatesRates;

@@ -1,0 +1,15 @@
+{
+  "collectionName": "components_rates_v2_advantage_cards",
+  "info": {
+    "displayName": "Advantage_card"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "description": {
+      "type": "text"
+    }
+  }
+}
