@@ -1103,14 +1103,14 @@ export interface ApiGeoLandingGeoLanding extends Schema.SingleType {
     rates_current_card_1_text: Attribute.String;
     rates_current_card_2_label: Attribute.String;
     rates_current_card_2_text: Attribute.String;
-    rates_current_body: Attribute.RichText;
     rates_refinancing_header: Attribute.String;
     rates_refinancing_card_1_label: Attribute.String;
     rates_refinancing_card_1_text: Attribute.String;
     rates_refinancing_card_2_label: Attribute.String;
     rates_refinancing_card_2_text: Attribute.String;
-    rates_refinancing_card_1_description: Attribute.RichText;
-    rates_refinancing_card_2_description: Attribute.RichText;
+    rates_current_body: Attribute.Blocks;
+    rates_refinancing_card_1_description: Attribute.Blocks;
+    rates_refinancing_card_2_description: Attribute.Blocks;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
