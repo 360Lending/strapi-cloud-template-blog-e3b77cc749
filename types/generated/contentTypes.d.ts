@@ -1088,6 +1088,15 @@ export interface ApiGeoLandingGeoLanding extends Schema.SingleType {
     cta_header: Attribute.String;
     cta_sub_header: Attribute.String;
     cta_button_text: Attribute.String;
+    market_header: Attribute.String;
+    market_sub_header: Attribute.String;
+    market_average_price_title: Attribute.String;
+    market_days_on_market_title: Attribute.String;
+    market_description_header: Attribute.String;
+    market_description_body: Attribute.String;
+    market_fine_print_text: Attribute.String;
+    market_fine_print_link_text: Attribute.String;
+    market_fine_print_link_url: Attribute.String;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
