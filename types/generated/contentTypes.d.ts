@@ -1538,6 +1538,38 @@ export interface ApiRatesPageRatesPage extends Schema.CollectionType {
   };
 }
 
+export interface ApiRatesV2PageRatesV2Page extends Schema.CollectionType {
+  collectionName: 'rates_v2_pages';
+  info: {
+    singularName: 'rates-v2-page';
+    pluralName: 'rates-v2-pages';
+    displayName: 'Rates v2 Page';
+    description: '';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    header: Attribute.String;
+    description: Attribute.Text;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::rates-v2-page.rates-v2-page',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::rates-v2-page.rates-v2-page',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
 export interface ApiReviewReview extends Schema.CollectionType {
   collectionName: 'reviews';
   info: {
@@ -1748,6 +1780,7 @@ declare module '@strapi/types' {
       'api::product.product': ApiProductProduct;
       'api::product-page.product-page': ApiProductPageProductPage;
       'api::rates-page.rates-page': ApiRatesPageRatesPage;
+      'api::rates-v2-page.rates-v2-page': ApiRatesV2PageRatesV2Page;
       'api::review.review': ApiReviewReview;
       'api::search-component.search-component': ApiSearchComponentSearchComponent;
       'api::support-page.support-page': ApiSupportPageSupportPage;
