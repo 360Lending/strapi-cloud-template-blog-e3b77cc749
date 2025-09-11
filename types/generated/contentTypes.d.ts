@@ -1561,6 +1561,7 @@ export interface ApiRatesV2PageRatesV2Page extends Schema.CollectionType {
   attributes: {
     header: Attribute.String;
     description: Attribute.Text;
+    advantage: Attribute.Component<'rates-v2.advantage'>;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;

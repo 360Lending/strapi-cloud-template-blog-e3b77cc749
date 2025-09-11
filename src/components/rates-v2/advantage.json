@@ -1,0 +1,28 @@
+{
+  "collectionName": "components_rates_v2_advantages",
+  "info": {
+    "displayName": "Advantage",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "header": {
+      "type": "string"
+    },
+    "subheader": {
+      "type": "text"
+    },
+    "cta_text": {
+      "type": "text"
+    },
+    "button_text": {
+      "type": "string"
+    },
+    "advantage_card": {
+      "displayName": "Advantage_card",
+      "type": "component",
+      "repeatable": true,
+      "component": "rates-v2.advantage-card"
+    }
+  }
+}

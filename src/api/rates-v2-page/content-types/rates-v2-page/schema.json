@@ -17,6 +17,12 @@
     },
     "description": {
       "type": "text"
+    },
+    "advantage": {
+      "displayName": "Advantage",
+      "type": "component",
+      "repeatable": false,
+      "component": "rates-v2.advantage"
     }
   }
 }
