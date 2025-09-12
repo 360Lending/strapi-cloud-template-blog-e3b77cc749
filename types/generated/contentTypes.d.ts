@@ -1111,6 +1111,14 @@ export interface ApiGeoLandingGeoLanding extends Schema.SingleType {
     rates_current_body: Attribute.Blocks;
     rates_refinancing_card_1_description: Attribute.Blocks;
     rates_refinancing_card_2_description: Attribute.Blocks;
+    rates_refinancing_card_1_rank: Attribute.Enumeration<
+      ['none', 'first', 'second']
+    > &
+      Attribute.DefaultTo<'none'>;
+    rates_refinancing_card_2_rank: Attribute.Enumeration<
+      ['none', 'first', 'second']
+    > &
+      Attribute.DefaultTo<'none'>;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
