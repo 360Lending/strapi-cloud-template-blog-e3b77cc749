@@ -442,6 +442,67 @@ export interface RatesV2Advantage extends Schema.Component {
   };
 }
 
+export interface RatesV2CostCardListItem extends Schema.Component {
+  collectionName: 'components_rates_v2_cost_card_list_items';
+  info: {
+    displayName: 'Cost_card_list_item';
+  };
+  attributes: {
+    title: Attribute.String;
+    description: Attribute.Text;
+  };
+}
+
+export interface RatesV2CostCard extends Schema.Component {
+  collectionName: 'components_rates_v2_cost_cards';
+  info: {
+    displayName: 'Cost_card';
+  };
+  attributes: {
+    title: Attribute.String;
+    description: Attribute.Text;
+  };
+}
+
+export interface RatesV2CostExampleFeeItem extends Schema.Component {
+  collectionName: 'components_rates_v2_cost_example_fee_items';
+  info: {
+    displayName: 'Cost_example_fee_item';
+    description: '';
+  };
+  attributes: {
+    title: Attribute.String & Attribute.Required;
+    amount: Attribute.Decimal & Attribute.Required & Attribute.DefaultTo<0>;
+  };
+}
+
+export interface RatesV2Cost extends Schema.Component {
+  collectionName: 'components_rates_v2_costs';
+  info: {
+    displayName: 'Cost';
+    description: '';
+  };
+  attributes: {
+    header: Attribute.String;
+    subheader: Attribute.Text;
+    cta_text: Attribute.Text;
+    button_text: Attribute.String;
+    out_of_pocket_cost: Attribute.Component<'rates-v2.cost-card'>;
+    out_of_pocket_cost_list_item: Attribute.Component<
+      'rates-v2.cost-card-list-item',
+      true
+    >;
+    closing_cost: Attribute.Component<'rates-v2.cost-card'>;
+    closing_cost_list_item: Attribute.Component<
+      'rates-v2.cost-card-list-item',
+      true
+    >;
+    example_fee_card_title: Attribute.String;
+    loan_amount: Attribute.Component<'rates-v2.cost-example-fee-item'>;
+    fees: Attribute.Component<'rates-v2.cost-example-fee-item', true>;
+  };
+}
+
 export interface RatesMortgageOptionListItems extends Schema.Component {
   collectionName: 'components_rates_mortgage_option_list_items';
   info: {
@@ -638,6 +699,16 @@ export interface SharedText extends Schema.Component {
   };
 }
 
+export interface SupportCost extends Schema.Component {
+  collectionName: 'components_support_costs';
+  info: {
+    displayName: 'Cost';
+  };
+  attributes: {
+    header: Attribute.String;
+  };
+}
+
 export interface SupportFaqListItems extends Schema.Component {
   collectionName: 'components_support_faq_list_items';
   info: {
@@ -710,6 +781,10 @@ declare module '@strapi/types' {
       'product.product-subheader-list-item': ProductProductSubheaderListItem;
       'rates-v2.advantage-card': RatesV2AdvantageCard;
       'rates-v2.advantage': RatesV2Advantage;
+      'rates-v2.cost-card-list-item': RatesV2CostCardListItem;
+      'rates-v2.cost-card': RatesV2CostCard;
+      'rates-v2.cost-example-fee-item': RatesV2CostExampleFeeItem;
+      'rates-v2.cost': RatesV2Cost;
       'rates.mortgage-option-list-items': RatesMortgageOptionListItems;
       'rates.rate-options': RatesRateOptions;
       'rates.rates': RatesRates;
@@ -723,6 +798,7 @@ declare module '@strapi/types' {
       'shared.seo': SharedSeo;
       'shared.slider': SharedSlider;
       'shared.text': SharedText;
+      'support.cost': SupportCost;
       'support.faq-list-items': SupportFaqListItems;
       'why-us.media-section-list-items': WhyUsMediaSectionListItems;
       'why-us.reason-list-items': WhyUsReasonListItems;

@@ -23,6 +23,16 @@
       "type": "component",
       "repeatable": false,
       "component": "rates-v2.advantage"
+    },
+    "slug": {
+      "type": "uid",
+      "required": true
+    },
+    "cost": {
+      "displayName": "Cost",
+      "type": "component",
+      "repeatable": false,
+      "component": "rates-v2.cost"
     }
   }
 }
