@@ -282,6 +282,24 @@
     },
     "rates_refinancing_card_2_description": {
       "type": "blocks"
+    },
+    "rates_refinancing_card_1_rank": {
+      "type": "enumeration",
+      "enum": [
+        "none",
+        "first",
+        "second"
+      ],
+      "default": "none"
+    },
+    "rates_refinancing_card_2_rank": {
+      "type": "enumeration",
+      "enum": [
+        "none",
+        "first",
+        "second"
+      ],
+      "default": "none"
     }
   }
 }
