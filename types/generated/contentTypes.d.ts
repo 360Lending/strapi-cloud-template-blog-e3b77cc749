@@ -1108,9 +1108,6 @@ export interface ApiGeoLandingGeoLanding extends Schema.SingleType {
     rates_refinancing_card_1_text: Attribute.String;
     rates_refinancing_card_2_label: Attribute.String;
     rates_refinancing_card_2_text: Attribute.String;
-    rates_current_body: Attribute.Blocks;
-    rates_refinancing_card_1_description: Attribute.Blocks;
-    rates_refinancing_card_2_description: Attribute.Blocks;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
