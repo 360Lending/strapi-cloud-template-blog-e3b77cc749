@@ -1,0 +1,19 @@
+{
+  "collectionName": "components_rates_v2_cost_example_fee_items",
+  "info": {
+    "displayName": "Cost_example_fee_item",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "amount": {
+      "type": "decimal",
+      "required": true,
+      "default": 0
+    }
+  }
+}

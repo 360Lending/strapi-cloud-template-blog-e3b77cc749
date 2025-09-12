@@ -1,0 +1,58 @@
+{
+  "collectionName": "components_rates_v2_costs",
+  "info": {
+    "displayName": "Cost",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "header": {
+      "type": "string"
+    },
+    "subheader": {
+      "type": "text"
+    },
+    "cta_text": {
+      "type": "text"
+    },
+    "button_text": {
+      "type": "string"
+    },
+    "out_of_pocket_cost": {
+      "displayName": "Cost_card",
+      "type": "component",
+      "repeatable": false,
+      "component": "rates-v2.cost-card"
+    },
+    "out_of_pocket_cost_list_item": {
+      "displayName": "Cost_card_list_item",
+      "type": "component",
+      "repeatable": true,
+      "component": "rates-v2.cost-card-list-item"
+    },
+    "closing_cost": {
+      "type": "component",
+      "repeatable": false,
+      "component": "rates-v2.cost-card"
+    },
+    "closing_cost_list_item": {
+      "type": "component",
+      "repeatable": true,
+      "component": "rates-v2.cost-card-list-item"
+    },
+    "example_fee_card_title": {
+      "type": "string"
+    },
+    "loan_amount": {
+      "displayName": "Cost_example_fee_item",
+      "type": "component",
+      "repeatable": false,
+      "component": "rates-v2.cost-example-fee-item"
+    },
+    "fees": {
+      "type": "component",
+      "repeatable": true,
+      "component": "rates-v2.cost-example-fee-item"
+    }
+  }
+}

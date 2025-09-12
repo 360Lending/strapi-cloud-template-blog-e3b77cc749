@@ -1,0 +1,12 @@
+{
+  "collectionName": "components_support_costs",
+  "info": {
+    "displayName": "Cost"
+  },
+  "options": {},
+  "attributes": {
+    "header": {
+      "type": "string"
+    }
+  }
+}

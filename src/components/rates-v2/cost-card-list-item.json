@@ -1,0 +1,15 @@
+{
+  "collectionName": "components_rates_v2_cost_card_list_items",
+  "info": {
+    "displayName": "Cost_card_list_item"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "description": {
+      "type": "text"
+    }
+  }
+}
