@@ -229,9 +229,6 @@
     "market_description_header": {
       "type": "string"
     },
-    "market_description_body": {
-      "type": "text"
-    },
     "market_fine_print_text": {
       "type": "string"
     },

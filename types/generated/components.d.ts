@@ -238,6 +238,7 @@ export interface LocationsLocation extends Schema.Component {
     location: Attribute.String;
     average_price: Attribute.BigInteger;
     days_on_market: Attribute.Integer;
+    market_description_body: Attribute.Text;
   };
 }
 
