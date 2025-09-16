@@ -1,0 +1,29 @@
+{
+  "collectionName": "components_rates_v2_hero_sections",
+  "info": {
+    "displayName": "Hero Section",
+    "description": "Top section content for Rates v2 pages"
+  },
+  "options": {},
+  "attributes": {
+    "header": {
+      "type": "string",
+      "required": true
+    },
+    "description": {
+      "type": "text"
+    },
+    "image_alt": {
+      "type": "string"
+    },
+    "search_placeholder": {
+      "type": "string"
+    },
+    "highlight_paragraphs": {
+      "displayName": "Highlight Paragraphs",
+      "type": "component",
+      "repeatable": true,
+      "component": "rates-v2.hero-highlight-paragraph"
+    }
+  }
+}

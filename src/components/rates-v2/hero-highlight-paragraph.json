@@ -1,0 +1,18 @@
+{
+  "collectionName": "components_rates_v2_hero_highlight_paragraphs",
+  "info": {
+    "displayName": "Hero Highlight Paragraph",
+    "description": "Paragraph with emphasized leading text for the Rates v2 hero section"
+  },
+  "options": {},
+  "attributes": {
+    "leading": {
+      "type": "string",
+      "required": true
+    },
+    "body": {
+      "type": "text",
+      "required": true
+    }
+  }
+}
