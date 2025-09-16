@@ -504,6 +504,36 @@ export interface RatesV2Cost extends Schema.Component {
   };
 }
 
+export interface RatesV2HeroHighlightParagraph extends Schema.Component {
+  collectionName: 'components_rates_v2_hero_highlight_paragraphs';
+  info: {
+    displayName: 'Hero Highlight Paragraph';
+    description: 'Paragraph with emphasized leading text for the Rates v2 hero section';
+  };
+  attributes: {
+    leading: Attribute.String & Attribute.Required;
+    body: Attribute.Text & Attribute.Required;
+  };
+}
+
+export interface RatesV2HeroSection extends Schema.Component {
+  collectionName: 'components_rates_v2_hero_sections';
+  info: {
+    displayName: 'Hero Section';
+    description: 'Top section content for Rates v2 pages';
+  };
+  attributes: {
+    header: Attribute.String & Attribute.Required;
+    description: Attribute.Text;
+    image_alt: Attribute.String;
+    search_placeholder: Attribute.String;
+    highlight_paragraphs: Attribute.Component<
+      'rates-v2.hero-highlight-paragraph',
+      true
+    >;
+  };
+}
+
 export interface RatesMortgageOptionListItems extends Schema.Component {
   collectionName: 'components_rates_mortgage_option_list_items';
   info: {
@@ -786,6 +816,8 @@ declare module '@strapi/types' {
       'rates-v2.cost-card': RatesV2CostCard;
       'rates-v2.cost-example-fee-item': RatesV2CostExampleFeeItem;
       'rates-v2.cost': RatesV2Cost;
+      'rates-v2.hero-highlight-paragraph': RatesV2HeroHighlightParagraph;
+      'rates-v2.hero-section': RatesV2HeroSection;
       'rates.mortgage-option-list-items': RatesMortgageOptionListItems;
       'rates.rate-options': RatesRateOptions;
       'rates.rates': RatesRates;
