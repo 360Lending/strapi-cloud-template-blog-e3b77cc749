@@ -533,6 +533,48 @@ export interface RatesV2HeroSection extends Schema.Component {
   };
 }
 
+export interface RatesV2PersonalizedRateStep extends Schema.Component {
+  collectionName: 'components_rates_v2_personalized_rate_steps';
+  info: {
+    displayName: 'Personalized Rate Step';
+  };
+  attributes: {
+    title: Attribute.String & Attribute.Required;
+    description: Attribute.Text & Attribute.Required;
+  };
+}
+
+export interface RatesV2PersonalizedRateTopBullet extends Schema.Component {
+  collectionName: 'components_rates_v2_personalized_rate_top_bullets';
+  info: {
+    displayName: 'Personalized Rate Top Bullet';
+  };
+  attributes: {
+    text: Attribute.String & Attribute.Required;
+  };
+}
+
+export interface RatesV2PersonalizedRate extends Schema.Component {
+  collectionName: 'components_rates_v2_personalized_rates';
+  info: {
+    displayName: 'Personalized Rate';
+    description: 'Section showing benefits and steps to get a personalized rate';
+  };
+  attributes: {
+    header: Attribute.String & Attribute.Required;
+    bold_intro: Attribute.Text;
+    description: Attribute.Text;
+    top_bullets: Attribute.Component<
+      'rates-v2.personalized-rate-top-bullet',
+      true
+    >;
+    benefits_header: Attribute.String;
+    benefits_description: Attribute.Text;
+    button_text: Attribute.String;
+    steps: Attribute.Component<'rates-v2.personalized-rate-step', true>;
+  };
+}
+
 export interface RatesMortgageOptionListItems extends Schema.Component {
   collectionName: 'components_rates_mortgage_option_list_items';
   info: {
@@ -817,6 +859,9 @@ declare module '@strapi/types' {
       'rates-v2.cost': RatesV2Cost;
       'rates-v2.hero-highlight-paragraph': RatesV2HeroHighlightParagraph;
       'rates-v2.hero-section': RatesV2HeroSection;
+      'rates-v2.personalized-rate-step': RatesV2PersonalizedRateStep;
+      'rates-v2.personalized-rate-top-bullet': RatesV2PersonalizedRateTopBullet;
+      'rates-v2.personalized-rate': RatesV2PersonalizedRate;
       'rates.mortgage-option-list-items': RatesMortgageOptionListItems;
       'rates.rate-options': RatesRateOptions;
       'rates.rates': RatesRates;
