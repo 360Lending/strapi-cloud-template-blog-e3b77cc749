@@ -16,9 +16,6 @@
     "image_alt": {
       "type": "string"
     },
-    "search_placeholder": {
-      "type": "string"
-    },
     "highlight_paragraphs": {
       "displayName": "Highlight Paragraphs",
       "type": "component",

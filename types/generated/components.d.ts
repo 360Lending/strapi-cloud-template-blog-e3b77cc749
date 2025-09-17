@@ -526,7 +526,6 @@ export interface RatesV2HeroSection extends Schema.Component {
     header: Attribute.String & Attribute.Required;
     description: Attribute.Text;
     image_alt: Attribute.String;
-    search_placeholder: Attribute.String;
     highlight_paragraphs: Attribute.Component<
       'rates-v2.hero-highlight-paragraph',
       true
