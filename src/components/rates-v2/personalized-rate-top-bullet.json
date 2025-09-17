@@ -1,0 +1,13 @@
+{
+  "collectionName": "components_rates_v2_personalized_rate_top_bullets",
+  "info": {
+    "displayName": "Personalized Rate Top Bullet"
+  },
+  "options": {},
+  "attributes": {
+    "text": {
+      "type": "string",
+      "required": true
+    }
+  }
+}

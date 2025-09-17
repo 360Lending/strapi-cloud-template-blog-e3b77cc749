@@ -1,0 +1,17 @@
+{
+  "collectionName": "components_rates_v2_personalized_rate_steps",
+  "info": {
+    "displayName": "Personalized Rate Step"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "description": {
+      "type": "text",
+      "required": true
+    }
+  }
+}

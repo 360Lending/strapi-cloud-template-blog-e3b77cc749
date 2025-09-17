@@ -1,0 +1,41 @@
+{
+  "collectionName": "components_rates_v2_personalized_rates",
+  "info": {
+    "displayName": "Personalized Rate",
+    "description": "Section showing benefits and steps to get a personalized rate"
+  },
+  "options": {},
+  "attributes": {
+    "header": {
+      "type": "string",
+      "required": true
+    },
+    "bold_intro": {
+      "type": "text"
+    },
+    "description": {
+      "type": "text"
+    },
+    "top_bullets": {
+      "displayName": "Top Bullets",
+      "type": "component",
+      "repeatable": true,
+      "component": "rates-v2.personalized-rate-top-bullet"
+    },
+    "benefits_header": {
+      "type": "string"
+    },
+    "benefits_description": {
+      "type": "text"
+    },
+    "button_text": {
+      "type": "string"
+    },
+    "steps": {
+      "displayName": "Steps",
+      "type": "component",
+      "repeatable": true,
+      "component": "rates-v2.personalized-rate-step"
+    }
+  }
+}

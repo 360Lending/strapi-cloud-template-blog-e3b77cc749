@@ -1587,6 +1587,7 @@ export interface ApiRatesV2PageRatesV2Page extends Schema.CollectionType {
     slug: Attribute.UID<'api::rates-v2-page.rates-v2-page', 'header'> &
       Attribute.Required;
     cost: Attribute.Component<'rates-v2.cost'>;
+    personalized_rate: Attribute.Component<'rates-v2.personalized-rate'>;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;

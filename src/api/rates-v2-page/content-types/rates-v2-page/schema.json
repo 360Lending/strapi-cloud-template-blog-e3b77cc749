@@ -40,6 +40,12 @@
       "type": "component",
       "repeatable": false,
       "component": "rates-v2.cost"
+    },
+    "personalized_rate": {
+      "displayName": "Personalized Rate",
+      "type": "component",
+      "repeatable": false,
+      "component": "rates-v2.personalized-rate"
     }
   }
 }
