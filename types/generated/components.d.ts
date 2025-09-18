@@ -443,34 +443,6 @@ export interface RatesV2Advantage extends Schema.Component {
   };
 }
 
-export interface RatesV2BreakdownItem extends Schema.Component {
-  collectionName: 'components_rates_v2_breakdown_items';
-  info: {
-    displayName: 'Breakdown Item';
-  };
-  attributes: {
-    title: Attribute.String & Attribute.Required;
-    description: Attribute.Text & Attribute.Required;
-  };
-}
-
-export interface RatesV2Breakdown extends Schema.Component {
-  collectionName: 'components_rates_v2_breakdowns';
-  info: {
-    displayName: 'Breakdown';
-    description: 'Breakdown section with credit score card and list';
-  };
-  attributes: {
-    header: Attribute.String;
-    description: Attribute.Text;
-    score_label: Attribute.String;
-    score_value: Attribute.Integer;
-    score_is_hidden: Attribute.Boolean & Attribute.DefaultTo<false>;
-    button_text: Attribute.String;
-    items: Attribute.Component<'rates-v2.breakdown-item', true>;
-  };
-}
-
 export interface RatesV2CostCardListItem extends Schema.Component {
   collectionName: 'components_rates_v2_cost_card_list_items';
   info: {
@@ -881,8 +853,6 @@ declare module '@strapi/types' {
       'product.product-subheader-list-item': ProductProductSubheaderListItem;
       'rates-v2.advantage-card': RatesV2AdvantageCard;
       'rates-v2.advantage': RatesV2Advantage;
-      'rates-v2.breakdown-item': RatesV2BreakdownItem;
-      'rates-v2.breakdown': RatesV2Breakdown;
       'rates-v2.cost-card-list-item': RatesV2CostCardListItem;
       'rates-v2.cost-card': RatesV2CostCard;
       'rates-v2.cost-example-fee-item': RatesV2CostExampleFeeItem;
