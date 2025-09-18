@@ -1,0 +1,21 @@
+{
+  "collectionName": "components_rates_v2_breakdown_example_legend_items",
+  "info": {
+    "displayName": "Breakdown Example Legend Item"
+  },
+  "options": {},
+  "attributes": {
+    "color": {
+      "type": "string",
+      "default": "#3EDC93"
+    },
+    "label": {
+      "type": "string",
+      "required": true
+    },
+    "value": {
+      "type": "string",
+      "required": true
+    }
+  }
+}

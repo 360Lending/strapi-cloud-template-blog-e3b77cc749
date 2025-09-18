@@ -1,0 +1,28 @@
+{
+  "collectionName": "components_rates_v2_breakdown_examples",
+  "info": {
+    "displayName": "Breakdown Example"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "button_text": {
+      "type": "string"
+    },
+    "legend": {
+      "displayName": "Legend Items",
+      "type": "component",
+      "repeatable": true,
+      "component": "rates-v2.breakdown-example-legend-item"
+    },
+    "equation_definition": {
+      "type": "string"
+    },
+    "equation": {
+      "type": "string"
+    }
+  }
+}

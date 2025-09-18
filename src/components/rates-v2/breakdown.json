@@ -1,0 +1,34 @@
+{
+  "collectionName": "components_rates_v2_breakdowns",
+  "info": {
+    "displayName": "Breakdown",
+    "description": "Breakdown section with steps and example panel"
+  },
+  "options": {},
+  "attributes": {
+    "header": {
+      "type": "string"
+    },
+    "description": {
+      "type": "text"
+    },
+    "steps": {
+      "displayName": "Steps",
+      "type": "component",
+      "repeatable": true,
+      "component": "rates-v2.breakdown-step"
+    },
+    "credit_score_bands": {
+      "displayName": "Credit Score Bands",
+      "type": "component",
+      "repeatable": true,
+      "component": "rates-v2.breakdown-credit-band"
+    },
+    "example": {
+      "displayName": "Example Panel",
+      "type": "component",
+      "repeatable": false,
+      "component": "rates-v2.breakdown-example"
+    }
+  }
+}
