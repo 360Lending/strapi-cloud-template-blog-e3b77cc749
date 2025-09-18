@@ -1588,6 +1588,7 @@ export interface ApiRatesV2PageRatesV2Page extends Schema.CollectionType {
       Attribute.Required;
     cost: Attribute.Component<'rates-v2.cost'>;
     personalized_rate: Attribute.Component<'rates-v2.personalized-rate'>;
+    breakdown: Attribute.Component<'rates-v2.breakdown'>;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
