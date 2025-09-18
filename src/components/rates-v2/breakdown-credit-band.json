@@ -1,0 +1,22 @@
+{
+  "collectionName": "components_rates_v2_breakdown_credit_bands",
+  "info": {
+    "displayName": "Breakdown Credit Band",
+    "description": "Represents a credit score band with numeric range and display color"
+  },
+  "options": {},
+  "attributes": {
+    "min": {
+      "type": "integer"
+    },
+    "max": {
+      "type": "integer"
+    },
+    "label": {
+      "type": "string"
+    },
+    "color": {
+      "type": "string"
+    }
+  }
+}

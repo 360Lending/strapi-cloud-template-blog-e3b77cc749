@@ -1,0 +1,25 @@
+{
+  "collectionName": "components_rates_v2_breakdown_steps",
+  "info": {
+    "displayName": "Breakdown Step"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "body": {
+      "type": "text"
+    },
+    "inline_card": {
+      "type": "blocks"
+    },
+    "left_card": {
+      "type": "blocks"
+    },
+    "right_card": {
+      "type": "blocks"
+    }
+  }
+}

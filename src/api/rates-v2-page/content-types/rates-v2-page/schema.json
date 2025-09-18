@@ -46,6 +46,12 @@
       "type": "component",
       "repeatable": false,
       "component": "rates-v2.personalized-rate"
+    },
+    "breakdown": {
+      "displayName": "Breakdown",
+      "type": "component",
+      "repeatable": false,
+      "component": "rates-v2.breakdown"
     }
   }
 }
