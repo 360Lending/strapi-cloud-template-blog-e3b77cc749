@@ -443,6 +443,78 @@ export interface RatesV2Advantage extends Schema.Component {
   };
 }
 
+export interface RatesV2BreakdownCreditBand extends Schema.Component {
+  collectionName: 'components_rates_v2_breakdown_credit_bands';
+  info: {
+    displayName: 'Breakdown Credit Band';
+    description: 'Represents a credit score band with numeric range and display color';
+  };
+  attributes: {
+    min: Attribute.Integer;
+    max: Attribute.Integer;
+    label: Attribute.String;
+    color: Attribute.String;
+  };
+}
+
+export interface RatesV2BreakdownExampleLegendItem extends Schema.Component {
+  collectionName: 'components_rates_v2_breakdown_example_legend_items';
+  info: {
+    displayName: 'Breakdown Example Legend Item';
+  };
+  attributes: {
+    color: Attribute.String & Attribute.DefaultTo<'#3EDC93'>;
+    label: Attribute.String & Attribute.Required;
+    value: Attribute.String & Attribute.Required;
+  };
+}
+
+export interface RatesV2BreakdownExample extends Schema.Component {
+  collectionName: 'components_rates_v2_breakdown_examples';
+  info: {
+    displayName: 'Breakdown Example';
+  };
+  attributes: {
+    title: Attribute.String & Attribute.Required;
+    button_text: Attribute.String;
+    legend: Attribute.Component<'rates-v2.breakdown-example-legend-item', true>;
+    equation_definition: Attribute.String;
+    equation: Attribute.String;
+  };
+}
+
+export interface RatesV2BreakdownStep extends Schema.Component {
+  collectionName: 'components_rates_v2_breakdown_steps';
+  info: {
+    displayName: 'Breakdown Step';
+  };
+  attributes: {
+    title: Attribute.String & Attribute.Required;
+    body: Attribute.Text;
+    inline_card: Attribute.Blocks;
+    left_card: Attribute.Blocks;
+    right_card: Attribute.Blocks;
+  };
+}
+
+export interface RatesV2Breakdown extends Schema.Component {
+  collectionName: 'components_rates_v2_breakdowns';
+  info: {
+    displayName: 'Breakdown';
+    description: 'Breakdown section with steps and example panel';
+  };
+  attributes: {
+    header: Attribute.String;
+    description: Attribute.Text;
+    steps: Attribute.Component<'rates-v2.breakdown-step', true>;
+    credit_score_bands: Attribute.Component<
+      'rates-v2.breakdown-credit-band',
+      true
+    >;
+    example: Attribute.Component<'rates-v2.breakdown-example'>;
+  };
+}
+
 export interface RatesV2CostCardListItem extends Schema.Component {
   collectionName: 'components_rates_v2_cost_card_list_items';
   info: {
@@ -853,6 +925,11 @@ declare module '@strapi/types' {
       'product.product-subheader-list-item': ProductProductSubheaderListItem;
       'rates-v2.advantage-card': RatesV2AdvantageCard;
       'rates-v2.advantage': RatesV2Advantage;
+      'rates-v2.breakdown-credit-band': RatesV2BreakdownCreditBand;
+      'rates-v2.breakdown-example-legend-item': RatesV2BreakdownExampleLegendItem;
+      'rates-v2.breakdown-example': RatesV2BreakdownExample;
+      'rates-v2.breakdown-step': RatesV2BreakdownStep;
+      'rates-v2.breakdown': RatesV2Breakdown;
       'rates-v2.cost-card-list-item': RatesV2CostCardListItem;
       'rates-v2.cost-card': RatesV2CostCard;
       'rates-v2.cost-example-fee-item': RatesV2CostExampleFeeItem;
