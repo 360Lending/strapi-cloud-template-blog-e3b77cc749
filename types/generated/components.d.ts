@@ -647,6 +647,30 @@ export interface RatesV2PersonalizedRate extends Schema.Component {
   };
 }
 
+export interface RatesV2UseCaseItem extends Schema.Component {
+  collectionName: 'components_rates_v2_use_case_items';
+  info: {
+    displayName: 'Use Case Item';
+  };
+  attributes: {
+    title: Attribute.String & Attribute.Required;
+    description: Attribute.Text;
+  };
+}
+
+export interface RatesV2UseCases extends Schema.Component {
+  collectionName: 'components_rates_v2_use_cases';
+  info: {
+    displayName: 'Use Cases';
+    description: 'Use cases section with lead text and items (media/icons hardcoded in FE)';
+  };
+  attributes: {
+    header: Attribute.String;
+    description: Attribute.Text;
+    items: Attribute.Component<'rates-v2.use-case-item', true>;
+  };
+}
+
 export interface RatesMortgageOptionListItems extends Schema.Component {
   collectionName: 'components_rates_mortgage_option_list_items';
   info: {
@@ -939,6 +963,8 @@ declare module '@strapi/types' {
       'rates-v2.personalized-rate-step': RatesV2PersonalizedRateStep;
       'rates-v2.personalized-rate-top-bullet': RatesV2PersonalizedRateTopBullet;
       'rates-v2.personalized-rate': RatesV2PersonalizedRate;
+      'rates-v2.use-case-item': RatesV2UseCaseItem;
+      'rates-v2.use-cases': RatesV2UseCases;
       'rates.mortgage-option-list-items': RatesMortgageOptionListItems;
       'rates.rate-options': RatesRateOptions;
       'rates.rates': RatesRates;
