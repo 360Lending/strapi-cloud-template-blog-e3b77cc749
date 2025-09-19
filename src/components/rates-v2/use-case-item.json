@@ -1,0 +1,16 @@
+{
+  "collectionName": "components_rates_v2_use_case_items",
+  "info": {
+    "displayName": "Use Case Item"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "description": {
+      "type": "text"
+    }
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "collectionName": "components_rates_v2_use_cases",
+  "info": {
+    "displayName": "Use Cases",
+    "description": "Use cases section with lead text and items (media/icons hardcoded in FE)"
+  },
+  "options": {},
+  "attributes": {
+    "header": {
+      "type": "string"
+    },
+    "description": {
+      "type": "text"
+    },
+    "items": {
+      "displayName": "Items",
+      "type": "component",
+      "repeatable": true,
+      "component": "rates-v2.use-case-item"
+    }
+  }
+}

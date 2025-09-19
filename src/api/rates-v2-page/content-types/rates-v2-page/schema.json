@@ -52,6 +52,12 @@
       "type": "component",
       "repeatable": false,
       "component": "rates-v2.breakdown"
+    },
+    "use_cases": {
+      "displayName": "Use Cases",
+      "type": "component",
+      "repeatable": false,
+      "component": "rates-v2.use-cases"
     }
   }
 }
