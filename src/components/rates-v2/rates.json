@@ -2,7 +2,7 @@
   "collectionName": "components_rates_v2_rates",
   "info": {
     "displayName": "Rates",
-    "description": "Rates section for Rates v2 pages"
+    "description": "Rates section for Rates v2"
   },
   "options": {},
   "attributes": {
@@ -25,6 +25,63 @@
       "type": "string"
     },
     "current_body": {
+      "type": "blocks"
+    },
+    "refinancing_header": {
+      "type": "string"
+    },
+    "refinancing_card_1_label": {
+      "type": "string"
+    },
+    "refinancing_card_1_text": {
+      "type": "string"
+    },
+    "refinancing_card_1_rank": {
+      "type": "enumeration",
+      "enum": [
+        "none",
+        "first",
+        "second"
+      ],
+      "default": "none"
+    },
+    "refinancing_card_2_label": {
+      "type": "string"
+    },
+    "refinancing_card_2_text": {
+      "type": "string"
+    },
+    "refinancing_card_2_rank": {
+      "type": "enumeration",
+      "enum": [
+        "none",
+        "first",
+        "second"
+      ],
+      "default": "none"
+    },
+    "refinancing_card_1_description": {
+      "type": "blocks"
+    },
+    "refinancing_card_2_description": {
+      "type": "blocks"
+    },
+    "purchasing_header": {
+      "type": "string"
+    },
+    "purchasing_card_1_label": {
+      "type": "string"
+    },
+    "purchasing_card_1_text": {
+      "type": "string"
+    },
+    "purchasing_card_2_label": {
+      "type": "string"
+    },
+    "purchasing_card_2_text": {
+      "type": "string"
+    },
+    "purchasing_body": {
       "type": "blocks"
     }
   }
