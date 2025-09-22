@@ -602,6 +602,18 @@ export interface RatesV2HeroSection extends Schema.Component {
       'rates-v2.hero-highlight-paragraph',
       true
     >;
+    toc_links: Attribute.Component<'rates-v2.hero-toc-link', true>;
+  };
+}
+
+export interface RatesV2HeroTocLink extends Schema.Component {
+  collectionName: 'components_rates_v2_hero_toc_links';
+  info: {
+    displayName: 'Hero TOC Link';
+    description: 'Label for an anchor link in the Rates v2 Hero TOC; anchors are fixed in code';
+  };
+  attributes: {
+    label: Attribute.String & Attribute.Required;
   };
 }
 
@@ -1013,6 +1025,7 @@ declare module '@strapi/types' {
       'rates-v2.cost': RatesV2Cost;
       'rates-v2.hero-highlight-paragraph': RatesV2HeroHighlightParagraph;
       'rates-v2.hero-section': RatesV2HeroSection;
+      'rates-v2.hero-toc-link': RatesV2HeroTocLink;
       'rates-v2.personalized-rate-step': RatesV2PersonalizedRateStep;
       'rates-v2.personalized-rate-top-bullet': RatesV2PersonalizedRateTopBullet;
       'rates-v2.personalized-rate': RatesV2PersonalizedRate;

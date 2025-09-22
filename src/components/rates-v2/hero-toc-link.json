@@ -1,0 +1,14 @@
+{
+  "collectionName": "components_rates_v2_hero_toc_links",
+  "info": {
+    "displayName": "Hero TOC Link",
+    "description": "Label for an anchor link in the Rates v2 Hero TOC; anchors are fixed in code"
+  },
+  "options": {},
+  "attributes": {
+    "label": {
+      "type": "string",
+      "required": true
+    }
+  }
+}

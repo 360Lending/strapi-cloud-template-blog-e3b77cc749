@@ -21,6 +21,12 @@
       "type": "component",
       "repeatable": true,
       "component": "rates-v2.hero-highlight-paragraph"
+    },
+    "toc_links": {
+      "displayName": "TOC Links (labels only)",
+      "type": "component",
+      "repeatable": true,
+      "component": "rates-v2.hero-toc-link"
     }
   }
 }
