@@ -2,7 +2,7 @@
   "collectionName": "components_rates_v2_rates",
   "info": {
     "displayName": "Rates",
-    "description": "Rates section for Rates v2"
+    "description": "Rates section for Rates v2 pages"
   },
   "options": {},
   "attributes": {
@@ -18,11 +18,45 @@
     "current_card_1_text": {
       "type": "string"
     },
+    "current_card_1_rank": {
+      "type": "enumeration",
+      "enum": [
+        "none",
+        "first",
+        "second"
+      ],
+      "default": "none"
+    },
+    "current_card_1_icon": {
+      "type": "enumeration",
+      "enum": [
+        "star",
+        "hand",
+        "house"
+      ]
+    },
     "current_card_2_label": {
       "type": "string"
     },
     "current_card_2_text": {
       "type": "string"
+    },
+    "current_card_2_rank": {
+      "type": "enumeration",
+      "enum": [
+        "none",
+        "first",
+        "second"
+      ],
+      "default": "none"
+    },
+    "current_card_2_icon": {
+      "type": "enumeration",
+      "enum": [
+        "star",
+        "hand",
+        "house"
+      ]
     },
     "current_body": {
       "type": "blocks"
@@ -45,6 +79,14 @@
       ],
       "default": "none"
     },
+    "refinancing_card_1_icon": {
+      "type": "enumeration",
+      "enum": [
+        "star",
+        "hand",
+        "house"
+      ]
+    },
     "refinancing_card_2_label": {
       "type": "string"
     },
@@ -60,10 +102,73 @@
       ],
       "default": "none"
     },
+    "refinancing_card_2_icon": {
+      "type": "enumeration",
+      "enum": [
+        "star",
+        "hand",
+        "house"
+      ]
+    },
     "refinancing_card_1_description": {
       "type": "blocks"
     },
     "refinancing_card_2_description": {
+      "type": "blocks"
+    },
+    "purchasing_header": {
+      "type": "string"
+    },
+    "purchasing_card_1_label": {
+      "type": "string"
+    },
+    "purchasing_card_1_text": {
+      "type": "string"
+    },
+    "purchasing_card_1_rank": {
+      "type": "enumeration",
+      "enum": [
+        "none",
+        "first",
+        "second"
+      ],
+      "default": "none"
+    },
+    "purchasing_card_1_icon": {
+      "type": "enumeration",
+      "enum": [
+        "star",
+        "hand",
+        "house"
+      ]
+    },
+    "purchasing_card_2_label": {
+      "type": "string"
+    },
+    "purchasing_card_2_text": {
+      "type": "string"
+    },
+    "purchasing_card_2_rank": {
+      "type": "enumeration",
+      "enum": [
+        "none",
+        "first",
+        "second"
+      ],
+      "default": "none"
+    },
+    "purchasing_card_2_icon": {
+      "type": "enumeration",
+      "enum": [
+        "star",
+        "hand",
+        "house"
+      ]
+    },
+    "purchasing_card_1_description": {
+      "type": "blocks"
+    },
+    "purchasing_card_2_description": {
       "type": "blocks"
     }
   }
