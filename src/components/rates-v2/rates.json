@@ -1,0 +1,31 @@
+{
+  "collectionName": "components_rates_v2_rates",
+  "info": {
+    "displayName": "Rates",
+    "description": "Rates section for Rates v2 pages"
+  },
+  "options": {},
+  "attributes": {
+    "header": {
+      "type": "string"
+    },
+    "current_header": {
+      "type": "string"
+    },
+    "current_card_1_label": {
+      "type": "string"
+    },
+    "current_card_1_text": {
+      "type": "string"
+    },
+    "current_card_2_label": {
+      "type": "string"
+    },
+    "current_card_2_text": {
+      "type": "string"
+    },
+    "current_body": {
+      "type": "blocks"
+    }
+  }
+}
