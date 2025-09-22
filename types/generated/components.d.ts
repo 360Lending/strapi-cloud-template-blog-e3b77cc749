@@ -651,15 +651,21 @@ export interface RatesV2Rates extends Schema.Component {
   collectionName: 'components_rates_v2_rates';
   info: {
     displayName: 'Rates';
-    description: 'Rates section for Rates v2';
+    description: 'Rates section for Rates v2 pages';
   };
   attributes: {
     header: Attribute.String;
     current_header: Attribute.String;
     current_card_1_label: Attribute.String;
     current_card_1_text: Attribute.String;
+    current_card_1_rank: Attribute.Enumeration<['none', 'first', 'second']> &
+      Attribute.DefaultTo<'none'>;
+    current_card_1_icon: Attribute.Enumeration<['star', 'hand', 'house']>;
     current_card_2_label: Attribute.String;
     current_card_2_text: Attribute.String;
+    current_card_2_rank: Attribute.Enumeration<['none', 'first', 'second']> &
+      Attribute.DefaultTo<'none'>;
+    current_card_2_icon: Attribute.Enumeration<['star', 'hand', 'house']>;
     current_body: Attribute.Blocks;
     refinancing_header: Attribute.String;
     refinancing_card_1_label: Attribute.String;
@@ -668,14 +674,29 @@ export interface RatesV2Rates extends Schema.Component {
       ['none', 'first', 'second']
     > &
       Attribute.DefaultTo<'none'>;
+    refinancing_card_1_icon: Attribute.Enumeration<['star', 'hand', 'house']>;
     refinancing_card_2_label: Attribute.String;
     refinancing_card_2_text: Attribute.String;
     refinancing_card_2_rank: Attribute.Enumeration<
       ['none', 'first', 'second']
     > &
       Attribute.DefaultTo<'none'>;
+    refinancing_card_2_icon: Attribute.Enumeration<['star', 'hand', 'house']>;
     refinancing_card_1_description: Attribute.Blocks;
     refinancing_card_2_description: Attribute.Blocks;
+    purchasing_header: Attribute.String;
+    purchasing_card_1_label: Attribute.String;
+    purchasing_card_1_text: Attribute.String;
+    purchasing_card_1_rank: Attribute.Enumeration<['none', 'first', 'second']> &
+      Attribute.DefaultTo<'none'>;
+    purchasing_card_1_icon: Attribute.Enumeration<['star', 'hand', 'house']>;
+    purchasing_card_2_label: Attribute.String;
+    purchasing_card_2_text: Attribute.String;
+    purchasing_card_2_rank: Attribute.Enumeration<['none', 'first', 'second']> &
+      Attribute.DefaultTo<'none'>;
+    purchasing_card_2_icon: Attribute.Enumeration<['star', 'hand', 'house']>;
+    purchasing_card_1_description: Attribute.Blocks;
+    purchasing_card_2_description: Attribute.Blocks;
   };
 }
 
