@@ -65,24 +65,6 @@
     },
     "refinancing_card_2_description": {
       "type": "blocks"
-    },
-    "purchasing_header": {
-      "type": "string"
-    },
-    "purchasing_card_1_label": {
-      "type": "string"
-    },
-    "purchasing_card_1_text": {
-      "type": "string"
-    },
-    "purchasing_card_2_label": {
-      "type": "string"
-    },
-    "purchasing_card_2_text": {
-      "type": "string"
-    },
-    "purchasing_body": {
-      "type": "blocks"
     }
   }
 }

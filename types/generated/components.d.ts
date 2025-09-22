@@ -676,12 +676,6 @@ export interface RatesV2Rates extends Schema.Component {
       Attribute.DefaultTo<'none'>;
     refinancing_card_1_description: Attribute.Blocks;
     refinancing_card_2_description: Attribute.Blocks;
-    purchasing_header: Attribute.String;
-    purchasing_card_1_label: Attribute.String;
-    purchasing_card_1_text: Attribute.String;
-    purchasing_card_2_label: Attribute.String;
-    purchasing_card_2_text: Attribute.String;
-    purchasing_body: Attribute.Blocks;
   };
 }
 
