@@ -668,6 +668,13 @@ export interface RatesV2Rates extends Schema.Component {
   };
   attributes: {
     header: Attribute.String;
+    calculator_header: Attribute.String;
+    calculator_description: Attribute.Text;
+    calculator_borrow_label: Attribute.String;
+    calculator_rate_header: Attribute.String;
+    calculator_rate_note: Attribute.String;
+    calculator_estimated_header: Attribute.String;
+    calculator_cta_text: Attribute.String;
     current_header: Attribute.String;
     current_card_1_label: Attribute.String;
     current_card_1_text: Attribute.String;
