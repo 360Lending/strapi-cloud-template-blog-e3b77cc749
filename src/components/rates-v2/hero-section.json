@@ -22,6 +22,10 @@
       "repeatable": true,
       "component": "rates-v2.hero-highlight-paragraph"
     },
+    "toc_header": {
+      "displayName": "TOC Header",
+      "type": "string"
+    },
     "toc_links": {
       "displayName": "TOC Links (labels only)",
       "type": "component",

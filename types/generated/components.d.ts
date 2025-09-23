@@ -602,6 +602,7 @@ export interface RatesV2HeroSection extends Schema.Component {
       'rates-v2.hero-highlight-paragraph',
       true
     >;
+    toc_header: Attribute.String;
     toc_links: Attribute.Component<'rates-v2.hero-toc-link', true>;
   };
 }
