@@ -39,6 +39,30 @@
     "calculator_tab_3_label": {
       "type": "string"
     },
+    "calculator_tab_1_icon": {
+      "type": "enumeration",
+      "enum": [
+        "star",
+        "hand",
+        "house"
+      ]
+    },
+    "calculator_tab_2_icon": {
+      "type": "enumeration",
+      "enum": [
+        "star",
+        "hand",
+        "house"
+      ]
+    },
+    "calculator_tab_3_icon": {
+      "type": "enumeration",
+      "enum": [
+        "star",
+        "hand",
+        "house"
+      ]
+    },
     "calculator_tab_2_slider_1_label": {
       "type": "string"
     },
