@@ -30,16 +30,25 @@
     "calculator_cta_text": {
       "type": "string"
     },
-    "calculator_refinance_tab_label": {
+    "calculator_tab_1_label": {
       "type": "string"
     },
-    "calculator_purchase_tab_label": {
+    "calculator_tab_2_label": {
       "type": "string"
     },
-    "calculator_purchase_price_label": {
+    "calculator_tab_3_label": {
       "type": "string"
     },
-    "calculator_down_payment_label": {
+    "calculator_tab_2_slider_1_label": {
+      "type": "string"
+    },
+    "calculator_tab_2_slider_2_label": {
+      "type": "string"
+    },
+    "calculator_tab_3_slider_1_label": {
+      "type": "string"
+    },
+    "calculator_tab_3_slider_2_label": {
       "type": "string"
     },
     "current_header": {
