@@ -30,6 +30,18 @@
     "calculator_cta_text": {
       "type": "string"
     },
+    "calculator_refinance_tab_label": {
+      "type": "string"
+    },
+    "calculator_purchase_tab_label": {
+      "type": "string"
+    },
+    "calculator_purchase_price_label": {
+      "type": "string"
+    },
+    "calculator_down_payment_label": {
+      "type": "string"
+    },
     "current_header": {
       "type": "string"
     },
