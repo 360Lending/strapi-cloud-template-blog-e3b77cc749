@@ -675,10 +675,13 @@ export interface RatesV2Rates extends Schema.Component {
     calculator_rate_note: Attribute.String;
     calculator_estimated_header: Attribute.String;
     calculator_cta_text: Attribute.String;
-    calculator_refinance_tab_label: Attribute.String;
-    calculator_purchase_tab_label: Attribute.String;
-    calculator_purchase_price_label: Attribute.String;
-    calculator_down_payment_label: Attribute.String;
+    calculator_tab_1_label: Attribute.String;
+    calculator_tab_2_label: Attribute.String;
+    calculator_tab_3_label: Attribute.String;
+    calculator_tab_2_slider_1_label: Attribute.String;
+    calculator_tab_2_slider_2_label: Attribute.String;
+    calculator_tab_3_slider_1_label: Attribute.String;
+    calculator_tab_3_slider_2_label: Attribute.String;
     current_header: Attribute.String;
     current_card_1_label: Attribute.String;
     current_card_1_text: Attribute.String;
