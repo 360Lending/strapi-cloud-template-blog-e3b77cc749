@@ -19,16 +19,6 @@
       ],
       "default": "house"
     },
-    "variant_type": {
-      "type": "enumeration",
-      "enum": [
-        "borrow",
-        "refinance",
-        "purchase",
-        "custom"
-      ],
-      "default": "borrow"
-    },
     "primary_slider_1_label": {
       "type": "string"
     },

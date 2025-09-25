@@ -525,10 +525,6 @@ export interface RatesV2CalculatorTab extends Schema.Component {
     label: Attribute.String & Attribute.Required;
     icon: Attribute.Enumeration<['star', 'hand', 'house']> &
       Attribute.DefaultTo<'house'>;
-    variant_type: Attribute.Enumeration<
-      ['borrow', 'refinance', 'purchase', 'custom']
-    > &
-      Attribute.DefaultTo<'borrow'>;
     primary_slider_1_label: Attribute.String;
     primary_slider_2_label: Attribute.String;
     rate_header: Attribute.String;
@@ -694,10 +690,14 @@ export interface RatesV2Rates extends Schema.Component {
     header: Attribute.String;
     calculator_header: Attribute.String;
     calculator_description: Attribute.Text;
+    calculator_borrow_label: Attribute.String;
+    calculator_rate_header: Attribute.String;
+    calculator_rate_note: Attribute.String;
+    calculator_estimated_header: Attribute.String;
+    calculator_cta_text: Attribute.String;
     calculator_tabs: Attribute.Component<'rates-v2.calculator-tab', true> &
       Attribute.SetMinMax<
         {
-          min: 1;
           max: 3;
         },
         number
