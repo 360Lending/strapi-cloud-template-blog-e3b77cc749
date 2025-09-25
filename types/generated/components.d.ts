@@ -678,6 +678,9 @@ export interface RatesV2Rates extends Schema.Component {
     calculator_tab_1_label: Attribute.String;
     calculator_tab_2_label: Attribute.String;
     calculator_tab_3_label: Attribute.String;
+    calculator_tab_1_icon: Attribute.Enumeration<['star', 'hand', 'house']>;
+    calculator_tab_2_icon: Attribute.Enumeration<['star', 'hand', 'house']>;
+    calculator_tab_3_icon: Attribute.Enumeration<['star', 'hand', 'house']>;
     calculator_tab_2_slider_1_label: Attribute.String;
     calculator_tab_2_slider_2_label: Attribute.String;
     calculator_tab_3_slider_1_label: Attribute.String;
