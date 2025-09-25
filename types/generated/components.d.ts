@@ -515,6 +515,30 @@ export interface RatesV2Breakdown extends Schema.Component {
   };
 }
 
+export interface RatesV2CalculatorTab extends Schema.Component {
+  collectionName: 'components_rates_v2_calculator_tabs';
+  info: {
+    displayName: 'Calculator Tab';
+    description: 'Single calculator tab configuration for Rates section';
+  };
+  attributes: {
+    label: Attribute.String & Attribute.Required;
+    icon: Attribute.Enumeration<['star', 'hand', 'house']> &
+      Attribute.DefaultTo<'house'>;
+    variant_type: Attribute.Enumeration<
+      ['borrow', 'refinance', 'purchase', 'custom']
+    > &
+      Attribute.DefaultTo<'borrow'>;
+    primary_slider_1_label: Attribute.String;
+    primary_slider_2_label: Attribute.String;
+    rate_header: Attribute.String;
+    rate_note: Attribute.String;
+    estimated_header: Attribute.String;
+    cta_text: Attribute.String;
+    description: Attribute.Text;
+  };
+}
+
 export interface RatesV2CostCardListItem extends Schema.Component {
   collectionName: 'components_rates_v2_cost_card_list_items';
   info: {
@@ -670,21 +694,14 @@ export interface RatesV2Rates extends Schema.Component {
     header: Attribute.String;
     calculator_header: Attribute.String;
     calculator_description: Attribute.Text;
-    calculator_borrow_label: Attribute.String;
-    calculator_rate_header: Attribute.String;
-    calculator_rate_note: Attribute.String;
-    calculator_estimated_header: Attribute.String;
-    calculator_cta_text: Attribute.String;
-    calculator_tab_1_label: Attribute.String;
-    calculator_tab_2_label: Attribute.String;
-    calculator_tab_3_label: Attribute.String;
-    calculator_tab_1_icon: Attribute.Enumeration<['star', 'hand', 'house']>;
-    calculator_tab_2_icon: Attribute.Enumeration<['star', 'hand', 'house']>;
-    calculator_tab_3_icon: Attribute.Enumeration<['star', 'hand', 'house']>;
-    calculator_tab_2_slider_1_label: Attribute.String;
-    calculator_tab_2_slider_2_label: Attribute.String;
-    calculator_tab_3_slider_1_label: Attribute.String;
-    calculator_tab_3_slider_2_label: Attribute.String;
+    calculator_tabs: Attribute.Component<'rates-v2.calculator-tab', true> &
+      Attribute.SetMinMax<
+        {
+          min: 1;
+          max: 3;
+        },
+        number
+      >;
     current_header: Attribute.String;
     current_card_1_label: Attribute.String;
     current_card_1_text: Attribute.String;
@@ -1037,6 +1054,7 @@ declare module '@strapi/types' {
       'rates-v2.breakdown-example': RatesV2BreakdownExample;
       'rates-v2.breakdown-step': RatesV2BreakdownStep;
       'rates-v2.breakdown': RatesV2Breakdown;
+      'rates-v2.calculator-tab': RatesV2CalculatorTab;
       'rates-v2.cost-card-list-item': RatesV2CostCardListItem;
       'rates-v2.cost-card': RatesV2CostCard;
       'rates-v2.cost-example-fee-item': RatesV2CostExampleFeeItem;

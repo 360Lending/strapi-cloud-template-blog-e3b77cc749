@@ -15,65 +15,12 @@
     "calculator_description": {
       "type": "text"
     },
-    "calculator_borrow_label": {
-      "type": "string"
-    },
-    "calculator_rate_header": {
-      "type": "string"
-    },
-    "calculator_rate_note": {
-      "type": "string"
-    },
-    "calculator_estimated_header": {
-      "type": "string"
-    },
-    "calculator_cta_text": {
-      "type": "string"
-    },
-    "calculator_tab_1_label": {
-      "type": "string"
-    },
-    "calculator_tab_2_label": {
-      "type": "string"
-    },
-    "calculator_tab_3_label": {
-      "type": "string"
-    },
-    "calculator_tab_1_icon": {
-      "type": "enumeration",
-      "enum": [
-        "star",
-        "hand",
-        "house"
-      ]
-    },
-    "calculator_tab_2_icon": {
-      "type": "enumeration",
-      "enum": [
-        "star",
-        "hand",
-        "house"
-      ]
-    },
-    "calculator_tab_3_icon": {
-      "type": "enumeration",
-      "enum": [
-        "star",
-        "hand",
-        "house"
-      ]
-    },
-    "calculator_tab_2_slider_1_label": {
-      "type": "string"
-    },
-    "calculator_tab_2_slider_2_label": {
-      "type": "string"
-    },
-    "calculator_tab_3_slider_1_label": {
-      "type": "string"
-    },
-    "calculator_tab_3_slider_2_label": {
-      "type": "string"
+    "calculator_tabs": {
+      "type": "component",
+      "repeatable": true,
+      "component": "rates-v2.calculator-tab",
+      "min": 1,
+      "max": 3
     },
     "current_header": {
       "type": "string"

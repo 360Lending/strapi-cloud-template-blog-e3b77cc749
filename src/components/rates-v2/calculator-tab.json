@@ -1,0 +1,54 @@
+{
+  "collectionName": "components_rates_v2_calculator_tabs",
+  "info": {
+    "displayName": "Calculator Tab",
+    "description": "Single calculator tab configuration for Rates section"
+  },
+  "options": {},
+  "attributes": {
+    "label": {
+      "type": "string",
+      "required": true
+    },
+    "icon": {
+      "type": "enumeration",
+      "enum": [
+        "star",
+        "hand",
+        "house"
+      ],
+      "default": "house"
+    },
+    "variant_type": {
+      "type": "enumeration",
+      "enum": [
+        "borrow",
+        "refinance",
+        "purchase",
+        "custom"
+      ],
+      "default": "borrow"
+    },
+    "primary_slider_1_label": {
+      "type": "string"
+    },
+    "primary_slider_2_label": {
+      "type": "string"
+    },
+    "rate_header": {
+      "type": "string"
+    },
+    "rate_note": {
+      "type": "string"
+    },
+    "estimated_header": {
+      "type": "string"
+    },
+    "cta_text": {
+      "type": "string"
+    },
+    "description": {
+      "type": "text"
+    }
+  }
+}
