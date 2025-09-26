@@ -5,7 +5,7 @@
     "singularName": "geo-landing",
     "pluralName": "geo-landings",
     "displayName": "Geo Landing",
-    "description": ""
+    "description": "Geo landing page content and calculator copy"
   },
   "options": {
     "draftAndPublish": true
@@ -16,6 +16,32 @@
       "type": "component",
       "repeatable": true,
       "component": "locations.location"
+    },
+    "calculator_header": {
+      "type": "string"
+    },
+    "calculator_description": {
+      "type": "string"
+    },
+    "calculator_borrow_label": {
+      "type": "string"
+    },
+    "calculator_rate_header": {
+      "type": "string"
+    },
+    "calculator_rate_note": {
+      "type": "string"
+    },
+    "calculator_estimated_header": {
+      "type": "string"
+    },
+    "calculator_cta_text": {
+      "type": "string"
+    },
+    "calculator_tabs": {
+      "type": "component",
+      "repeatable": true,
+      "component": "rates-v2.calculator-tab"
     },
     "hero_header": {
       "type": "string"
@@ -256,6 +282,9 @@
     "rates_current_card_2_text": {
       "type": "string"
     },
+    "rates_current_body": {
+      "type": "blocks"
+    },
     "rates_refinancing_header": {
       "type": "string"
     },
@@ -264,21 +293,6 @@
     },
     "rates_refinancing_card_1_text": {
       "type": "string"
-    },
-    "rates_refinancing_card_2_label": {
-      "type": "string"
-    },
-    "rates_refinancing_card_2_text": {
-      "type": "string"
-    },
-    "rates_current_body": {
-      "type": "blocks"
-    },
-    "rates_refinancing_card_1_description": {
-      "type": "blocks"
-    },
-    "rates_refinancing_card_2_description": {
-      "type": "blocks"
     },
     "rates_refinancing_card_1_rank": {
       "type": "enumeration",
@@ -289,6 +303,12 @@
       ],
       "default": "none"
     },
+    "rates_refinancing_card_2_label": {
+      "type": "string"
+    },
+    "rates_refinancing_card_2_text": {
+      "type": "string"
+    },
     "rates_refinancing_card_2_rank": {
       "type": "enumeration",
       "enum": [
@@ -297,6 +317,12 @@
         "second"
       ],
       "default": "none"
+    },
+    "rates_refinancing_card_1_description": {
+      "type": "blocks"
+    },
+    "rates_refinancing_card_2_description": {
+      "type": "blocks"
     }
   }
 }
