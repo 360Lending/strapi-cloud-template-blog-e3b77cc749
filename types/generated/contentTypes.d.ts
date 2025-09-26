@@ -1016,13 +1016,21 @@ export interface ApiGeoLandingGeoLanding extends Schema.SingleType {
     singularName: 'geo-landing';
     pluralName: 'geo-landings';
     displayName: 'Geo Landing';
-    description: '';
+    description: 'Geo landing page content and calculator copy';
   };
   options: {
     draftAndPublish: true;
   };
   attributes: {
     locations: Attribute.Component<'locations.location', true>;
+    calculator_header: Attribute.String;
+    calculator_description: Attribute.String;
+    calculator_borrow_label: Attribute.String;
+    calculator_rate_header: Attribute.String;
+    calculator_rate_note: Attribute.String;
+    calculator_estimated_header: Attribute.String;
+    calculator_cta_text: Attribute.String;
+    calculator_tabs: Attribute.Component<'rates-v2.calculator-tab', true>;
     hero_header: Attribute.String;
     hero_sub_header: Attribute.String;
     hero_underlined_text: Attribute.String;
@@ -1102,22 +1110,22 @@ export interface ApiGeoLandingGeoLanding extends Schema.SingleType {
     rates_current_card_1_text: Attribute.String;
     rates_current_card_2_label: Attribute.String;
     rates_current_card_2_text: Attribute.String;
+    rates_current_body: Attribute.Blocks;
     rates_refinancing_header: Attribute.String;
     rates_refinancing_card_1_label: Attribute.String;
     rates_refinancing_card_1_text: Attribute.String;
-    rates_refinancing_card_2_label: Attribute.String;
-    rates_refinancing_card_2_text: Attribute.String;
-    rates_current_body: Attribute.Blocks;
-    rates_refinancing_card_1_description: Attribute.Blocks;
-    rates_refinancing_card_2_description: Attribute.Blocks;
     rates_refinancing_card_1_rank: Attribute.Enumeration<
       ['none', 'first', 'second']
     > &
       Attribute.DefaultTo<'none'>;
+    rates_refinancing_card_2_label: Attribute.String;
+    rates_refinancing_card_2_text: Attribute.String;
     rates_refinancing_card_2_rank: Attribute.Enumeration<
       ['none', 'first', 'second']
     > &
       Attribute.DefaultTo<'none'>;
+    rates_refinancing_card_1_description: Attribute.Blocks;
+    rates_refinancing_card_2_description: Attribute.Blocks;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
