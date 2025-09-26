@@ -23,21 +23,6 @@
     "calculator_description": {
       "type": "string"
     },
-    "calculator_borrow_label": {
-      "type": "string"
-    },
-    "calculator_rate_header": {
-      "type": "string"
-    },
-    "calculator_rate_note": {
-      "type": "string"
-    },
-    "calculator_estimated_header": {
-      "type": "string"
-    },
-    "calculator_cta_text": {
-      "type": "string"
-    },
     "calculator_tabs": {
       "type": "component",
       "repeatable": true,
