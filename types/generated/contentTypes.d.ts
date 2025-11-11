@@ -878,6 +878,8 @@ export interface ApiBlogPostBlogPost extends Schema.CollectionType {
     >;
     isFeatureArticle: Attribute.Boolean & Attribute.DefaultTo<false>;
     description: Attribute.Text;
+    metadataTitle: Attribute.String;
+    metadataDescription: Attribute.Text;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
