@@ -48,6 +48,12 @@
     },
     "description": {
       "type": "text"
+    },
+    "metadataTitle": {
+      "type": "string"
+    },
+    "metadataDescription": {
+      "type": "text"
     }
   }
 }
