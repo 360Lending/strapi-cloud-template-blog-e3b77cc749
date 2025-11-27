@@ -1,9 +1,9 @@
 {
   "dependencies": {
-    "@strapi/plugin-cloud": "4.20.2",
-    "@strapi/plugin-graphql": "^4.20.2",
-    "@strapi/plugin-i18n": "4.20.2",
-    "@strapi/plugin-users-permissions": "4.20.2",
+    "@strapi/plugin-cloud": "^4.25.24",
+    "@strapi/plugin-graphql": "^4.25.24",
+    "@strapi/plugin-i18n": "^4.25.24",
+    "@strapi/plugin-users-permissions": "^4.25.24",
     "@strapi/strapi": "^4.25.24",
     "better-sqlite3": "8.6.0",
     "fs-extra": "^10.0.0",
